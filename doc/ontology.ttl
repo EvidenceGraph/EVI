@@ -1,0 +1,631 @@
+@prefix : <https://w3id.org/evi/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/evi/> .
+
+<https://w3id.org/evi/> rdf:type owl:Ontology ;
+                         <http://purl.org/dc/terms/contributor> "\"Justin Niestroy\"" ,
+                                                                "\"Maxwell Adam Levinson\"" ;
+                         <http://purl.org/dc/terms/created> "2020-07-31T09:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/creator> "\"Sadnan Al Manir\"" ,
+                                                            "\"Tim Clark\"" ;
+                         <http://purl.org/dc/terms/description> "A small paragraph indicating what the ontology does and why should some one use it"@en ;
+                         <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by-nc-sa/2.0/" ;
+                         <http://purl.org/dc/terms/title> "EVI: Evidence Graph Ontology"@en ;
+                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "evi" ;
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/evi/"@en ;
+                         owl:versionIRI "http://www.w3.org/2002/07/owl"@en ;
+                         owl:versionInfo "1.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/evi/about
+:about rdf:type owl:ObjectProperty ;
+       rdfs:domain :Caption ;
+       rdfs:range <http://schema.org/Dataset> ;
+       rdfs:label "about" .
+
+
+###  https://w3id.org/evi/arguedBy
+:arguedBy rdf:type owl:ObjectProperty ;
+          owl:inverseOf :argues ;
+          rdfs:label "arguedBy" .
+
+
+###  https://w3id.org/evi/argues
+:argues rdf:type owl:ObjectProperty ;
+        rdfs:domain :EvidenceGraph ;
+        rdfs:range <http://schema.org/Claim> ;
+        rdfs:label "argues" .
+
+
+###  https://w3id.org/evi/assertedBy
+:assertedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :asserts ;
+            rdfs:label "assertedBy" .
+
+
+###  https://w3id.org/evi/asserts
+:asserts rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :contains ;
+         rdfs:domain :EvidenceGraph ;
+         rdfs:range :Representation ;
+         rdfs:label "asserts" .
+
+
+###  https://w3id.org/evi/associatedWith
+:associatedWith rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith> ;
+                rdfs:domain <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity> ;
+                rdfs:range <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent> ;
+                rdfs:label "associatedWith" .
+
+
+###  https://w3id.org/evi/attributedTo
+:attributedTo rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo> ;
+              rdfs:domain <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity> ;
+              rdfs:range <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent> ;
+              rdfs:label "attributedTo" .
+
+
+###  https://w3id.org/evi/challengedBy
+:challengedBy rdf:type owl:ObjectProperty ;
+              owl:inverseOf :challenges ;
+              rdfs:label "challengedBy" .
+
+
+###  https://w3id.org/evi/challenges
+:challenges rdf:type owl:ObjectProperty ;
+            rdfs:domain :Representation ;
+            rdfs:range :Representation ;
+            rdfs:label "challenges" .
+
+
+###  https://w3id.org/evi/contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:domain :Representation ;
+          rdfs:range :Representation ;
+          rdfs:label "contains" .
+
+
+###  https://w3id.org/evi/creator
+:creator rdf:type owl:ObjectProperty ;
+         rdfs:domain :Representation ;
+         rdfs:range <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent> ;
+         rdfs:label "creator" .
+
+
+###  https://w3id.org/evi/derivedFrom
+:derivedFrom rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom> ;
+             owl:inverseOf :derives ;
+             rdfs:domain <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity> ;
+             rdfs:range <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity> ;
+             rdfs:label "derivedFrom" .
+
+
+###  https://w3id.org/evi/derives
+:derives rdf:type owl:ObjectProperty ;
+         rdfs:label "derives" .
+
+
+###  https://w3id.org/evi/directlyChallengedBy
+:directlyChallengedBy rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :challengedBy ;
+                      owl:inverseOf :directlyChallenges ;
+                      rdfs:label "directlyChallengedBy" .
+
+
+###  https://w3id.org/evi/directlyChallenges
+:directlyChallenges rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :challenges ;
+                    rdfs:label "directlyChallenges" .
+
+
+###  https://w3id.org/evi/directlySupportedBy
+:directlySupportedBy rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :supportedBy ;
+                     owl:inverseOf :directlySupports ;
+                     rdfs:label "directlySupportedBy" .
+
+
+###  https://w3id.org/evi/directlySupports
+:directlySupports rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :supports ;
+                  rdfs:label "directlySupports" .
+
+
+###  https://w3id.org/evi/generatedBy
+:generatedBy rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy> ;
+             owl:inverseOf :generates ;
+             rdfs:domain <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity> ;
+             rdfs:range <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity> ;
+             rdfs:label "generatedBy" .
+
+
+###  https://w3id.org/evi/generates
+:generates rdf:type owl:ObjectProperty ;
+           rdfs:label "generates" .
+
+
+###  https://w3id.org/evi/indirectlyChallengedBy
+:indirectlyChallengedBy rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :challengedBy ;
+                        owl:inverseOf :indirectlyChallenges ;
+                        rdfs:label "indirectlyChallengedBy" .
+
+
+###  https://w3id.org/evi/indirectlyChallenges
+:indirectlyChallenges rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :challenges ;
+                      owl:propertyChainAxiom ( :directlyChallenges
+                                               :supports
+                                             ) ;
+                      rdfs:label "indirectlyChallenges" .
+
+
+###  https://w3id.org/evi/representedBy
+:representedBy rdf:type owl:ObjectProperty ;
+               owl:inverseOf :represents ;
+               rdfs:label "representedBy" .
+
+
+###  https://w3id.org/evi/represents
+:represents rdf:type owl:ObjectProperty ;
+            rdfs:domain :Representation ;
+            rdfs:range <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity> ;
+            rdfs:label "represents" .
+
+
+###  https://w3id.org/evi/supportedBy
+:supportedBy rdf:type owl:ObjectProperty ;
+             owl:inverseOf :supports ;
+             rdfs:label "supportedBy" .
+
+
+###  https://w3id.org/evi/supports
+:supports rdf:type owl:ObjectProperty ,
+                   owl:TransitiveProperty ;
+          rdfs:domain :Representation ;
+          rdfs:range :Representation ;
+          rdfs:label "supports" .
+
+
+###  https://w3id.org/evi/used
+:used rdf:type owl:ObjectProperty ;
+      owl:inverseOf :usedBy ;
+      rdfs:domain <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity> ;
+      rdfs:range <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity> ;
+      rdfs:label "used" .
+
+
+###  https://w3id.org/evi/usedBy
+:usedBy rdf:type owl:ObjectProperty ;
+        rdfs:label "usedBy" .
+
+
+###  https://w3id.org/evi/usedDataset
+:usedDataset rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :used ;
+             rdfs:domain :Computation ;
+             rdfs:range :Dataset ;
+             rdfs:label "usedDataset" .
+
+
+###  https://w3id.org/evi/usedService
+:usedService rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :used ;
+             rdfs:domain :Computation ;
+             rdfs:range :Service ;
+             rdfs:label "usedService" .
+
+
+###  https://w3id.org/evi/usedSoftware
+:usedSoftware rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :used ;
+              rdfs:domain :Computation ;
+              rdfs:range :Software ;
+              rdfs:label "usedSoftware" .
+
+
+###  https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith
+<https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:label "wasAssociatedWith" .
+
+
+###  https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo
+<https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:label "wasAttributedTo" .
+
+
+###  https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom
+<https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:label "wasDerivedFrom" .
+
+
+###  https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy
+<https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:label "wasGeneratedBy" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://schema.org/contentUrl
+<https://schema.org/contentUrl> rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:anyURI ;
+                                rdfs:comment "Actual bytes of the media object, for example the image file or video file" ;
+                                rdfs:label "contentUrl" .
+
+
+###  https://w3id.org/evi/citation
+:citation rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Reference ;
+          rdfs:range xsd:string ;
+          rdfs:label "citation" .
+
+
+###  https://w3id.org/evi/id
+:id rdf:type owl:DatatypeProperty ;
+    rdfs:label "id" .
+
+
+###  https://w3id.org/evi/qualifiedBy
+:qualifiedBy rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:label "qualifiedBy" .
+
+
+###  https://w3id.org/evi/state
+:state rdf:type owl:DatatypeProperty ;
+       rdfs:domain <http://schema.org/Claim> ;
+       rdfs:range xsd:string ;
+       rdfs:label "state" .
+
+
+###  https://www.w3.org/TR/2013/REC-prov-o-20130430/#atTime
+<https://www.w3.org/TR/2013/REC-prov-o-20130430/#atTime> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:comment "The PROV data model is implicitly based on a notion of instantaneous events (or just events), that mark transitions in the world. Events include generation, usage, or invalidation of entities, as well as starting or ending of activities. This notion of event is not first-class in the data model, but it is useful for explaining its other concepts and its semantics." ;
+                                                         rdfs:label "atTime" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/Article
+<http://schema.org/Article> rdf:type owl:Class ;
+                            rdfs:subClassOf :Representation ;
+                            rdfs:comment "An identifiable source object of which an EvidenceGraph is derived. It includes information about its location, time of creation, and the authors." ;
+                            rdfs:label "Article" .
+
+
+###  http://schema.org/Claim
+<http://schema.org/Claim> rdf:type owl:Class ;
+                          rdfs:subClassOf :Representation ;
+                          rdfs:comment "A statement argued in a scientific experiment." ;
+                          rdfs:label "Claim" .
+
+
+###  http://schema.org/Dataset
+<http://schema.org/Dataset> rdf:type owl:Class ;
+                            owl:equivalentClass :Dataset ;
+                            rdfs:subClassOf :Representation ;
+                            rdfs:comment "A body of structured information describing some topic(s) of interest." ;
+                            rdfs:label "Dataset" .
+
+
+###  http://schema.org/Organization
+<http://schema.org/Organization> rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent> ;
+                                 rdfs:comment "An organization is a social or legal institution such as a company, society, etc." ;
+                                 rdfs:label "Organization" .
+
+
+###  http://schema.org/Person
+<http://schema.org/Person> rdf:type owl:Class ;
+                           rdfs:subClassOf <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent> ;
+                           rdfs:comment "Person agents are people." ;
+                           rdfs:label "Person" .
+
+
+###  http://schema.org/Service
+<http://schema.org/Service> rdf:type owl:Class ;
+                            owl:equivalentClass :Service ;
+                            rdfs:subClassOf :Method ;
+                            rdfs:comment "A Method used during a Computation Activity." ;
+                            rdfs:label "Service" .
+
+
+###  http://schema.org/SoftwareApplication
+<http://schema.org/SoftwareApplication> rdf:type owl:Class ;
+                                        owl:equivalentClass :Software ;
+                                        rdfs:subClassOf :Material ;
+                                        rdfs:comment "A set of instructions to perform specific Computation Activity." ;
+                                        rdfs:label "SoftwareApplication" .
+
+
+###  https://w3id.org/evi/Caption
+:Caption rdf:type owl:Class ;
+         rdfs:subClassOf <http://schema.org/Claim> ;
+         rdfs:comment "Composed of descriptive statements which describe information about objects such as images, tables, datasets." ;
+         rdfs:label "Caption" .
+
+
+###  https://w3id.org/evi/Computation
+:Computation rdf:type owl:Class ;
+             rdfs:subClassOf <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity> ;
+             rdfs:comment "Computation is an Activity which is generally performed on a Dataset with the help of a SoftwareApplication" ;
+             rdfs:label "Computation" .
+
+
+###  https://w3id.org/evi/Dataset
+:Dataset rdf:type owl:Class ;
+         rdfs:subClassOf :Representation ;
+         rdfs:comment "A body of structured information describing some topic(s) of interest." ;
+         rdfs:label "Dataset" .
+
+
+###  https://w3id.org/evi/EvidenceGraph
+:EvidenceGraph rdf:type owl:Class ;
+               rdfs:subClassOf :Representation ;
+               rdfs:comment "An EvidenceGraph is a set of Representation, having supportive and/or challenging relations to one another." ;
+               rdfs:label "EvidenceGraph" .
+
+
+###  https://w3id.org/evi/Material
+:Material rdf:type owl:Class ;
+          rdfs:subClassOf :Representation ;
+          rdfs:comment "A Material supports any Method of which it is a component." ;
+          rdfs:label "Material" .
+
+
+###  https://w3id.org/evi/Method
+:Method rdf:type owl:Class ;
+        rdfs:subClassOf :Representation ;
+        rdfs:comment "A reusable recipe showing how the Dataset were obtained. It specifies an Activitiy, and may refer to some Material as a component of the recipe." ;
+        rdfs:label "Method" .
+
+
+###  https://w3id.org/evi/Reagent
+:Reagent rdf:type owl:Class ;
+         rdfs:subClassOf :Material ;
+         rdfs:comment "A Reagent is a Material used for representing biological objects." ;
+         rdfs:label "Reagent" .
+
+
+###  https://w3id.org/evi/Reference
+:Reference rdf:type owl:Class ;
+           rdfs:subClassOf :Representation ;
+           rdfs:comment "A Representation that is used to speify the citation of an EvidenceGraph." ;
+           rdfs:label "Reference" .
+
+
+###  https://w3id.org/evi/Representation
+:Representation rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity> ;
+                rdfs:comment "A Representation is an Entity which represents an instance of EvidenceGraph, an Article, a Claim, a Dataset, a Material, a Method, or a Reference." ;
+                rdfs:label "Representation" .
+
+
+###  https://w3id.org/evi/Service
+:Service rdf:type owl:Class ;
+         rdfs:subClassOf :Method ;
+         rdfs:comment "A Method used during a Computation Activity." ;
+         rdfs:label "Service" .
+
+
+###  https://w3id.org/evi/Software
+:Software rdf:type owl:Class ;
+          rdfs:subClassOf :Material ;
+          rdfs:comment "A set of instructions to perform specific Computation Activity." ;
+          rdfs:label "Software" .
+
+
+###  https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity
+<https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity> rdf:type owl:Class ;
+                                                           rdfs:comment "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." ;
+                                                           rdfs:label "Activity" .
+
+
+###  https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent
+<https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity> ;
+                                                        rdfs:comment "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity." ;
+                                                        rdfs:label "Agent" .
+
+
+###  https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity
+<https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity> rdf:type owl:Class ;
+                                                         rdfs:comment "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary." ;
+                                                         rdfs:label "Entity" .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://purl.org/evi/data2> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://purl.org/evi/computation> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://purl.org/evi/data1> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://purl.org/evi/z> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://purl.org/evi/a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://purl.org/evi/x> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://purl.org/evi/y> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S5" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :attributedTo ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/z> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/a>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :supports ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/a> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/z>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :derivedFrom ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/z> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/x>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :supports ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/x> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/z>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :derivedFrom ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/z> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/x>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :supports ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/x> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/z>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S4" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :generatedBy ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/z> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/y>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :supports ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/y> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/z>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :generatedBy ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/data2> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/computation>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :usedDataset ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/computation> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/data1>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :directlySupports ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/data1> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/data2>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

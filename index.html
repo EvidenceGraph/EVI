@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <script type='application/ld+json'>
+      {
+        "@context": "http://www.schema.org",
+        "@type": "WebSite",
+        "name": "EVI: An Ontology for documenting claims, assertions, and evidence",
+        "alternateName": "A semantic data model for representing claims, assertions, and evidence in scientific experiments",
+        "url": "https://purl.org/evi/"
+      }
+    </script>
+
+    <title>EVI: Evidence Graph of claims, assertions, evidence in scientific experiments</title>
+  </head>
+  <body vocab="http://schema.org/">
+    <div class="licence"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+     <img alt="Creative Commons License" style="border-width:0" src="images/license.png"/></a>
+    </div>
+    <div class="page" typeof="WebPage">
+      <nav class="navbar navbar-toggleable-md navbar-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto" typeof="BreadcrumbList">
+            <li class="nav-item active">
+              <h4><a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></h4>
+            </li>
+            <li property="itemListElement" typeof="ListItem" class="nav-item">
+                <h4><a property="item" typeof="WebPage" class="nav-link" href="resources.html">
+                <span property="name">Resources</span>
+              </a></h4>
+              <meta property="position" content="2"/>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="content">
+        <h2><b>EVI: Evidence Graph of claims, assertions, evidence in scientific experiments</b></h2>
+
+        <section>
+            <h3><b><a href="doc/index-en.html">The Evidence Graph Data Model and Ontology</a></b></h3>
+            <p>The EVI Data Model is a generic data model for the representation of scientific experiments with their provenance information.
+              The aim of this model is to capture the general elements of scientific experiments for their understandability and reproducibility.
+              An Experiment is considered as the central point of the REPRODUCE-ME data model. The model consists of eight components: Data, Agent, Activity, Plan, Step,
+              Setting, Instrument, Material. The REPRODUCE-ME Data Model forms a basis for the REPRODUCE-ME ontology.
+              The REPRODUCE-ME ontology extended from PROV-O and P-Plan is used to represent the whole picture of an
+              experiment describing the path it took from its design to result.
+              We aim to enable end-to-end reproducibility of scientific experiments by capturing and representing
+              the complete provenance of a scientific experiment using the REPRODUCE-ME ontology.</p>
+        </section>
+
+    </div>
+  </body>
+</html>
