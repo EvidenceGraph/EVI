@@ -4,8 +4,9 @@ Profiles</a> to describe evidence for correctness of findings in biomedical publ
 Language (OWL2).
 
 ## Ontology
-* Docs https://github.com/
-* OWL  https://github.com/EvidenceGraph/EVI/Ontology/versions/1.0/evi.owl
+* Docs https://evidencegraph.github.io/EVI/
+* OWL  https://github.com/EvidenceGraph/EVI/blob/master/Ontology/versions/v1.0/evi.owl
 
 ## Contact:
-* Sadnan Al Manir (ma3xy at virginia dot edu)
+* Sadnan Al Manir (ma3xy@virginia.edu)
+* Tim Clark (twclark@virginia.edu)
