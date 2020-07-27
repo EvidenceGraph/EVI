@@ -5,21 +5,25 @@ This section provides details for each class and property defined by EVI.
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity"
-            title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity">Activity</a>
+         <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">Activity</a>
       </li>
       <li>
-         <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent"
-            title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">Agent</a>
+         <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
       </li>
       <li>
          <a href="#http://schema.org/Article" title="http://schema.org/Article">Article</a>
+      </li>
+      <li>
+         <a href="#Article" title="https://w3id.org/evi/Article">Article</a>
       </li>
       <li>
          <a href="#Caption" title="https://w3id.org/evi/Caption">Caption</a>
       </li>
       <li>
          <a href="#http://schema.org/Claim" title="http://schema.org/Claim">Claim</a>
+      </li>
+      <li>
+         <a href="#Claim" title="https://w3id.org/evi/Claim">Claim</a>
       </li>
       <li>
          <a href="#Computation" title="https://w3id.org/evi/Computation">Computation</a>
@@ -31,8 +35,7 @@ This section provides details for each class and property defined by EVI.
          <a href="#Dataset" title="https://w3id.org/evi/Dataset">Dataset</a>
       </li>
       <li>
-         <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity"
-            title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">Entity</a>
+         <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
       </li>
       <li>
          <a href="#EvidenceGraph" title="https://w3id.org/evi/EvidenceGraph">EvidenceGraph</a>
@@ -47,7 +50,13 @@ This section provides details for each class and property defined by EVI.
          <a href="#http://schema.org/Organization" title="http://schema.org/Organization">Organization</a>
       </li>
       <li>
+         <a href="#https://www.w3.org/ns/prov#Organization" title="https://www.w3.org/ns/prov#Organization">Organization</a>
+      </li>
+      <li>
          <a href="#http://schema.org/Person" title="http://schema.org/Person">Person</a>
+      </li>
+      <li>
+         <a href="#https://www.w3.org/ns/prov#Person" title="https://www.w3.org/ns/prov#Person">Person</a>
       </li>
       <li>
          <a href="#Reagent" title="https://w3id.org/evi/Reagent">Reagent</a>
@@ -71,15 +80,15 @@ This section provides details for each class and property defined by EVI.
          <a href="#http://schema.org/SoftwareApplication" title="http://schema.org/SoftwareApplication">SoftwareApplication</a>
       </li>
    </ul>
-   <div class="entity" id="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity">
+   <div class="entity" id="https://www.w3.org/ns/prov#Activity">
       <h3>Activity<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity</p>
+         <strong>IRI:</strong> https://www.w3.org/ns/prov#Activity</p>
       <div class="comment">
-         <span class="markdown">An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</span>
+         <span class="markdown">An Activity is a process by which an Entity is produced, modified, consumed or used.</span>
       </div>
       <dl class="description">
          <dt>has sub-classes</dt>
@@ -100,27 +109,28 @@ This section provides details for each class and property defined by EVI.
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">
+   <div class="entity" id="https://www.w3.org/ns/prov#Agent">
       <h3>Agent<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent</p>
+         <strong>IRI:</strong> https://www.w3.org/ns/prov#Agent</p>
       <div class="comment">
          <span class="markdown">An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity"
-               title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">Entity</a>
+            <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#http://schema.org/Organization" title="http://schema.org/Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3.org/ns/prov#Organization" title="https://www.w3.org/ns/prov#Organization">Organization</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/Person" title="http://schema.org/Person">Person</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3.org/ns/prov#Person" title="https://www.w3.org/ns/prov#Person">Person</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
@@ -143,6 +153,26 @@ This section provides details for each class and property defined by EVI.
          <span class="markdown">An identifiable source object of which an EvidenceGraph is derived. It includes information about its location, time of creation, and the authors.</span>
       </div>
       <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#Article" title="https://w3id.org/evi/Article">Article</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Representation" title="https://w3id.org/evi/Representation">Representation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Article">
+      <h3>Article<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/evi/Article</p>
+      <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#Representation" title="https://w3id.org/evi/Representation">Representation</a>
@@ -158,7 +188,7 @@ This section provides details for each class and property defined by EVI.
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/Caption</p>
       <div class="comment">
-         <span class="markdown">Composed of descriptive statements which describe information about objects such as images, tables, datasets.</span>
+         <span class="markdown">A composition of descriptive statements which describes information about objects such as images, tables, datasets etc.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -181,9 +211,14 @@ This section provides details for each class and property defined by EVI.
       <p>
          <strong>IRI:</strong> http://schema.org/Claim</p>
       <div class="comment">
-         <span class="markdown">A statement argued in a scientific experiment.</span>
+         <span class="markdown">A Claim is a principal statement arguedBy a EvidenceGraph in a scientific Article.</span>
       </div>
       <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#Claim" title="https://w3id.org/evi/Claim">Claim</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#Representation" title="https://w3id.org/evi/Representation">Representation</a>
@@ -194,15 +229,33 @@ This section provides details for each class and property defined by EVI.
             <a href="#Caption" title="https://w3id.org/evi/Caption">Caption</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#state" title="https://w3id.org/evi/state">state</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#argues" title="https://w3id.org/evi/argues">argues</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Claim">
+      <h3>Claim<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/evi/Claim</p>
+      <div class="comment">
+         <span class="markdown">A Claim is a principal statement arguedBy a EvidenceGraph in a scientific Article.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Representation" title="https://w3id.org/evi/Representation">Representation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#state" title="https://w3id.org/evi/state">state</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -219,8 +272,7 @@ This section provides details for each class and property defined by EVI.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity"
-               title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity">Activity</a>
+            <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -283,21 +335,20 @@ This section provides details for each class and property defined by EVI.
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">
+   <div class="entity" id="https://www.w3.org/ns/prov#Entity">
       <h3>Entity<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity</p>
+         <strong>IRI:</strong> https://www.w3.org/ns/prov#Entity</p>
       <div class="comment">
          <span class="markdown">An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.</span>
       </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent"
-               title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">Agent</a>
+            <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Representation" title="https://w3id.org/evi/Representation">Representation</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -325,7 +376,7 @@ This section provides details for each class and property defined by EVI.
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/EvidenceGraph</p>
       <div class="comment">
-         <span class="markdown">An EvidenceGraph is a set of Representation, having supportive and/or challenging relations to one another.</span>
+         <span class="markdown">An EvidenceGraph is a set of Representations, having supports and / or challenges relations to one another, and potentially those which have Reference to other EvidenceGraphs.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -401,10 +452,32 @@ This section provides details for each class and property defined by EVI.
          <span class="markdown">An organization is a social or legal institution such as a company, society, etc.</span>
       </div>
       <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#https://www.w3.org/ns/prov#Organization" title="https://www.w3.org/ns/prov#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent"
-               title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">Agent</a>
+            <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3.org/ns/prov#Organization">
+      <h3>Organization<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3.org/ns/prov#Organization</p>
+      <div class="comment">
+         <span class="markdown">An organization is a social or legal institution such as a company, society, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -420,10 +493,32 @@ This section provides details for each class and property defined by EVI.
          <span class="markdown">Person agents are people.</span>
       </div>
       <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#https://www.w3.org/ns/prov#Person" title="https://www.w3.org/ns/prov#Person">Person</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent"
-               title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">Agent</a>
+            <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3.org/ns/prov#Person">
+      <h3>Person<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3.org/ns/prov#Person</p>
+      <div class="comment">
+         <span class="markdown">Person agents are prople.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -482,14 +577,15 @@ This section provides details for each class and property defined by EVI.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity"
-               title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">Entity</a>
+            <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#http://schema.org/Article" title="http://schema.org/Article">Article</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Article" title="https://w3id.org/evi/Article">Article</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/Claim" title="http://schema.org/Claim">Claim</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Claim" title="https://w3id.org/evi/Claim">Claim</a>
             <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">Dataset</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Dataset" title="https://w3id.org/evi/Dataset">Dataset</a>
             <sup class="type-c" title="class">c</sup>, <a href="#EvidenceGraph" title="https://w3id.org/evi/EvidenceGraph">EvidenceGraph</a>
@@ -649,9 +745,6 @@ This section provides details for each class and property defined by EVI.
          <a href="#derivedFrom" title="https://w3id.org/evi/derivedFrom">derivedFrom</a>
       </li>
       <li>
-         <a href="#derives" title="https://w3id.org/evi/derives">derives</a>
-      </li>
-      <li>
          <a href="#directlyChallengedBy" title="https://w3id.org/evi/directlyChallengedBy">directlyChallengedBy</a>
       </li>
       <li>
@@ -665,9 +758,6 @@ This section provides details for each class and property defined by EVI.
       </li>
       <li>
          <a href="#generatedBy" title="https://w3id.org/evi/generatedBy">generatedBy</a>
-      </li>
-      <li>
-         <a href="#generates" title="https://w3id.org/evi/generates">generates</a>
       </li>
       <li>
          <a href="#indirectlyChallengedBy" title="https://w3id.org/evi/indirectlyChallengedBy">indirectlyChallengedBy</a>
@@ -703,20 +793,16 @@ This section provides details for each class and property defined by EVI.
          <a href="#usedSoftware" title="https://w3id.org/evi/usedSoftware">usedSoftware</a>
       </li>
       <li>
-         <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith"
-            title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">wasAssociatedWith</a>
+         <a href="#https://www.w3.org/ns/prov#wasAssociatedWith" title="https://www.w3.org/ns/prov#wasAssociatedWith">wasAssociatedWith</a>
       </li>
       <li>
-         <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo"
-            title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo">wasAttributedTo</a>
+         <a href="#https://www.w3.org/ns/prov#wasAttributedTo" title="https://www.w3.org/ns/prov#wasAttributedTo">wasAttributedTo</a>
       </li>
       <li>
-         <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom"
-            title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">wasDerivedFrom</a>
+         <a href="#https://www.w3.org/ns/prov#wasDerivedFrom" title="https://www.w3.org/ns/prov#wasDerivedFrom">wasDerivedFrom</a>
       </li>
       <li>
-         <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy"
-            title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy">wasGeneratedBy</a>
+         <a href="#https://www.w3.org/ns/prov#wasGeneratedBy" title="https://www.w3.org/ns/prov#wasGeneratedBy">wasGeneratedBy</a>
       </li>
    </ul>
    <div class="entity" id="about">
@@ -726,6 +812,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/about</p>
+      <div class="comment">
+         <span class="markdown">Asserts instance of a Caption about a Dataset.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -748,6 +837,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/arguedBy</p>
+      <div class="comment">
+         <span class="markdown">Asserts that the principal Claim is arguedBy an EvideneGraph.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
@@ -765,6 +857,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/argues</p>
+      <div class="comment">
+         <span class="markdown">Asserts that EvidenceGraph argues the principal Claim.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -792,6 +887,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/assertedBy</p>
+      <div class="comment">
+         <span class="markdown">Instance of Representation assertedBy instance of EvidenceGraph.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
@@ -809,6 +907,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/asserts</p>
+      <div class="comment">
+         <span class="markdown">Instance of EvidenceGraph asserts instance of Representation.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -841,24 +942,24 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/associatedWith</p>
+      <div class="comment">
+         <span class="markdown">A prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">wasAssociatedWith</a>
+               <a href="#https://www.w3.org/ns/prov#wasAssociatedWith" title="https://www.w3.org/ns/prov#wasAssociatedWith">wasAssociatedWith</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity">Activity</a>
+               <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">Activity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">Agent</a>
+               <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -871,24 +972,24 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/attributedTo</p>
+      <div class="comment">
+         <span class="markdown">Attribution is the ascribing of a prov:Entity to a prov:Agent.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo">wasAttributedTo</a>
+               <a href="#https://www.w3.org/ns/prov#wasAttributedTo" title="https://www.w3.org/ns/prov#wasAttributedTo">wasAttributedTo</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">Entity</a>
+               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">Agent</a>
+               <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -901,6 +1002,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/challengedBy</p>
+      <div class="comment">
+         <span class="markdown">Reverse of challenges property.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -924,6 +1028,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/challenges</p>
+      <div class="comment">
+         <span class="markdown">The challenges property is inferred when Representation either directlyChallenges another, or indirectlyChallenges it by undercutting (directlyChallenges) a Representation which supports it.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -957,6 +1064,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/contains</p>
+      <div class="comment">
+         <span class="markdown">Instances of Representations may contain instances of  Representations.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -984,6 +1094,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/creator</p>
+      <div class="comment">
+         <span class="markdown">An instance of Representation responsible for making the resource. Recommended practice is to identify the creator with a URI.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -993,8 +1106,7 @@ This section provides details for each class and property defined by EVI.
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">Agent</a>
+               <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1007,47 +1119,25 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/derivedFrom</p>
+      <div class="comment">
+         <span class="markdown">A derivation is a transformation of a prov:Entity into another, an update of a prov:Entity resulting in a new one, or the construction of a new prov:Entity based on a pre-existing prov:Entity.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">wasDerivedFrom</a>
+               <a href="#https://www.w3.org/ns/prov#wasDerivedFrom" title="https://www.w3.org/ns/prov#wasDerivedFrom">wasDerivedFrom</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">Entity</a>
+               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">Entity</a>
+               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
                <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#derives" title="https://w3id.org/evi/derives">derives</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="derives">
-      <h3>derives<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/evi/derives</p>
-      <div class="description">
-         <dl>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#derivedFrom" title="https://w3id.org/evi/derivedFrom">derivedFrom</a>
-               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -1059,6 +1149,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/directlyChallengedBy</p>
+      <div class="comment">
+         <span class="markdown">Reverse of directlyChallenges property.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1081,6 +1174,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/directlyChallenges</p>
+      <div class="comment">
+         <span class="markdown">The directlyChallenges property establishes a relation between instances of Representations when they directly challenge one another.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1103,6 +1199,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/directlySupportedBy</p>
+      <div class="comment">
+         <span class="markdown">The use of directlySupportedBy property is intended to establish a direct relation between instances of  Representations.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1125,6 +1224,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/directlySupports</p>
+      <div class="comment">
+         <span class="markdown">The use of directlySupports property is intended to establish a direct relation between instances of  Representations.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1147,47 +1249,25 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/generatedBy</p>
+      <div class="comment">
+         <span class="markdown">Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy">wasGeneratedBy</a>
+               <a href="#https://www.w3.org/ns/prov#wasGeneratedBy" title="https://www.w3.org/ns/prov#wasGeneratedBy">wasGeneratedBy</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">Entity</a>
+               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity">Activity</a>
+               <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">Activity</a>
                <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#generates" title="https://w3id.org/evi/generates">generates</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="generates">
-      <h3>generates<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/evi/generates</p>
-      <div class="description">
-         <dl>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#generatedBy" title="https://w3id.org/evi/generatedBy">generatedBy</a>
-               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -1199,6 +1279,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/indirectlyChallengedBy</p>
+      <div class="comment">
+         <span class="markdown">Reverse of indirectlyChallenges property.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1221,6 +1304,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/indirectlyChallenges</p>
+      <div class="comment">
+         <span class="markdown">The indirectlyChallenges property establishes a relation between instances of Representations when they indirectly challenge one another with the help of property chaining.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1251,6 +1337,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/representedBy</p>
+      <div class="comment">
+         <span class="markdown">Instances of prov:Entity may be represented by instance of Representation.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
@@ -1268,6 +1357,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/represents</p>
+      <div class="comment">
+         <span class="markdown">Instance of Representation may represent instance of prov:Entity.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -1277,8 +1369,7 @@ This section provides details for each class and property defined by EVI.
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">Entity</a>
+               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1296,6 +1387,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/supportedBy</p>
+      <div class="comment">
+         <span class="markdown">The supportedBy property is a transitive relation between Representations.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -1318,6 +1412,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/supports</p>
+      <div class="comment">
+         <span class="markdown">The supports property is a transitive relation between Representations.</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:</strong> transitive</p>
@@ -1352,6 +1449,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/used</p>
+      <div class="comment">
+         <span class="markdown">A prov:Activity that used a prov:Entity.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -1363,14 +1463,12 @@ This section provides details for each class and property defined by EVI.
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity">Activity</a>
+               <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">Activity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity"
-                  title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">Entity</a>
+               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1388,6 +1486,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/usedBy</p>
+      <div class="comment">
+         <span class="markdown">A prov:Entity that was used by a prov:Activity.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
@@ -1405,6 +1506,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/usedDataset</p>
+      <div class="comment">
+         <span class="markdown">A Computation as a prov:Activity that used Dataset as a prov:Entity.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1432,6 +1536,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/usedService</p>
+      <div class="comment">
+         <span class="markdown">A Computation as a prov:Activity that used Service as a prov:Entity.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1459,6 +1566,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/usedSoftware</p>
+      <div class="comment">
+         <span class="markdown">A Computation as a prov:Activity that used Software as a prov:Entity.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1479,13 +1589,16 @@ This section provides details for each class and property defined by EVI.
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">
+   <div class="entity" id="https://www.w3.org/ns/prov#wasAssociatedWith">
       <h3>wasAssociatedWith<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith</p>
+         <strong>IRI:</strong> https://www.w3.org/ns/prov#wasAssociatedWith</p>
+      <div class="comment">
+         <span class="markdown">A prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -1496,13 +1609,16 @@ This section provides details for each class and property defined by EVI.
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo">
+   <div class="entity" id="https://www.w3.org/ns/prov#wasAttributedTo">
       <h3>wasAttributedTo<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo</p>
+         <strong>IRI:</strong> https://www.w3.org/ns/prov#wasAttributedTo</p>
+      <div class="comment">
+         <span class="markdown">Attribution is the ascribing of a prov:Entity to a prov:Agent.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -1513,13 +1629,16 @@ This section provides details for each class and property defined by EVI.
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">
+   <div class="entity" id="https://www.w3.org/ns/prov#wasDerivedFrom">
       <h3>wasDerivedFrom<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom</p>
+         <strong>IRI:</strong> https://www.w3.org/ns/prov#wasDerivedFrom</p>
+      <div class="comment">
+         <span class="markdown">A derivation is a transformation of a prov:Entity into another, an update of a prov:Entity resulting in a new one, or the construction of a new prov:Entity based on a pre-existing prov:Entity.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -1530,13 +1649,16 @@ This section provides details for each class and property defined by EVI.
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy">
+   <div class="entity" id="https://www.w3.org/ns/prov#wasGeneratedBy">
       <h3>wasGeneratedBy<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy</p>
+         <strong>IRI:</strong> https://www.w3.org/ns/prov#wasGeneratedBy</p>
+      <div class="comment">
+         <span class="markdown">Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -1551,8 +1673,7 @@ This section provides details for each class and property defined by EVI.
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#https://www.w3.org/TR/2013/REC-prov-o-20130430/#atTime"
-            title="https://www.w3.org/TR/2013/REC-prov-o-20130430/#atTime">atTime</a>
+         <a href="#https://www.w3.org/ns/prov#atTime" title="https://www.w3.org/ns/prov#atTime">atTime</a>
       </li>
       <li>
          <a href="#citation" title="https://w3id.org/evi/citation">citation</a>
@@ -1564,19 +1685,16 @@ This section provides details for each class and property defined by EVI.
          <a href="#id" title="https://w3id.org/evi/id">id</a>
       </li>
       <li>
-         <a href="#qualifiedBy" title="https://w3id.org/evi/qualifiedBy">qualifiedBy</a>
-      </li>
-      <li>
          <a href="#state" title="https://w3id.org/evi/state">state</a>
       </li>
    </ul>
-   <div class="entity" id="https://www.w3.org/TR/2013/REC-prov-o-20130430/#atTime">
+   <div class="entity" id="https://www.w3.org/ns/prov#atTime">
       <h3>atTime<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://www.w3.org/TR/2013/REC-prov-o-20130430/#atTime</p>
+         <strong>IRI:</strong> https://www.w3.org/ns/prov#atTime</p>
       <div class="comment">
          <span class="markdown">The PROV data model is implicitly based on a notion of instantaneous events (or just events), that mark transitions in the world. Events include generation, usage, or invalidation of entities, as well as starting or ending of activities. This notion of event is not first-class in the data model, but it is useful for explaining its other concepts and its semantics.</span>
       </div>
@@ -1588,6 +1706,9 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/citation</p>
+      <div class="comment">
+         <span class="markdown">The description of Reference in the form of xsd:string.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -1610,7 +1731,7 @@ This section provides details for each class and property defined by EVI.
       <p>
          <strong>IRI:</strong> https://schema.org/contentUrl</p>
       <div class="comment">
-         <span class="markdown">Actual bytes of the media object, for example the image file or video file</span>
+         <span class="markdown">A URL for the media object in the form of xsd:anyURI.</span>
       </div>
       <div class="description">
          <dl>
@@ -1628,21 +1749,8 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/id</p>
-   </div>
-   <div class="entity" id="qualifiedBy">
-      <h3>qualifiedBy<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/evi/qualifiedBy</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
+      <div class="comment">
+         <span class="markdown">An identifier to specify an object.</span>
       </div>
    </div>
    <div class="entity" id="state">
@@ -1652,11 +1760,14 @@ This section provides details for each class and property defined by EVI.
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/evi/state</p>
+      <div class="comment">
+         <span class="markdown">The statement of Claim in the form of xsd:string.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://schema.org/Claim" title="http://schema.org/Claim">Claim</a>
+               <a href="#Claim" title="https://w3id.org/evi/Claim">Claim</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
