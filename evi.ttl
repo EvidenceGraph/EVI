@@ -9,7 +9,7 @@
 <https://w3id.org/evi/> rdf:type owl:Ontology ;
                          <http://purl.org/dc/terms/contributor> "https://github.com/jniestroy" ,
                                                                 "https://github.com/mlev71" ;
-                         <http://purl.org/dc/terms/created> "2020-07-31"^^rdfs:Literal ;
+                         <http://purl.org/dc/terms/created> "2020-07-27"@en ;
                          <http://purl.org/dc/terms/creator> "https://datascience.virginia.edu/people/tim-clark" ,
                                                             "https://github.com/sadnanalmanir" ;
                          <http://purl.org/dc/terms/description> "The Evidence Graph ontology extends core concepts from the W3C Provenance Ontology PROV-O and Bioschemas' Profiles to describe evidence for correctness of findings in biomedical publications. The semantic data model in EVI is expressed using OWL2 Web Ontology Language (OWL2)."@en ;
@@ -18,7 +18,7 @@
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "evi" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/evi/"@en ;
                          owl:versionIRI "http://www.w3.org/2002/07/owl"@en ;
-                         owl:versionInfo "1.0"@en .
+                         owl:versionInfo "0.1"@en .
 
 #################################################################
 #    Annotation properties

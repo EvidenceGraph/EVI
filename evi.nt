@@ -1,7 +1,7 @@
 <https://w3id.org/evi/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/evi/> <http://purl.org/dc/terms/contributor> "https://github.com/jniestroy" .
 <https://w3id.org/evi/> <http://purl.org/dc/terms/contributor> "https://github.com/mlev71" .
-<https://w3id.org/evi/> <http://purl.org/dc/terms/created> "2020-07-31"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/evi/> <http://purl.org/dc/terms/created> "2020-07-27"@en .
 <https://w3id.org/evi/> <http://purl.org/dc/terms/creator> "https://datascience.virginia.edu/people/tim-clark" .
 <https://w3id.org/evi/> <http://purl.org/dc/terms/creator> "https://github.com/sadnanalmanir" .
 <https://w3id.org/evi/> <http://purl.org/dc/terms/description> "The Evidence Graph ontology extends core concepts from the W3C Provenance Ontology PROV-O and Bioschemas' Profiles to describe evidence for correctness of findings in biomedical publications. The semantic data model in EVI is expressed using OWL2 Web Ontology Language (OWL2)."@en .
@@ -10,7 +10,7 @@
 <https://w3id.org/evi/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "evi" .
 <https://w3id.org/evi/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/evi/"@en .
 <https://w3id.org/evi/> <http://www.w3.org/2002/07/owl#versionIRI> "http://www.w3.org/2002/07/owl"@en .
-<https://w3id.org/evi/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+<https://w3id.org/evi/> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"@en .
 # 
 # 
 # #################################################################
