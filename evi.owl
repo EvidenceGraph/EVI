@@ -15,7 +15,7 @@
     <owl:Ontology rdf:about="https://w3id.org/evi/">
         <terms:contributor>https://github.com/jniestroy</terms:contributor>
         <terms:contributor>https://github.com/mlev71</terms:contributor>
-        <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2020-07-31</terms:created>
+        <terms:created xml:lang="en">2020-07-27</terms:created>
         <terms:creator>https://datascience.virginia.edu/people/tim-clark</terms:creator>
         <terms:creator>https://github.com/sadnanalmanir</terms:creator>
         <terms:description xml:lang="en">The Evidence Graph ontology extends core concepts from the W3C Provenance Ontology PROV-O and Bioschemas&apos; Profiles to describe evidence for correctness of findings in biomedical publications. The semantic data model in EVI is expressed using OWL2 Web Ontology Language (OWL2).</terms:description>
@@ -24,7 +24,7 @@
         <vann:preferredNamespacePrefix>evi</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri xml:lang="en">http://w3id.org/evi/</vann:preferredNamespaceUri>
         <owl:versionIRI xml:lang="en">http://www.w3.org/2002/07/owl</owl:versionIRI>
-        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">0.1</owl:versionInfo>
     </owl:Ontology>
     
 
