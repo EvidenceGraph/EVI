@@ -1,16 +1,16 @@
-<https://w3id.org/evi/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/evi/> <http://purl.org/dc/terms/contributor> "https://github.com/jniestroy" .
-<https://w3id.org/evi/> <http://purl.org/dc/terms/contributor> "https://github.com/mlev71" .
-<https://w3id.org/evi/> <http://purl.org/dc/terms/created> "2020-07-27"@en .
-<https://w3id.org/evi/> <http://purl.org/dc/terms/creator> "https://datascience.virginia.edu/people/tim-clark" .
-<https://w3id.org/evi/> <http://purl.org/dc/terms/creator> "https://github.com/sadnanalmanir" .
-<https://w3id.org/evi/> <http://purl.org/dc/terms/description> "The Evidence Graph ontology extends core concepts from the W3C Provenance Ontology PROV-O and Bioschemas' Profiles to describe evidence for correctness of findings in biomedical publications. The semantic data model in EVI is expressed using OWL2 Web Ontology Language (OWL2)."@en .
-<https://w3id.org/evi/> <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by-nc-sa/2.0/" .
-<https://w3id.org/evi/> <http://purl.org/dc/terms/title> "EVI: Evidence Graph Ontology"@en .
-<https://w3id.org/evi/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "evi" .
-<https://w3id.org/evi/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/evi/"@en .
-<https://w3id.org/evi/> <http://www.w3.org/2002/07/owl#versionIRI> "http://www.w3.org/2002/07/owl"@en .
-<https://w3id.org/evi/> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"@en .
+<https://w3id.org/EVI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/EVI> <http://purl.org/dc/terms/contributor> "https://github.com/jniestroy" .
+<https://w3id.org/EVI> <http://purl.org/dc/terms/contributor> "https://github.com/mlev71" .
+<https://w3id.org/EVI> <http://purl.org/dc/terms/created> "2020-07-27"@en .
+<https://w3id.org/EVI> <http://purl.org/dc/terms/creator> "https://datascience.virginia.edu/people/tim-clark" .
+<https://w3id.org/EVI> <http://purl.org/dc/terms/creator> "https://github.com/sadnanalmanir" .
+<https://w3id.org/EVI> <http://purl.org/dc/terms/description> "The Evidence Graph ontology extends core concepts from the W3C Provenance Ontology PROV-O and Bioschemas' Profiles to describe evidence for correctness of findings in biomedical publications. The semantic data model in EVI is expressed using OWL2 Web Ontology Language (OWL2)."@en .
+<https://w3id.org/EVI> <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by-nc-sa/2.0/" .
+<https://w3id.org/EVI> <http://purl.org/dc/terms/title> "EVI: Evidence Graph Ontology"@en .
+<https://w3id.org/EVI> <http://purl.org/vocab/vann/preferredNamespacePrefix> "evi" .
+<https://w3id.org/EVI> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/evi/"@en .
+<https://w3id.org/EVI> <http://www.w3.org/2002/07/owl#versionIRI> "http://www.w3.org/2002/07/owl"@en .
+<https://w3id.org/EVI> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"@en .
 # 
 # 
 # #################################################################
@@ -59,209 +59,209 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/evi/about
-<https://w3id.org/evi/about> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/about> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/Caption> .
-<https://w3id.org/evi/about> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Dataset> .
-<https://w3id.org/evi/about> <http://www.w3.org/2000/01/rdf-schema#comment> "Asserts instance of a Caption about a Dataset." .
-<https://w3id.org/evi/about> <http://www.w3.org/2000/01/rdf-schema#label> "about" .
+# https://w3id.org/EVI#about
+<https://w3id.org/EVI#about> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#about> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#Caption> .
+<https://w3id.org/EVI#about> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Dataset> .
+<https://w3id.org/EVI#about> <http://www.w3.org/2000/01/rdf-schema#comment> "Asserts instance of a Caption about a Dataset." .
+<https://w3id.org/EVI#about> <http://www.w3.org/2000/01/rdf-schema#label> "about" .
 # 
-# https://w3id.org/evi/arguedBy
-<https://w3id.org/evi/arguedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/arguedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/evi/argues> .
-<https://w3id.org/evi/arguedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Asserts that the principal Claim is arguedBy an EvideneGraph." .
-<https://w3id.org/evi/arguedBy> <http://www.w3.org/2000/01/rdf-schema#label> "arguedBy" .
+# https://w3id.org/EVI#arguedBy
+<https://w3id.org/EVI#arguedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#arguedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/EVI#argues> .
+<https://w3id.org/EVI#arguedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Asserts that the principal Claim is arguedBy an EvideneGraph." .
+<https://w3id.org/EVI#arguedBy> <http://www.w3.org/2000/01/rdf-schema#label> "arguedBy" .
 # 
-# https://w3id.org/evi/argues
-<https://w3id.org/evi/argues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/argues> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/EvidenceGraph> .
-<https://w3id.org/evi/argues> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Claim> .
-<https://w3id.org/evi/argues> <http://www.w3.org/2000/01/rdf-schema#comment> "Asserts that EvidenceGraph argues the principal Claim." .
-<https://w3id.org/evi/argues> <http://www.w3.org/2000/01/rdf-schema#label> "argues" .
+# https://w3id.org/EVI#argues
+<https://w3id.org/EVI#argues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#argues> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#EvidenceGraph> .
+<https://w3id.org/EVI#argues> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Claim> .
+<https://w3id.org/EVI#argues> <http://www.w3.org/2000/01/rdf-schema#comment> "Asserts that EvidenceGraph argues the principal Claim." .
+<https://w3id.org/EVI#argues> <http://www.w3.org/2000/01/rdf-schema#label> "argues" .
 # 
-# https://w3id.org/evi/assertedBy
-<https://w3id.org/evi/assertedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/assertedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/evi/asserts> .
-<https://w3id.org/evi/assertedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of Representation assertedBy instance of EvidenceGraph." .
-<https://w3id.org/evi/assertedBy> <http://www.w3.org/2000/01/rdf-schema#label> "assertedBy" .
+# https://w3id.org/EVI#assertedBy
+<https://w3id.org/EVI#assertedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#assertedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/EVI#asserts> .
+<https://w3id.org/EVI#assertedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of Representation assertedBy instance of EvidenceGraph." .
+<https://w3id.org/EVI#assertedBy> <http://www.w3.org/2000/01/rdf-schema#label> "assertedBy" .
 # 
-# https://w3id.org/evi/asserts
-<https://w3id.org/evi/asserts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/asserts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/evi/contains> .
-<https://w3id.org/evi/asserts> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/EvidenceGraph> .
-<https://w3id.org/evi/asserts> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/asserts> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of EvidenceGraph asserts instance of Representation." .
-<https://w3id.org/evi/asserts> <http://www.w3.org/2000/01/rdf-schema#label> "asserts" .
+# https://w3id.org/EVI#asserts
+<https://w3id.org/EVI#asserts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#asserts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/EVI#contains> .
+<https://w3id.org/EVI#asserts> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#EvidenceGraph> .
+<https://w3id.org/EVI#asserts> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#asserts> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of EvidenceGraph asserts instance of Representation." .
+<https://w3id.org/EVI#asserts> <http://www.w3.org/2000/01/rdf-schema#label> "asserts" .
 # 
-# https://w3id.org/evi/associatedWith
-<https://w3id.org/evi/associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/associatedWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3.org/ns/prov#wasAssociatedWith> .
-<https://w3id.org/evi/associatedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/prov#Activity> .
-<https://w3id.org/evi/associatedWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Agent> .
-<https://w3id.org/evi/associatedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "A prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity." .
-<https://w3id.org/evi/associatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "associatedWith" .
+# https://w3id.org/EVI#associatedWith
+<https://w3id.org/EVI#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#associatedWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3.org/ns/prov#wasAssociatedWith> .
+<https://w3id.org/EVI#associatedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/EVI#associatedWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/EVI#associatedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "A prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity." .
+<https://w3id.org/EVI#associatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "associatedWith" .
 # 
-# https://w3id.org/evi/attributedTo
-<https://w3id.org/evi/attributedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/attributedTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3.org/ns/prov#wasAttributedTo> .
-<https://w3id.org/evi/attributedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/prov#Entity> .
-<https://w3id.org/evi/attributedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Agent> .
-<https://w3id.org/evi/attributedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribution is the ascribing of a prov:Entity to a prov:Agent." .
-<https://w3id.org/evi/attributedTo> <http://www.w3.org/2000/01/rdf-schema#label> "attributedTo" .
+# https://w3id.org/EVI#attributedTo
+<https://w3id.org/EVI#attributedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#attributedTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3.org/ns/prov#wasAttributedTo> .
+<https://w3id.org/EVI#attributedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/EVI#attributedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/EVI#attributedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribution is the ascribing of a prov:Entity to a prov:Agent." .
+<https://w3id.org/EVI#attributedTo> <http://www.w3.org/2000/01/rdf-schema#label> "attributedTo" .
 # 
-# https://w3id.org/evi/challengedBy
-<https://w3id.org/evi/challengedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/challengedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/evi/challenges> .
-<https://w3id.org/evi/challengedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Reverse of challenges property." .
-<https://w3id.org/evi/challengedBy> <http://www.w3.org/2000/01/rdf-schema#label> "challengedBy" .
+# https://w3id.org/EVI#challengedBy
+<https://w3id.org/EVI#challengedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#challengedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/EVI#challenges> .
+<https://w3id.org/EVI#challengedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Reverse of challenges property." .
+<https://w3id.org/EVI#challengedBy> <http://www.w3.org/2000/01/rdf-schema#label> "challengedBy" .
 # 
-# https://w3id.org/evi/challenges
-<https://w3id.org/evi/challenges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/challenges> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/challenges> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/challenges> <http://www.w3.org/2000/01/rdf-schema#comment> "The challenges property is inferred when Representation either directlyChallenges another, or indirectlyChallenges it by undercutting (directlyChallenges) a Representation which supports it." .
-<https://w3id.org/evi/challenges> <http://www.w3.org/2000/01/rdf-schema#label> "challenges" .
+# https://w3id.org/EVI#challenges
+<https://w3id.org/EVI#challenges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#challenges> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#challenges> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#challenges> <http://www.w3.org/2000/01/rdf-schema#comment> "The challenges property is inferred when Representation either directlyChallenges another, or indirectlyChallenges it by undercutting (directlyChallenges) a Representation which supports it." .
+<https://w3id.org/EVI#challenges> <http://www.w3.org/2000/01/rdf-schema#label> "challenges" .
 # 
-# https://w3id.org/evi/contains
-<https://w3id.org/evi/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/contains> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/contains> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Instances of Representations may contain instances of  Representations." .
-<https://w3id.org/evi/contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains" .
+# https://w3id.org/EVI#contains
+<https://w3id.org/EVI#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#contains> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#contains> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Instances of Representations may contain instances of  Representations." .
+<https://w3id.org/EVI#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains" .
 # 
-# https://w3id.org/evi/creator
-<https://w3id.org/evi/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/creator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/creator> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Agent> .
-<https://w3id.org/evi/creator> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Representation responsible for making the resource. Recommended practice is to identify the creator with a URI." .
-<https://w3id.org/evi/creator> <http://www.w3.org/2000/01/rdf-schema#label> "creator" .
+# https://w3id.org/EVI#creator
+<https://w3id.org/EVI#creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#creator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#creator> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/EVI#creator> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Representation responsible for making the resource. Recommended practice is to identify the creator with a URI." .
+<https://w3id.org/EVI#creator> <http://www.w3.org/2000/01/rdf-schema#label> "creator" .
 # 
-# https://w3id.org/evi/derivedFrom
-<https://w3id.org/evi/derivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3.org/ns/prov#wasDerivedFrom> .
-<https://w3id.org/evi/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/prov#Entity> .
-<https://w3id.org/evi/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Entity> .
-<https://w3id.org/evi/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "A derivation is a transformation of a prov:Entity into another, an update of a prov:Entity resulting in a new one, or the construction of a new prov:Entity based on a pre-existing prov:Entity." .
-<https://w3id.org/evi/derivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "derivedFrom" .
+# https://w3id.org/EVI#derivedFrom
+<https://w3id.org/EVI#derivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3.org/ns/prov#wasDerivedFrom> .
+<https://w3id.org/EVI#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/EVI#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/EVI#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "A derivation is a transformation of a prov:Entity into another, an update of a prov:Entity resulting in a new one, or the construction of a new prov:Entity based on a pre-existing prov:Entity." .
+<https://w3id.org/EVI#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "derivedFrom" .
 # 
-# https://w3id.org/evi/directlyChallengedBy
-<https://w3id.org/evi/directlyChallengedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/directlyChallengedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/evi/challengedBy> .
-<https://w3id.org/evi/directlyChallengedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/evi/directlyChallenges> .
-<https://w3id.org/evi/directlyChallengedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Reverse of directlyChallenges property." .
-<https://w3id.org/evi/directlyChallengedBy> <http://www.w3.org/2000/01/rdf-schema#label> "directlyChallengedBy" .
+# https://w3id.org/EVI#directlyChallengedBy
+<https://w3id.org/EVI#directlyChallengedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#directlyChallengedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/EVI#challengedBy> .
+<https://w3id.org/EVI#directlyChallengedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/EVI#directlyChallenges> .
+<https://w3id.org/EVI#directlyChallengedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Reverse of directlyChallenges property." .
+<https://w3id.org/EVI#directlyChallengedBy> <http://www.w3.org/2000/01/rdf-schema#label> "directlyChallengedBy" .
 # 
-# https://w3id.org/evi/directlyChallenges
-<https://w3id.org/evi/directlyChallenges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/directlyChallenges> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/evi/challenges> .
-<https://w3id.org/evi/directlyChallenges> <http://www.w3.org/2000/01/rdf-schema#comment> "The directlyChallenges property establishes a relation between instances of Representations when they directly challenge one another." .
-<https://w3id.org/evi/directlyChallenges> <http://www.w3.org/2000/01/rdf-schema#label> "directlyChallenges" .
+# https://w3id.org/EVI#directlyChallenges
+<https://w3id.org/EVI#directlyChallenges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#directlyChallenges> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/EVI#challenges> .
+<https://w3id.org/EVI#directlyChallenges> <http://www.w3.org/2000/01/rdf-schema#comment> "The directlyChallenges property establishes a relation between instances of Representations when they directly challenge one another." .
+<https://w3id.org/EVI#directlyChallenges> <http://www.w3.org/2000/01/rdf-schema#label> "directlyChallenges" .
 # 
-# https://w3id.org/evi/directlySupportedBy
-<https://w3id.org/evi/directlySupportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/directlySupportedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/evi/supportedBy> .
-<https://w3id.org/evi/directlySupportedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/evi/directlySupports> .
-<https://w3id.org/evi/directlySupportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The use of directlySupportedBy property is intended to establish a direct relation between instances of  Representations." .
-<https://w3id.org/evi/directlySupportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "directlySupportedBy" .
+# https://w3id.org/EVI#directlySupportedBy
+<https://w3id.org/EVI#directlySupportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#directlySupportedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/EVI#supportedBy> .
+<https://w3id.org/EVI#directlySupportedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/EVI#directlySupports> .
+<https://w3id.org/EVI#directlySupportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The use of directlySupportedBy property is intended to establish a direct relation between instances of  Representations." .
+<https://w3id.org/EVI#directlySupportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "directlySupportedBy" .
 # 
-# https://w3id.org/evi/directlySupports
-<https://w3id.org/evi/directlySupports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/directlySupports> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/evi/supports> .
-<https://w3id.org/evi/directlySupports> <http://www.w3.org/2000/01/rdf-schema#comment> "The use of directlySupports property is intended to establish a direct relation between instances of  Representations." .
-<https://w3id.org/evi/directlySupports> <http://www.w3.org/2000/01/rdf-schema#label> "directlySupports" .
+# https://w3id.org/EVI#directlySupports
+<https://w3id.org/EVI#directlySupports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#directlySupports> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/EVI#supports> .
+<https://w3id.org/EVI#directlySupports> <http://www.w3.org/2000/01/rdf-schema#comment> "The use of directlySupports property is intended to establish a direct relation between instances of  Representations." .
+<https://w3id.org/EVI#directlySupports> <http://www.w3.org/2000/01/rdf-schema#label> "directlySupports" .
 # 
-# https://w3id.org/evi/generatedBy
-<https://w3id.org/evi/generatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/generatedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3.org/ns/prov#wasGeneratedBy> .
-<https://w3id.org/evi/generatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/prov#Entity> .
-<https://w3id.org/evi/generatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Activity> .
-<https://w3id.org/evi/generatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation." .
-<https://w3id.org/evi/generatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "generatedBy" .
+# https://w3id.org/EVI#generatedBy
+<https://w3id.org/EVI#generatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#generatedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3.org/ns/prov#wasGeneratedBy> .
+<https://w3id.org/EVI#generatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/EVI#generatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/EVI#generatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation." .
+<https://w3id.org/EVI#generatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "generatedBy" .
 # 
-# https://w3id.org/evi/indirectlyChallengedBy
-<https://w3id.org/evi/indirectlyChallengedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/indirectlyChallengedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/evi/challengedBy> .
-<https://w3id.org/evi/indirectlyChallengedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/evi/indirectlyChallenges> .
-<https://w3id.org/evi/indirectlyChallengedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Reverse of indirectlyChallenges property." .
-<https://w3id.org/evi/indirectlyChallengedBy> <http://www.w3.org/2000/01/rdf-schema#label> "indirectlyChallengedBy" .
+# https://w3id.org/EVI#indirectlyChallengedBy
+<https://w3id.org/EVI#indirectlyChallengedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#indirectlyChallengedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/EVI#challengedBy> .
+<https://w3id.org/EVI#indirectlyChallengedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/EVI#indirectlyChallenges> .
+<https://w3id.org/EVI#indirectlyChallengedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Reverse of indirectlyChallenges property." .
+<https://w3id.org/EVI#indirectlyChallengedBy> <http://www.w3.org/2000/01/rdf-schema#label> "indirectlyChallengedBy" .
 # 
-# https://w3id.org/evi/indirectlyChallenges
-<https://w3id.org/evi/indirectlyChallenges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/indirectlyChallenges> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/evi/challenges> .
-<https://w3id.org/evi/indirectlyChallenges> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid2 .
+# https://w3id.org/EVI#indirectlyChallenges
+<https://w3id.org/EVI#indirectlyChallenges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#indirectlyChallenges> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/EVI#challenges> .
+<https://w3id.org/EVI#indirectlyChallenges> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/evi/directlyChallenges> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/EVI#directlyChallenges> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid1 .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/evi/supports> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/EVI#supports> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/evi/indirectlyChallenges> <http://www.w3.org/2000/01/rdf-schema#comment> "The indirectlyChallenges property establishes a relation between instances of Representations when they indirectly challenge one another with the help of property chaining." .
-<https://w3id.org/evi/indirectlyChallenges> <http://www.w3.org/2000/01/rdf-schema#label> "indirectlyChallenges" .
+<https://w3id.org/EVI#indirectlyChallenges> <http://www.w3.org/2000/01/rdf-schema#comment> "The indirectlyChallenges property establishes a relation between instances of Representations when they indirectly challenge one another with the help of property chaining." .
+<https://w3id.org/EVI#indirectlyChallenges> <http://www.w3.org/2000/01/rdf-schema#label> "indirectlyChallenges" .
 # 
-# https://w3id.org/evi/representedBy
-<https://w3id.org/evi/representedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/representedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/evi/represents> .
-<https://w3id.org/evi/representedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Instances of prov:Entity may be represented by instance of Representation." .
-<https://w3id.org/evi/representedBy> <http://www.w3.org/2000/01/rdf-schema#label> "representedBy" .
+# https://w3id.org/EVI#representedBy
+<https://w3id.org/EVI#representedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#representedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/EVI#represents> .
+<https://w3id.org/EVI#representedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Instances of prov:Entity may be represented by instance of Representation." .
+<https://w3id.org/EVI#representedBy> <http://www.w3.org/2000/01/rdf-schema#label> "representedBy" .
 # 
-# https://w3id.org/evi/represents
-<https://w3id.org/evi/represents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/represents> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/represents> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Entity> .
-<https://w3id.org/evi/represents> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of Representation may represent instance of prov:Entity." .
-<https://w3id.org/evi/represents> <http://www.w3.org/2000/01/rdf-schema#label> "represents" .
+# https://w3id.org/EVI#represents
+<https://w3id.org/EVI#represents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#represents> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#represents> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/EVI#represents> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of Representation may represent instance of prov:Entity." .
+<https://w3id.org/EVI#represents> <http://www.w3.org/2000/01/rdf-schema#label> "represents" .
 # 
-# https://w3id.org/evi/supportedBy
-<https://w3id.org/evi/supportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/supportedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/evi/supports> .
-<https://w3id.org/evi/supportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The supportedBy property is a transitive relation between Representations." .
-<https://w3id.org/evi/supportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "supportedBy" .
+# https://w3id.org/EVI#supportedBy
+<https://w3id.org/EVI#supportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#supportedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/EVI#supports> .
+<https://w3id.org/EVI#supportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The supportedBy property is a transitive relation between Representations." .
+<https://w3id.org/EVI#supportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "supportedBy" .
 # 
-# https://w3id.org/evi/supports
-<https://w3id.org/evi/supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<https://w3id.org/evi/supports> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/supports> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/supports> <http://www.w3.org/2000/01/rdf-schema#comment> "The supports property is a transitive relation between Representations." .
-<https://w3id.org/evi/supports> <http://www.w3.org/2000/01/rdf-schema#label> "supports" .
+# https://w3id.org/EVI#supports
+<https://w3id.org/EVI#supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/EVI#supports> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#supports> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#supports> <http://www.w3.org/2000/01/rdf-schema#comment> "The supports property is a transitive relation between Representations." .
+<https://w3id.org/EVI#supports> <http://www.w3.org/2000/01/rdf-schema#label> "supports" .
 # 
-# https://w3id.org/evi/used
-<https://w3id.org/evi/used> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/used> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/evi/usedBy> .
-<https://w3id.org/evi/used> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/prov#Activity> .
-<https://w3id.org/evi/used> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Entity> .
-<https://w3id.org/evi/used> <http://www.w3.org/2000/01/rdf-schema#comment> "A prov:Activity that used a prov:Entity." .
-<https://w3id.org/evi/used> <http://www.w3.org/2000/01/rdf-schema#comment> "The more specific usedDataset, usedService, usedSoftware properties should be used whenever possible." .
-<https://w3id.org/evi/used> <http://www.w3.org/2000/01/rdf-schema#label> "used" .
+# https://w3id.org/EVI#used
+<https://w3id.org/EVI#used> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#used> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/EVI#usedBy> .
+<https://w3id.org/EVI#used> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/EVI#used> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/EVI#used> <http://www.w3.org/2000/01/rdf-schema#comment> "A prov:Activity that used a prov:Entity." .
+<https://w3id.org/EVI#used> <http://www.w3.org/2000/01/rdf-schema#comment> "The more specific usedDataset, usedService, usedSoftware properties should be used whenever possible." .
+<https://w3id.org/EVI#used> <http://www.w3.org/2000/01/rdf-schema#label> "used" .
 # 
-# https://w3id.org/evi/usedBy
-<https://w3id.org/evi/usedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/usedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A prov:Entity that was used by a prov:Activity." .
-<https://w3id.org/evi/usedBy> <http://www.w3.org/2000/01/rdf-schema#label> "usedBy" .
+# https://w3id.org/EVI#usedBy
+<https://w3id.org/EVI#usedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#usedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A prov:Entity that was used by a prov:Activity." .
+<https://w3id.org/EVI#usedBy> <http://www.w3.org/2000/01/rdf-schema#label> "usedBy" .
 # 
-# https://w3id.org/evi/usedDataset
-<https://w3id.org/evi/usedDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/usedDataset> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/evi/used> .
-<https://w3id.org/evi/usedDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/Computation> .
-<https://w3id.org/evi/usedDataset> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/evi/Dataset> .
-<https://w3id.org/evi/usedDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A Computation as a prov:Activity that used Dataset as a prov:Entity." .
-<https://w3id.org/evi/usedDataset> <http://www.w3.org/2000/01/rdf-schema#label> "usedDataset" .
+# https://w3id.org/EVI#usedDataset
+<https://w3id.org/EVI#usedDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#usedDataset> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/EVI#used> .
+<https://w3id.org/EVI#usedDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#Computation> .
+<https://w3id.org/EVI#usedDataset> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/EVI#Dataset> .
+<https://w3id.org/EVI#usedDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A Computation as a prov:Activity that used Dataset as a prov:Entity." .
+<https://w3id.org/EVI#usedDataset> <http://www.w3.org/2000/01/rdf-schema#label> "usedDataset" .
 # 
-# https://w3id.org/evi/usedService
-<https://w3id.org/evi/usedService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/usedService> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/evi/used> .
-<https://w3id.org/evi/usedService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/Computation> .
-<https://w3id.org/evi/usedService> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/evi/Service> .
-<https://w3id.org/evi/usedService> <http://www.w3.org/2000/01/rdf-schema#comment> "A Computation as a prov:Activity that used Service as a prov:Entity." .
-<https://w3id.org/evi/usedService> <http://www.w3.org/2000/01/rdf-schema#label> "usedService" .
+# https://w3id.org/EVI#usedService
+<https://w3id.org/EVI#usedService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#usedService> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/EVI#used> .
+<https://w3id.org/EVI#usedService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#Computation> .
+<https://w3id.org/EVI#usedService> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/EVI#Service> .
+<https://w3id.org/EVI#usedService> <http://www.w3.org/2000/01/rdf-schema#comment> "A Computation as a prov:Activity that used Service as a prov:Entity." .
+<https://w3id.org/EVI#usedService> <http://www.w3.org/2000/01/rdf-schema#label> "usedService" .
 # 
-# https://w3id.org/evi/usedSoftware
-<https://w3id.org/evi/usedSoftware> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/evi/usedSoftware> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/evi/used> .
-<https://w3id.org/evi/usedSoftware> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/Computation> .
-<https://w3id.org/evi/usedSoftware> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/evi/Software> .
-<https://w3id.org/evi/usedSoftware> <http://www.w3.org/2000/01/rdf-schema#comment> "A Computation as a prov:Activity that used Software as a prov:Entity." .
-<https://w3id.org/evi/usedSoftware> <http://www.w3.org/2000/01/rdf-schema#label> "usedSoftware" .
+# https://w3id.org/EVI#usedSoftware
+<https://w3id.org/EVI#usedSoftware> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/EVI#usedSoftware> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/EVI#used> .
+<https://w3id.org/EVI#usedSoftware> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#Computation> .
+<https://w3id.org/EVI#usedSoftware> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/EVI#Software> .
+<https://w3id.org/EVI#usedSoftware> <http://www.w3.org/2000/01/rdf-schema#comment> "A Computation as a prov:Activity that used Software as a prov:Entity." .
+<https://w3id.org/EVI#usedSoftware> <http://www.w3.org/2000/01/rdf-schema#label> "usedSoftware" .
 # 
 # https://www.w3.org/ns/prov#wasAssociatedWith
 <https://www.w3.org/ns/prov#wasAssociatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -303,24 +303,24 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://schema.org/contentUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual bytes of the media object, for example the image file or video file" .
 <https://schema.org/contentUrl> <http://www.w3.org/2000/01/rdf-schema#label> "contentUrl" .
 # 
-# https://w3id.org/evi/citation
-<https://w3id.org/evi/citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/evi/citation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/Reference> .
-<https://w3id.org/evi/citation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/evi/citation> <http://www.w3.org/2000/01/rdf-schema#comment> "The description of Reference in the form of xsd:string." .
-<https://w3id.org/evi/citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation" .
+# https://w3id.org/EVI#citation
+<https://w3id.org/EVI#citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/EVI#citation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#Reference> .
+<https://w3id.org/EVI#citation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/EVI#citation> <http://www.w3.org/2000/01/rdf-schema#comment> "The description of Reference in the form of xsd:string." .
+<https://w3id.org/EVI#citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation" .
 # 
-# https://w3id.org/evi/id
-<https://w3id.org/evi/id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/evi/id> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier to specify an object." .
-<https://w3id.org/evi/id> <http://www.w3.org/2000/01/rdf-schema#label> "id" .
+# https://w3id.org/EVI#id
+<https://w3id.org/EVI#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/EVI#id> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier to specify an object." .
+<https://w3id.org/EVI#id> <http://www.w3.org/2000/01/rdf-schema#label> "id" .
 # 
-# https://w3id.org/evi/state
-<https://w3id.org/evi/state> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/evi/state> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/evi/Claim> .
-<https://w3id.org/evi/state> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/evi/state> <http://www.w3.org/2000/01/rdf-schema#comment> "The statement of Claim in the form of xsd:string." .
-<https://w3id.org/evi/state> <http://www.w3.org/2000/01/rdf-schema#label> "state" .
+# https://w3id.org/EVI#state
+<https://w3id.org/EVI#state> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/EVI#state> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/EVI#Claim> .
+<https://w3id.org/EVI#state> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/EVI#state> <http://www.w3.org/2000/01/rdf-schema#comment> "The statement of Claim in the form of xsd:string." .
+<https://w3id.org/EVI#state> <http://www.w3.org/2000/01/rdf-schema#label> "state" .
 # 
 # https://www.w3.org/ns/prov#atTime
 <https://www.w3.org/ns/prov#atTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -338,22 +338,22 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://schema.org/Article
 <http://schema.org/Article> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://schema.org/Article> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/evi/Article> .
-<http://schema.org/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Representation> .
+<http://schema.org/Article> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/EVI#Article> .
+<http://schema.org/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Representation> .
 <http://schema.org/Article> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifiable source object of which an EvidenceGraph is derived. It includes information about its location, time of creation, and the authors." .
 <http://schema.org/Article> <http://www.w3.org/2000/01/rdf-schema#label> "Article" .
 # 
 # http://schema.org/Claim
 <http://schema.org/Claim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://schema.org/Claim> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/evi/Claim> .
-<http://schema.org/Claim> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Representation> .
+<http://schema.org/Claim> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/EVI#Claim> .
+<http://schema.org/Claim> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Representation> .
 <http://schema.org/Claim> <http://www.w3.org/2000/01/rdf-schema#comment> "A Claim is a principal statement arguedBy a EvidenceGraph in a scientific Article." .
 <http://schema.org/Claim> <http://www.w3.org/2000/01/rdf-schema#label> "Claim" .
 # 
 # http://schema.org/Dataset
 <http://schema.org/Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://schema.org/Dataset> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/evi/Dataset> .
-<http://schema.org/Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Representation> .
+<http://schema.org/Dataset> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/EVI#Dataset> .
+<http://schema.org/Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Representation> .
 <http://schema.org/Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A body of structured information describing some topic(s) of interest." .
 <http://schema.org/Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
 # 
@@ -373,95 +373,95 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://schema.org/Service
 <http://schema.org/Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://schema.org/Service> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/evi/Service> .
-<http://schema.org/Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Method> .
+<http://schema.org/Service> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/EVI#Service> .
+<http://schema.org/Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Method> .
 <http://schema.org/Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A Method used during a Computation Activity." .
 <http://schema.org/Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service" .
 # 
 # http://schema.org/SoftwareApplication
 <http://schema.org/SoftwareApplication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://schema.org/SoftwareApplication> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/evi/Software> .
-<http://schema.org/SoftwareApplication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Material> .
+<http://schema.org/SoftwareApplication> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/EVI#Software> .
+<http://schema.org/SoftwareApplication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Material> .
 <http://schema.org/SoftwareApplication> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of instructions to perform specific Computation Activity." .
 <http://schema.org/SoftwareApplication> <http://www.w3.org/2000/01/rdf-schema#label> "SoftwareApplication" .
 # 
-# https://w3id.org/evi/Article
-<https://w3id.org/evi/Article> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/Article> <http://www.w3.org/2000/01/rdf-schema#label> "Article" .
+# https://w3id.org/EVI#Article
+<https://w3id.org/EVI#Article> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#Article> <http://www.w3.org/2000/01/rdf-schema#label> "Article" .
 # 
-# https://w3id.org/evi/Caption
-<https://w3id.org/evi/Caption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/Caption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Claim> .
-<https://w3id.org/evi/Caption> <http://www.w3.org/2000/01/rdf-schema#comment> "A composition of descriptive statements which describes information about objects such as images, tables, datasets etc." .
-<https://w3id.org/evi/Caption> <http://www.w3.org/2000/01/rdf-schema#label> "Caption" .
+# https://w3id.org/EVI#Caption
+<https://w3id.org/EVI#Caption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#Caption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Claim> .
+<https://w3id.org/EVI#Caption> <http://www.w3.org/2000/01/rdf-schema#comment> "A composition of descriptive statements which describes information about objects such as images, tables, datasets etc." .
+<https://w3id.org/EVI#Caption> <http://www.w3.org/2000/01/rdf-schema#label> "Caption" .
 # 
-# https://w3id.org/evi/Claim
-<https://w3id.org/evi/Claim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/Claim> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/Claim> <http://www.w3.org/2000/01/rdf-schema#comment> "A Claim is a principal statement arguedBy a EvidenceGraph in a scientific Article." .
-<https://w3id.org/evi/Claim> <http://www.w3.org/2000/01/rdf-schema#label> "Claim" .
+# https://w3id.org/EVI#Claim
+<https://w3id.org/EVI#Claim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#Claim> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#Claim> <http://www.w3.org/2000/01/rdf-schema#comment> "A Claim is a principal statement arguedBy a EvidenceGraph in a scientific Article." .
+<https://w3id.org/EVI#Claim> <http://www.w3.org/2000/01/rdf-schema#label> "Claim" .
 # 
-# https://w3id.org/evi/Computation
-<https://w3id.org/evi/Computation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/Computation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/prov#Activity> .
-<https://w3id.org/evi/Computation> <http://www.w3.org/2000/01/rdf-schema#comment> "Computation is an Activity which is generally performed on a Dataset with the help of a SoftwareApplication" .
-<https://w3id.org/evi/Computation> <http://www.w3.org/2000/01/rdf-schema#label> "Computation" .
+# https://w3id.org/EVI#Computation
+<https://w3id.org/EVI#Computation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#Computation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/EVI#Computation> <http://www.w3.org/2000/01/rdf-schema#comment> "Computation is an Activity which is generally performed on a Dataset with the help of a SoftwareApplication" .
+<https://w3id.org/EVI#Computation> <http://www.w3.org/2000/01/rdf-schema#label> "Computation" .
 # 
-# https://w3id.org/evi/Dataset
-<https://w3id.org/evi/Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A body of structured information describing some topic(s) of interest." .
-<https://w3id.org/evi/Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
+# https://w3id.org/EVI#Dataset
+<https://w3id.org/EVI#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A body of structured information describing some topic(s) of interest." .
+<https://w3id.org/EVI#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
 # 
-# https://w3id.org/evi/EvidenceGraph
-<https://w3id.org/evi/EvidenceGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/EvidenceGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/EvidenceGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "An EvidenceGraph is a set of Representations, having supports and / or challenges relations to one another, and potentially those which have Reference to other EvidenceGraphs." .
-<https://w3id.org/evi/EvidenceGraph> <http://www.w3.org/2000/01/rdf-schema#label> "EvidenceGraph" .
+# https://w3id.org/EVI#EvidenceGraph
+<https://w3id.org/EVI#EvidenceGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#EvidenceGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#EvidenceGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "An EvidenceGraph is a set of Representations, having supports and / or challenges relations to one another, and potentially those which have Reference to other EvidenceGraphs." .
+<https://w3id.org/EVI#EvidenceGraph> <http://www.w3.org/2000/01/rdf-schema#label> "EvidenceGraph" .
 # 
-# https://w3id.org/evi/Material
-<https://w3id.org/evi/Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/Material> <http://www.w3.org/2000/01/rdf-schema#comment> "A Material supports any Method of which it is a component." .
-<https://w3id.org/evi/Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material" .
+# https://w3id.org/EVI#Material
+<https://w3id.org/EVI#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "A Material supports any Method of which it is a component." .
+<https://w3id.org/EVI#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material" .
 # 
-# https://w3id.org/evi/Method
-<https://w3id.org/evi/Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/Method> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/Method> <http://www.w3.org/2000/01/rdf-schema#comment> "A reusable recipe showing how the Dataset were obtained. It specifies an Activitiy, and may refer to some Material as a component of the recipe." .
-<https://w3id.org/evi/Method> <http://www.w3.org/2000/01/rdf-schema#label> "Method" .
+# https://w3id.org/EVI#Method
+<https://w3id.org/EVI#Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#Method> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#Method> <http://www.w3.org/2000/01/rdf-schema#comment> "A reusable recipe showing how the Dataset were obtained. It specifies an Activitiy, and may refer to some Material as a component of the recipe." .
+<https://w3id.org/EVI#Method> <http://www.w3.org/2000/01/rdf-schema#label> "Method" .
 # 
-# https://w3id.org/evi/Reagent
-<https://w3id.org/evi/Reagent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/Reagent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Material> .
-<https://w3id.org/evi/Reagent> <http://www.w3.org/2000/01/rdf-schema#comment> "A Reagent is a Material used for representing biological objects." .
-<https://w3id.org/evi/Reagent> <http://www.w3.org/2000/01/rdf-schema#label> "Reagent" .
+# https://w3id.org/EVI#Reagent
+<https://w3id.org/EVI#Reagent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#Reagent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Material> .
+<https://w3id.org/EVI#Reagent> <http://www.w3.org/2000/01/rdf-schema#comment> "A Reagent is a Material used for representing biological objects." .
+<https://w3id.org/EVI#Reagent> <http://www.w3.org/2000/01/rdf-schema#label> "Reagent" .
 # 
-# https://w3id.org/evi/Reference
-<https://w3id.org/evi/Reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/Reference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Representation> .
-<https://w3id.org/evi/Reference> <http://www.w3.org/2000/01/rdf-schema#comment> "A Representation that is used to speify the citation of an EvidenceGraph." .
-<https://w3id.org/evi/Reference> <http://www.w3.org/2000/01/rdf-schema#label> "Reference" .
+# https://w3id.org/EVI#Reference
+<https://w3id.org/EVI#Reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#Reference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Representation> .
+<https://w3id.org/EVI#Reference> <http://www.w3.org/2000/01/rdf-schema#comment> "A Representation that is used to speify the citation of an EvidenceGraph." .
+<https://w3id.org/EVI#Reference> <http://www.w3.org/2000/01/rdf-schema#label> "Reference" .
 # 
-# https://w3id.org/evi/Representation
-<https://w3id.org/evi/Representation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/Representation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/prov#Entity> .
-<https://w3id.org/evi/Representation> <http://www.w3.org/2000/01/rdf-schema#comment> "A Representation is an Entity which represents an instance of EvidenceGraph, an Article, a Claim, a Dataset, a Material, a Method, or a Reference." .
-<https://w3id.org/evi/Representation> <http://www.w3.org/2000/01/rdf-schema#comment> "A Representation is an Entity which represents something." .
-<https://w3id.org/evi/Representation> <http://www.w3.org/2000/01/rdf-schema#label> "Representation" .
+# https://w3id.org/EVI#Representation
+<https://w3id.org/EVI#Representation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#Representation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/EVI#Representation> <http://www.w3.org/2000/01/rdf-schema#comment> "A Representation is an Entity which represents an instance of EvidenceGraph, an Article, a Claim, a Dataset, a Material, a Method, or a Reference." .
+<https://w3id.org/EVI#Representation> <http://www.w3.org/2000/01/rdf-schema#comment> "A Representation is an Entity which represents something." .
+<https://w3id.org/EVI#Representation> <http://www.w3.org/2000/01/rdf-schema#label> "Representation" .
 # 
-# https://w3id.org/evi/Service
-<https://w3id.org/evi/Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Method> .
-<https://w3id.org/evi/Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A Method used during a Computation Activity." .
-<https://w3id.org/evi/Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service" .
+# https://w3id.org/EVI#Service
+<https://w3id.org/EVI#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Method> .
+<https://w3id.org/EVI#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A Method used during a Computation Activity." .
+<https://w3id.org/EVI#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service" .
 # 
-# https://w3id.org/evi/Software
-<https://w3id.org/evi/Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/evi/Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/evi/Material> .
-<https://w3id.org/evi/Software> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of instructions to perform specific Computation Activity." .
-<https://w3id.org/evi/Software> <http://www.w3.org/2000/01/rdf-schema#label> "Software" .
+# https://w3id.org/EVI#Software
+<https://w3id.org/EVI#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/EVI#Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/EVI#Material> .
+<https://w3id.org/EVI#Software> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of instructions to perform specific Computation Activity." .
+<https://w3id.org/EVI#Software> <http://www.w3.org/2000/01/rdf-schema#label> "Software" .
 # 
 # https://www.w3.org/ns/prov#Activity
 <https://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -502,9 +502,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # #################################################################
 # 
 # 
-<http://purl.org/evi/data2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <http://purl.org/evi/computation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <http://purl.org/evi/data1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://purl.org/evi/data2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <http://purl.org/evi/z> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <http://purl.org/evi/a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <http://purl.org/evi/x> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
@@ -517,7 +517,7 @@ _:genid10 <http://www.w3.org/2003/11/swrl#body> _:genid11 .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid12 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/evi/attributedTo> .
+_:genid12 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/EVI#attributedTo> .
 _:genid12 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/z> .
 _:genid12 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/a> .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
@@ -525,7 +525,7 @@ _:genid10 <http://www.w3.org/2003/11/swrl#head> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid14 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/evi/supports> .
+_:genid14 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/EVI#supports> .
 _:genid14 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/a> .
 _:genid14 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/z> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
@@ -537,7 +537,7 @@ _:genid15 <http://www.w3.org/2003/11/swrl#body> _:genid16 .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid17 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/evi/derivedFrom> .
+_:genid17 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/EVI#derivedFrom> .
 _:genid17 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/z> .
 _:genid17 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/x> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
@@ -545,7 +545,7 @@ _:genid15 <http://www.w3.org/2003/11/swrl#head> _:genid18 .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid19 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/evi/supports> .
+_:genid19 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/EVI#supports> .
 _:genid19 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/x> .
 _:genid19 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/z> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
@@ -557,7 +557,7 @@ _:genid20 <http://www.w3.org/2003/11/swrl#body> _:genid21 .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid22 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/evi/derivedFrom> .
+_:genid22 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/EVI#derivedFrom> .
 _:genid22 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/z> .
 _:genid22 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/x> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
@@ -565,7 +565,7 @@ _:genid20 <http://www.w3.org/2003/11/swrl#head> _:genid23 .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid24 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/evi/supports> .
+_:genid24 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/EVI#supports> .
 _:genid24 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/x> .
 _:genid24 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/z> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
@@ -577,7 +577,7 @@ _:genid25 <http://www.w3.org/2003/11/swrl#body> _:genid26 .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid27 .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid27 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/evi/generatedBy> .
+_:genid27 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/EVI#generatedBy> .
 _:genid27 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/z> .
 _:genid27 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/y> .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
@@ -585,7 +585,7 @@ _:genid25 <http://www.w3.org/2003/11/swrl#head> _:genid28 .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid29 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/evi/supports> .
+_:genid29 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/EVI#supports> .
 _:genid29 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/y> .
 _:genid29 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/z> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
@@ -597,22 +597,22 @@ _:genid3 <http://www.w3.org/2003/11/swrl#body> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid7 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/evi/generatedBy> .
-_:genid7 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/data2> .
-_:genid7 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/computation> .
+_:genid7 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/EVI#usedDataset> .
+_:genid7 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/computation> .
+_:genid7 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/data1> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid5 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/evi/usedDataset> .
-_:genid5 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/computation> .
-_:genid5 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/data1> .
+_:genid5 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/EVI#generatedBy> .
+_:genid5 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/data2> .
+_:genid5 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/computation> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid3 <http://www.w3.org/2003/11/swrl#head> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid9 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/evi/directlySupports> .
+_:genid9 <http://www.w3.org/2003/11/swrl#propertyPredicate> <https://w3id.org/EVI#directlySupports> .
 _:genid9 <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/data1> .
 _:genid9 <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/data2> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .

@@ -31,7 +31,7 @@
     "@id" : "http://purl.org/evi/a"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/evi/attributedTo"
+    "@id" : "https://w3id.org/EVI#attributedTo"
   } ]
 }, {
   "@id" : "_:genid14",
@@ -43,7 +43,7 @@
     "@id" : "http://purl.org/evi/z"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/evi/supports"
+    "@id" : "https://w3id.org/EVI#supports"
   } ]
 }, {
   "@id" : "_:genid15",
@@ -78,7 +78,7 @@
     "@id" : "http://purl.org/evi/x"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/evi/derivedFrom"
+    "@id" : "https://w3id.org/EVI#derivedFrom"
   } ]
 }, {
   "@id" : "_:genid19",
@@ -90,7 +90,7 @@
     "@id" : "http://purl.org/evi/z"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/evi/supports"
+    "@id" : "https://w3id.org/EVI#supports"
   } ]
 }, {
   "@id" : "_:genid20",
@@ -125,7 +125,7 @@
     "@id" : "http://purl.org/evi/x"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/evi/derivedFrom"
+    "@id" : "https://w3id.org/EVI#derivedFrom"
   } ]
 }, {
   "@id" : "_:genid24",
@@ -137,7 +137,7 @@
     "@id" : "http://purl.org/evi/z"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/evi/supports"
+    "@id" : "https://w3id.org/EVI#supports"
   } ]
 }, {
   "@id" : "_:genid25",
@@ -172,7 +172,7 @@
     "@id" : "http://purl.org/evi/y"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/evi/generatedBy"
+    "@id" : "https://w3id.org/EVI#generatedBy"
   } ]
 }, {
   "@id" : "_:genid29",
@@ -184,7 +184,7 @@
     "@id" : "http://purl.org/evi/z"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/evi/supports"
+    "@id" : "https://w3id.org/EVI#supports"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -215,25 +215,25 @@
   "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://purl.org/evi/computation"
-  } ],
-  "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://purl.org/evi/data1"
-  } ],
-  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/evi/usedDataset"
-  } ]
-}, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://purl.org/evi/data2"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
     "@id" : "http://purl.org/evi/computation"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/evi/generatedBy"
+    "@id" : "https://w3id.org/EVI#generatedBy"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://purl.org/evi/computation"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://purl.org/evi/data1"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "https://w3id.org/EVI#usedDataset"
   } ]
 }, {
   "@id" : "_:genid9",
@@ -245,7 +245,7 @@
     "@id" : "http://purl.org/evi/data2"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "https://w3id.org/evi/directlySupports"
+    "@id" : "https://w3id.org/EVI#directlySupports"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/contributor",
@@ -302,10 +302,10 @@
     "@value" : "Article"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/evi/Article"
+    "@id" : "https://w3id.org/EVI#Article"
   } ]
 }, {
   "@id" : "http://schema.org/Claim",
@@ -317,10 +317,10 @@
     "@value" : "Claim"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/evi/Claim"
+    "@id" : "https://w3id.org/EVI#Claim"
   } ]
 }, {
   "@id" : "http://schema.org/Dataset",
@@ -332,10 +332,10 @@
     "@value" : "Dataset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/evi/Dataset"
+    "@id" : "https://w3id.org/EVI#Dataset"
   } ]
 }, {
   "@id" : "http://schema.org/Organization",
@@ -377,10 +377,10 @@
     "@value" : "Service"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Method"
+    "@id" : "https://w3id.org/EVI#Method"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/evi/Service"
+    "@id" : "https://w3id.org/EVI#Service"
   } ]
 }, {
   "@id" : "http://schema.org/SoftwareApplication",
@@ -392,10 +392,10 @@
     "@value" : "SoftwareApplication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Material"
+    "@id" : "https://w3id.org/EVI#Material"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/evi/Software"
+    "@id" : "https://w3id.org/EVI#Software"
   } ]
 }, {
   "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
@@ -418,7 +418,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/",
+  "@id" : "https://w3id.org/EVI",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "https://github.com/jniestroy"
@@ -461,16 +461,16 @@
     "@value" : "0.1"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/Article",
+  "@id" : "https://w3id.org/EVI#Article",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Article"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/Caption",
+  "@id" : "https://w3id.org/EVI#Caption",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A composition of descriptive statements which describes information about objects such as images, tables, datasets etc."
@@ -482,7 +482,7 @@
     "@id" : "http://schema.org/Claim"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/Claim",
+  "@id" : "https://w3id.org/EVI#Claim",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Claim is a principal statement arguedBy a EvidenceGraph in a scientific Article."
@@ -491,10 +491,10 @@
     "@value" : "Claim"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/Computation",
+  "@id" : "https://w3id.org/EVI#Computation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Computation is an Activity which is generally performed on a Dataset with the help of a SoftwareApplication"
@@ -506,7 +506,7 @@
     "@id" : "https://www.w3.org/ns/prov#Activity"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/Dataset",
+  "@id" : "https://w3id.org/EVI#Dataset",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A body of structured information describing some topic(s) of interest."
@@ -515,10 +515,10 @@
     "@value" : "Dataset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/EvidenceGraph",
+  "@id" : "https://w3id.org/EVI#EvidenceGraph",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An EvidenceGraph is a set of Representations, having supports and / or challenges relations to one another, and potentially those which have Reference to other EvidenceGraphs."
@@ -527,10 +527,10 @@
     "@value" : "EvidenceGraph"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/Material",
+  "@id" : "https://w3id.org/EVI#Material",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Material supports any Method of which it is a component."
@@ -539,10 +539,10 @@
     "@value" : "Material"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/Method",
+  "@id" : "https://w3id.org/EVI#Method",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A reusable recipe showing how the Dataset were obtained. It specifies an Activitiy, and may refer to some Material as a component of the recipe."
@@ -551,10 +551,10 @@
     "@value" : "Method"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/Reagent",
+  "@id" : "https://w3id.org/EVI#Reagent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Reagent is a Material used for representing biological objects."
@@ -563,10 +563,10 @@
     "@value" : "Reagent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Material"
+    "@id" : "https://w3id.org/EVI#Material"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/Reference",
+  "@id" : "https://w3id.org/EVI#Reference",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Representation that is used to speify the citation of an EvidenceGraph."
@@ -575,10 +575,10 @@
     "@value" : "Reference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/Representation",
+  "@id" : "https://w3id.org/EVI#Representation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Representation is an Entity which represents an instance of EvidenceGraph, an Article, a Claim, a Dataset, a Material, a Method, or a Reference."
@@ -592,7 +592,7 @@
     "@id" : "https://www.w3.org/ns/prov#Entity"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/Service",
+  "@id" : "https://w3id.org/EVI#Service",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Method used during a Computation Activity."
@@ -601,10 +601,10 @@
     "@value" : "Service"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Method"
+    "@id" : "https://w3id.org/EVI#Method"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/Software",
+  "@id" : "https://w3id.org/EVI#Software",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A set of instructions to perform specific Computation Activity."
@@ -613,16 +613,16 @@
     "@value" : "Software"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/evi/Material"
+    "@id" : "https://w3id.org/EVI#Material"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/about",
+  "@id" : "https://w3id.org/EVI#about",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Asserts instance of a Caption about a Dataset."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/Caption"
+    "@id" : "https://w3id.org/EVI#Caption"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "about"
@@ -631,7 +631,7 @@
     "@id" : "http://schema.org/Dataset"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/arguedBy",
+  "@id" : "https://w3id.org/EVI#arguedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Asserts that the principal Claim is arguedBy an EvideneGraph."
@@ -640,16 +640,16 @@
     "@value" : "arguedBy"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/evi/argues"
+    "@id" : "https://w3id.org/EVI#argues"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/argues",
+  "@id" : "https://w3id.org/EVI#argues",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Asserts that EvidenceGraph argues the principal Claim."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/EvidenceGraph"
+    "@id" : "https://w3id.org/EVI#EvidenceGraph"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "argues"
@@ -658,7 +658,7 @@
     "@id" : "http://schema.org/Claim"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/assertedBy",
+  "@id" : "https://w3id.org/EVI#assertedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Instance of Representation assertedBy instance of EvidenceGraph."
@@ -667,28 +667,28 @@
     "@value" : "assertedBy"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/evi/asserts"
+    "@id" : "https://w3id.org/EVI#asserts"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/asserts",
+  "@id" : "https://w3id.org/EVI#asserts",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Instance of EvidenceGraph asserts instance of Representation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/EvidenceGraph"
+    "@id" : "https://w3id.org/EVI#EvidenceGraph"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "asserts"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/evi/contains"
+    "@id" : "https://w3id.org/EVI#contains"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/associatedWith",
+  "@id" : "https://w3id.org/EVI#associatedWith",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity."
@@ -706,7 +706,7 @@
     "@id" : "https://www.w3.org/ns/prov#wasAssociatedWith"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/attributedTo",
+  "@id" : "https://w3id.org/EVI#attributedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Attribution is the ascribing of a prov:Entity to a prov:Agent."
@@ -724,7 +724,7 @@
     "@id" : "https://www.w3.org/ns/prov#wasAttributedTo"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/challengedBy",
+  "@id" : "https://w3id.org/EVI#challengedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Reverse of challenges property."
@@ -733,31 +733,31 @@
     "@value" : "challengedBy"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/evi/challenges"
+    "@id" : "https://w3id.org/EVI#challenges"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/challenges",
+  "@id" : "https://w3id.org/EVI#challenges",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The challenges property is inferred when Representation either directlyChallenges another, or indirectlyChallenges it by undercutting (directlyChallenges) a Representation which supports it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "challenges"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/citation",
+  "@id" : "https://w3id.org/EVI#citation",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The description of Reference in the form of xsd:string."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/Reference"
+    "@id" : "https://w3id.org/EVI#Reference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "citation"
@@ -766,28 +766,28 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/contains",
+  "@id" : "https://w3id.org/EVI#contains",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Instances of Representations may contain instances of  Representations."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "contains"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/creator",
+  "@id" : "https://w3id.org/EVI#creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An instance of Representation responsible for making the resource. Recommended practice is to identify the creator with a URI."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "creator"
@@ -796,7 +796,7 @@
     "@id" : "https://www.w3.org/ns/prov#Agent"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/derivedFrom",
+  "@id" : "https://w3id.org/EVI#derivedFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A derivation is a transformation of a prov:Entity into another, an update of a prov:Entity resulting in a new one, or the construction of a new prov:Entity based on a pre-existing prov:Entity."
@@ -814,7 +814,7 @@
     "@id" : "https://www.w3.org/ns/prov#wasDerivedFrom"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/directlyChallengedBy",
+  "@id" : "https://w3id.org/EVI#directlyChallengedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Reverse of directlyChallenges property."
@@ -823,13 +823,13 @@
     "@value" : "directlyChallengedBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/evi/challengedBy"
+    "@id" : "https://w3id.org/EVI#challengedBy"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/evi/directlyChallenges"
+    "@id" : "https://w3id.org/EVI#directlyChallenges"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/directlyChallenges",
+  "@id" : "https://w3id.org/EVI#directlyChallenges",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The directlyChallenges property establishes a relation between instances of Representations when they directly challenge one another."
@@ -838,10 +838,10 @@
     "@value" : "directlyChallenges"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/evi/challenges"
+    "@id" : "https://w3id.org/EVI#challenges"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/directlySupportedBy",
+  "@id" : "https://w3id.org/EVI#directlySupportedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The use of directlySupportedBy property is intended to establish a direct relation between instances of  Representations."
@@ -850,13 +850,13 @@
     "@value" : "directlySupportedBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/evi/supportedBy"
+    "@id" : "https://w3id.org/EVI#supportedBy"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/evi/directlySupports"
+    "@id" : "https://w3id.org/EVI#directlySupports"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/directlySupports",
+  "@id" : "https://w3id.org/EVI#directlySupports",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The use of directlySupports property is intended to establish a direct relation between instances of  Representations."
@@ -865,10 +865,10 @@
     "@value" : "directlySupports"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/evi/supports"
+    "@id" : "https://w3id.org/EVI#supports"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/generatedBy",
+  "@id" : "https://w3id.org/EVI#generatedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation."
@@ -886,7 +886,7 @@
     "@id" : "https://www.w3.org/ns/prov#wasGeneratedBy"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/id",
+  "@id" : "https://w3id.org/EVI#id",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An identifier to specify an object."
@@ -895,7 +895,7 @@
     "@value" : "id"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/indirectlyChallengedBy",
+  "@id" : "https://w3id.org/EVI#indirectlyChallengedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Reverse of indirectlyChallenges property."
@@ -904,13 +904,13 @@
     "@value" : "indirectlyChallengedBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/evi/challengedBy"
+    "@id" : "https://w3id.org/EVI#challengedBy"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/evi/indirectlyChallenges"
+    "@id" : "https://w3id.org/EVI#indirectlyChallenges"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/indirectlyChallenges",
+  "@id" : "https://w3id.org/EVI#indirectlyChallenges",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The indirectlyChallenges property establishes a relation between instances of Representations when they indirectly challenge one another with the help of property chaining."
@@ -919,17 +919,17 @@
     "@value" : "indirectlyChallenges"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/evi/challenges"
+    "@id" : "https://w3id.org/EVI#challenges"
   } ],
   "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/evi/directlyChallenges"
+      "@id" : "https://w3id.org/EVI#directlyChallenges"
     }, {
-      "@id" : "https://w3id.org/evi/supports"
+      "@id" : "https://w3id.org/EVI#supports"
     } ]
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/representedBy",
+  "@id" : "https://w3id.org/EVI#representedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Instances of prov:Entity may be represented by instance of Representation."
@@ -938,16 +938,16 @@
     "@value" : "representedBy"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/evi/represents"
+    "@id" : "https://w3id.org/EVI#represents"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/represents",
+  "@id" : "https://w3id.org/EVI#represents",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Instance of Representation may represent instance of prov:Entity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "represents"
@@ -956,13 +956,13 @@
     "@id" : "https://www.w3.org/ns/prov#Entity"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/state",
+  "@id" : "https://w3id.org/EVI#state",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The statement of Claim in the form of xsd:string."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/Claim"
+    "@id" : "https://w3id.org/EVI#Claim"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "state"
@@ -971,7 +971,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/supportedBy",
+  "@id" : "https://w3id.org/EVI#supportedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The supportedBy property is a transitive relation between Representations."
@@ -980,25 +980,25 @@
     "@value" : "supportedBy"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/evi/supports"
+    "@id" : "https://w3id.org/EVI#supports"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/supports",
+  "@id" : "https://w3id.org/EVI#supports",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The supports property is a transitive relation between Representations."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "supports"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/evi/Representation"
+    "@id" : "https://w3id.org/EVI#Representation"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/used",
+  "@id" : "https://w3id.org/EVI#used",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A prov:Activity that used a prov:Entity."
@@ -1015,10 +1015,10 @@
     "@id" : "https://www.w3.org/ns/prov#Entity"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/evi/usedBy"
+    "@id" : "https://w3id.org/EVI#usedBy"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/usedBy",
+  "@id" : "https://w3id.org/EVI#usedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A prov:Entity that was used by a prov:Activity."
@@ -1027,58 +1027,58 @@
     "@value" : "usedBy"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/usedDataset",
+  "@id" : "https://w3id.org/EVI#usedDataset",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Computation as a prov:Activity that used Dataset as a prov:Entity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/Computation"
+    "@id" : "https://w3id.org/EVI#Computation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "usedDataset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/evi/Dataset"
+    "@id" : "https://w3id.org/EVI#Dataset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/evi/used"
+    "@id" : "https://w3id.org/EVI#used"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/usedService",
+  "@id" : "https://w3id.org/EVI#usedService",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Computation as a prov:Activity that used Service as a prov:Entity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/Computation"
+    "@id" : "https://w3id.org/EVI#Computation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "usedService"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/evi/Service"
+    "@id" : "https://w3id.org/EVI#Service"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/evi/used"
+    "@id" : "https://w3id.org/EVI#used"
   } ]
 }, {
-  "@id" : "https://w3id.org/evi/usedSoftware",
+  "@id" : "https://w3id.org/EVI#usedSoftware",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A Computation as a prov:Activity that used Software as a prov:Entity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/evi/Computation"
+    "@id" : "https://w3id.org/EVI#Computation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "usedSoftware"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/evi/Software"
+    "@id" : "https://w3id.org/EVI#Software"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/evi/used"
+    "@id" : "https://w3id.org/EVI#used"
   } ]
 }, {
   "@id" : "https://www.w3.org/ns/prov#Activity",
