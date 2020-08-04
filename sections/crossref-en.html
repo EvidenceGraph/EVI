@@ -5,10 +5,10 @@ This section provides details for each class and property defined by EVI.
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">Activity</a>
+         <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">prov:Activity</a>
       </li>
       <li>
-         <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
+         <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">prov:Agent</a>
       </li>
       <li>
          <a href="#Article" title="https://w3id.org/EVI#Article">Article</a>
@@ -26,7 +26,7 @@ This section provides details for each class and property defined by EVI.
          <a href="#Dataset" title="https://w3id.org/EVI#Dataset">Dataset</a>
       </li>
       <li>
-         <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
+         <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">prov:Entity</a>
       </li>
       <li>
          <a href="#EvidenceGraph" title="https://w3id.org/EVI#EvidenceGraph">EvidenceGraph</a>
@@ -47,10 +47,10 @@ This section provides details for each class and property defined by EVI.
          <a href="#Method" title="https://w3id.org/EVI#Method">Method</a>
       </li>
       <li>
-         <a href="#https://www.w3.org/ns/prov#Organization" title="https://www.w3.org/ns/prov#Organization">Organization</a>
+         <a href="#https://www.w3.org/ns/prov#Organization" title="https://www.w3.org/ns/prov#Organization">prov:Organization</a>
       </li>
       <li>
-         <a href="#https://www.w3.org/ns/prov#Person" title="https://www.w3.org/ns/prov#Person">Person</a>
+         <a href="#https://www.w3.org/ns/prov#Person" title="https://www.w3.org/ns/prov#Person">prov:Person</a>
       </li>
       <li>
          <a href="#Reference" title="https://w3id.org/EVI#Reference">Reference</a>
@@ -66,7 +66,7 @@ This section provides details for each class and property defined by EVI.
       </li>
    </ul>
    <div class="entity" id="https://www.w3.org/ns/prov#Activity">
-      <h3>Activity<sup class="type-c" title="class">c</sup>
+      <h3>prov:Activity<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -79,15 +79,15 @@ This section provides details for each class and property defined by EVI.
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (a) A Computation in which a Dataset of Electronic Health Records (EHR) is de-identified is an Activity. 
-           
-           (b) Manual annotation of the de-identified Dataset with descriptive metadata is an Activity. 
-           
-           (c) Selection of a patient cohort from the annotated, de-identified Dataset is an Activity. 
-           
-           (d) Preparation of an Article on analytic findings from the above Dataset analysis is an Activity.
+           (1) A Computation in which a Dataset of Electronic Health Records (EHR) is de-identified is an Activity.
+
+           (2) Manual annotation of the de-identified Dataset with descriptive metadata is an Activity.
+
+           (3) Selection of a patient cohort from the annotated, de-identified Dataset is an Activity.
+
+           (4) Preparation of an Article on analytic findings from the above Dataset analysis is an Activity.
         </pre>
-       </div>   
+       </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
@@ -110,36 +110,36 @@ This section provides details for each class and property defined by EVI.
       </dl>
    </div>
    <div class="entity" id="https://www.w3.org/ns/prov#Agent">
-      <h3>Agent<sup class="type-c" title="class">c</sup>
+      <h3>prov:Agent<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://www.w3.org/ns/prov#Agent</p>
       <div class="comment">
-         <span class="markdown">An Agent is an autonomous Entity. Persons and Organizations are Agents in EVI. Agents may be associatedWith Activities, and Entities may be attributedTo Agents.</span>
+         <span class="markdown">An Agent is an autonomous Entity. Persons and Organizations are Agents in EVI. Agents may be associatedWith Activities, and Entities may be createdBy Agents.</span>
       </div>
        <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (a) Dr. Mary Smith is an Agent of type Person. 
-           
-           (b) The University of Virginia is an Agent, of type Organization. 
+           (1) Dr. Mary Smith is an Agent of type Person.
 
-           (c) The bioRXiv preprint archive is an Agent of type Organization.
+           (2) The University of Virginia is an Agent, of type Organization.
+
+           (3) The bioRxiv preprint archive is an Agent of type Organization.
         </pre>
-       </div>   
+       </div>
        <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
+            <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">prov:Entity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/ns/prov#Organization" title="https://www.w3.org/ns/prov#Organization">Organization</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3.org/ns/prov#Person" title="https://www.w3.org/ns/prov#Person">Person</a>
+            <a href="#https://www.w3.org/ns/prov#Organization" title="https://www.w3.org/ns/prov#Organization">prov:Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3.org/ns/prov#Person" title="https://www.w3.org/ns/prov#Person">prov:Person</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
@@ -158,7 +158,7 @@ This section provides details for each class and property defined by EVI.
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#Article</p>
        <p>
-         <strong>Schema.org Equivalent Class:</strong> https://schema.org/Article</p>
+         <strong>Equivalent Schema.org IRI:</strong> https://schema.org/Article</p>
       <div class="comment">
          <span class="markdown">An Article is a (typically compound) textual document conveying a set of Claims and other Representations. Among these, an Article in EVI always conveys an assertion of its authorship in the form of a bibliographic self-reference.</span>
       </div>
@@ -166,11 +166,15 @@ This section provides details for each class and property defined by EVI.
        <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (a) Dr. Smith&#39;s latest preprint, submitted to “Preprint RXiv”, is an Article, whose creator is Mary Smith.
+           Dr. Smith&#39;s latest preprint, submitted to “Preprint Rxiv”, is an Article, which was createdBy Mary Smith.
         </pre>
-       </div>   
-
+       </div>
        <dl class="description">
+        <dt>has equivalent-classes</dt>
+         <dd>
+            <a href="https://schema.org/Article" title="https://schema.org/Article">schema:Article</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#Representation" title="https://w3id.org/EVI#Representation">Representation</a>
@@ -186,7 +190,7 @@ This section provides details for each class and property defined by EVI.
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#Claim</p>
        <p>
-         <strong>Schema.org Equivalent Class:</strong> https://schema.org/Claim</p>
+         <strong>Equivalent Schema.org IRI:</strong> https://schema.org/Claim</p>
       <div class="comment">
          <span class="markdown">A Claim is a declarative sentence or assertion. Claims are defeasible.</span>
       </div>
@@ -194,12 +198,17 @@ This section provides details for each class and property defined by EVI.
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (a) The sentence &quot;Age (from conception) was significantly correlated with birth weight.&quot; is a Claim. 
-           
-           (b) &quot;Happy birthday!&quot; is not a Claim.
+           (1) The sentence &quot;Age (from conception) was significantly correlated with birth weight.&quot; is a Claim.
+
+           (2) &quot;Happy birthday!&quot; is not a Claim.
         </pre>
-       </div>   
+       </div>
        <dl class="description">
+         <dt>has equivalent-classes</dt>
+         <dd>
+            <a href="https://schema.org/Claim" title="https://schema.org/Claim">schema:Claim</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#Representation" title="https://w3id.org/EVI#Representation">Representation</a>
@@ -221,13 +230,14 @@ This section provides details for each class and property defined by EVI.
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           In Dr. Smith&#39;s research, she performed a Computation to determine the correlation of birth weight and post-menstrual age of one thousand preterm infants.
+           In Dr. Smith&#39;s research, she performed a Computation to determine the correlation of birth weight and post-menstrual age of one thousand
+           preterm infants.
         </pre>
-       </div>   
+       </div>
        <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">Activity</a>
+            <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">prov:Activity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -252,19 +262,19 @@ This section provides details for each class and property defined by EVI.
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#DataAcquisition</p>
       <div class="comment">
-         <span class="markdown">DataAcquisition is an Activity which allows one to collect data using  physical Instruments.</span>
+         <span class="markdown">DataAcquisition is an Activity which allows one to collect data using physical Instruments.</span>
       </div>
       <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (a) Write an example ...
+           Dr. Smith used the BedMasterEx Instrument for acquiring heart rate data from babies in NICU within a 10 minute inteval.
         </pre>
-       </div>   
+       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">Activity</a>
+            <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">prov:Activity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -282,7 +292,7 @@ This section provides details for each class and property defined by EVI.
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#Dataset</p>
        <p>
-         <strong>Schema.org Equivalent Class:</strong> https://schema.org/Dataset</p>
+         <strong>Equivalent Schema.org IRI:</strong> https://schema.org/Dataset</p>
       <div class="comment">
          <span class="markdown">A body of structured information describing some topic(s) of interest.</span>
       </div>
@@ -290,12 +300,18 @@ This section provides details for each class and property defined by EVI.
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (a) Dr. Smith analyzed a Dataset consisting of the subject identifiers, post-menstrual ages, and birthrights of one thousand babies. 
-           
-           (b) Dr. Smith&#39;s results included a computed dataset showing the correlation of age and birthweight for male and female preterm infants in five age ranges.
+           (1) Dr. Smith analyzed a Dataset consisting of the subject identifiers, post-menstrual ages, and birthrights of one thousand babies.
+
+           (2) Dr. Smith&#39;s results included a computed dataset showing the correlation of age and birthweight for male and female preterm infants in
+           five age ranges.
         </pre>
-       </div>   
+       </div>
       <dl class="description">
+         <dt>has equivalent-classes</dt>
+         <dd>
+            <a href="https://schema.org/Dataset" title="https://schema.org/Dataset">schema:Dataset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#Material" title="https://w3id.org/EVI#Material">Material</a>
@@ -314,7 +330,7 @@ This section provides details for each class and property defined by EVI.
       </dl>
    </div>
    <div class="entity" id="https://www.w3.org/ns/prov#Entity">
-      <h3>Entity<sup class="type-c" title="class">c</sup>
+      <h3>prov:Entity<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -327,19 +343,19 @@ This section provides details for each class and property defined by EVI.
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (a) The University of Virginia Hospital Neonatal ICU is an Entity.
+           (1) The University of Virginia Hospital Neonatal ICU is an Entity.
 
-           (b) Subject #459 in Dr. Smith&#39;s study is an Entity.
+           (2) Subject #459 in Dr. Smith&#39;s study is an Entity.
 
-           (c) Dr. Smith&#39;s preprint is an Entity, as is Dr. Smith.
+           (3) Dr. Smith&#39;s preprint is an Entity, as is Dr. Smith.
 
-           (d) Dr. Smith&#39;s medical record in the UVA Health System is an Entity.
+           (4) Dr. Smith&#39;s medical record in the UVA Health System is an Entity.
         </pre>
-       </div>   
+       </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
+            <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">prov:Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Representation" title="https://w3id.org/EVI#Representation">Representation</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -367,26 +383,22 @@ This section provides details for each class and property defined by EVI.
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#EvidenceGraph</p>
       <div class="comment">
-         <span class="markdown">
-             An EvidenceGraph is a directed acyclic graph
-
-                E<sub>v</sub> = (R<sub>n</sub>, R<sup>+</sup>, R<sup>-</sup>)
-
-where R<sub>n</sub> is a set of Representations, R<sup>+</sup> &isin; R<sub>n</sub> &#8339; R<sub>n</sub> is a set of supports relations, R<sup>-</sup> &isin; R<sub>n</sub> &#8339; R<sub>n</sub> is a set of challenge relations, and R<sup>+</sup>&#8745;R<sup>-</sup> = &empty;.
-
-EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-Schiex, 2009]</b> represented as RDF named graphs.</span>
+         <span class="markdown">An EvidenceGraph is a directed acyclic graph E<sub>v</sub> = (R<sub>n</sub>, R<sup>+</sup>, R<sup>-</sup>) where R<sub>n</sub> is a set of Representations, R<sup>+</sup> &isin; R<sub>n</sub> X R<sub>n</sub> is a set of supports
+            relations, R<sup>-</sup> &isin; R<sub>n</sub> X R<sub>n</sub> is a set of challenge relations, and R<sup>+</sup>&#8745;R<sup>-</sup> = &empty;. EvidenceGraphs are bipolar argumentation frameworks [<a href="#Cayrol2009">Cayrol &amp; Lagasquie-Schiex (2009)</a>] represented as RDF named graphs.
+         </span>
       </div>
      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (1) A minimal EvidenceGraph for Dr. Smith&#39;s Article on baby birthweights is EG1 a EvidenceGraph {&quot;Preprint RXiv 20200729.1&quot; a Article creator &quot;Smith M&quot; a Person} for &quot;Preprint RXiv 20200729.1&quot; a Article
-           
-           (2) A more robust EvidenceGraph for the correlation result discussed in Dr. Smith&#39;s Article might be &quot;Post-conception age was significantly correlated with birth weight.&quot; a Claim derivedFrom Dataset2 generatedBy Computation1 using Dataset1, Software1.
-           
-           Note: EvidenceGraphs always have the relation evidenceFor to the Representation at their root. I.e. in Example 1 above, the EvidenceGraph EG1 is evidencefor &quot;Preprint RXiv 20200729.1&quot; a Article.
+           (1) A minimal EvidenceGraph for Dr. Smith&#39;s Article on baby birth weights is EG1 a EvidenceGraph {&quot;Preprint rXiv 20200729.1&quot; a Article
+           createdBy &quot;Smith M&quot; a Person} for &quot;Preprint rXiv 20200729.1&quot; a Article
+
+           (2) A more robust EvidenceGraph for the correlation result discussed in Dr. Smith&#39;s Article might be &quot;Post-conception age was significantly
+           correlated with birth weight.&quot; a Claim derivedFrom Dataset2 generatedBy Computation1 using Dataset1, Software1.
         </pre>
-       </div>   
+       </div>
+       EvidenceGraphs always have the relation evidenceFor to the Representation at their root. I.e. in Example (1) above, the EvidenceGraph EG1 is evidencefor &quot;Preprint rXiv 20200729.1&quot; a Article.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -414,8 +426,8 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (1) The string &quot;20200729.1&quot; is a unique Identifier for Articles in the local context of thePreprint RXiv system.
-           
+           (1) The string &quot;20200729.1&quot; is a unique Identifier for Articles in the local context of the Preprint rXiv system.
+
            (2) An Archival Resource Key (ARK) is a globally unique persistent Identifier.
         </pre>
        </div>
@@ -441,9 +453,9 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (a) TODO
+           A scatterplot Image was produced from the Dataset of babies, birth weights, and ages.
         </pre>
-       </div>   
+       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -460,15 +472,15 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#Instrument</p>
       <div class="comment">
-         <span class="markdown">An Instrument is a physical object which represents a non-digital Material. Instruments are used for acquisition of data.</span>
+         <span class="markdown">An Instrument is a physical object which represents a non-digital Material. Instruments are used for DataAcquisition.</span>
       </div>
              <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (a) TODO
+           BedMasterEx is an Instrument that is used to acquire and store vital signs of patients.
         </pre>
-       </div>   
+       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -496,11 +508,11 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (1) Dr. Smith&#39;s Dataset of birthweight and baby ages is a natively digital Material.
-           
-           (2) The BedmasterEx real time patient monitor system is a non-digital physical entity represented in EVI as a Material.
+           (1) Dr. Smith&#39;s Dataset of birth-weight and baby ages is a natively digital Material.
+
+           (2) The BedMasterEx real time patient monitor system is a non-digital physical entity represented in EVI as a Material.
         </pre>
-       </div>   
+       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -537,7 +549,8 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
         <pre>
            &quot;We used scipy.stats.pearsonr to compute the Pearson correlation coefficient&quot; is a Method.
         </pre>
-       </div>   
+      </div>
+      Note that the actual version of code for scipy.stats.pearsonr is a Material (Software) not a Method. Methods are descriptive, Materials are concrete objects (even if they are digital, they are concrete).
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -553,14 +566,14 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       </dl>
    </div>
    <div class="entity" id="https://www.w3.org/ns/prov#Organization">
-      <h3>Organization<sup class="type-c" title="class">c</sup>
+      <h3>prov:Organization<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://www.w3.org/ns/prov#Organization</p>
        <p>
-         <strong>Schema.org Equivalent Class:</strong> https://schema.org/Organization</p>
+         <strong>Equivalent Schema.org IRI:</strong> https://schema.org/Organization</p>
       <div class="comment">
          <span class="markdown">An Organization is a social or legal institution with structure and purpose such as a company, society, university, sports team, etc.</span>
       </div>
@@ -574,24 +587,29 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
 
            (3) The UVA Cavaliers basketball team, 2019 NCAA Champions, is an Organization.
         </pre>
-       </div>   
+       </div>
       <dl class="description">
+         <dt>has equivalent-classes</dt>
+         <dd>
+            <a href="https://schema.org/Organization" title="https://schema.org/Organization">schema:Organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
+            <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">prov:Agent</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="https://www.w3.org/ns/prov#Person">
-      <h3>Person<sup class="type-c" title="class">c</sup>
+      <h3>prov:Person<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://www.w3.org/ns/prov#Person</p>
        <p>
-         <strong>Schema.org Equivalent Class:</strong> https://schema.org/Person</p>
+         <strong>Equivalent Schema.org IRI:</strong> https://schema.org/Person</p>
       <div class="comment">
          <span class="markdown">A Person is a human Agent.</span>
       </div>
@@ -599,15 +617,20 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (1) Dr. Mary Smith is a Person conducting a study of infant birthweight correlations.
-           
+           (1) Dr. Mary Smith is a Person conducting a study of infant birth weight correlations.
+
            (2) The babies in Dr. Smith&#39;s study are Persons, participating as subjects in her study.
         </pre>
-       </div>   
+       </div>
       <dl class="description">
+         <dt>has equivalent-classes</dt>
+         <dd>
+            <a href="https://schema.org/Person" title="https://schema.org/Person">schema:Person</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
+            <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">prov:Agent</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -626,7 +649,7 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (1) &quot;Smith M 2020. Post-conception age and birthweight. Preprint RXiv 20200729.1&quot; is a Reference for Dr. Smith&#39;s Article.
+           &quot;Smith M 2020. Post-conception age and birth weight. Preprint rXiv 20200729.1&quot; is a Reference for Dr. Smith&#39;s Article.
         </pre>
       </div>
       <dl class="description">
@@ -645,25 +668,26 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#Representation</p>
       <div class="comment">
-         <span class="markdown">A Representation is an Entity which represents another Entity. Representations are always attributedTo an Agent, their creator, contributor, influencer or to an Activity they were generatedBy.</span>
+         <span class="markdown">A Representation is an Entity which represents another Entity. Representations are always createdBy an Agent, their creator, contributor or to an Activity they were generatedBy.</span>
       </div>
       <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           The Dataset of babies, birthweights, and ages used to support the conclusions of Dr. Smith&#39;s preprint Article, is a Representation. So is the Article itself, as well as the Figures showing, and Captions describing, the scatterplots and correlations, presented within the Article. The scatterplot Image and the output correlation Dataset upon which is is based, are also Representations.
-           
-           Because Representations always have Agents or Activities they were generatedBy, whether or not they make any textually recognizable Claims, they always have at least a minimal EvidenceGraph supporting them.
-           
-           When the creating Activity is not documented, e.g. the Activity of &quot;writing&quot;, or &quot;drawing&quot;, or &quot;photographing&quot;, the EvidenceGraph of the Representation consists the creating Agent and itscreatorrelationship to the Representation. The quality of the evidence then depends solely upon the reputation of the authoring Agent, e.g. appointments and publication record.
-           
-           When the creating Activity is clearly documented and reproducible, for example as a Computation, the EvidenceGraph includes the Agent associatedWith running that Computation, the parameter set or other characteristics of the Computation, the Software on which the Computation was based, and the Dataset input to the Computation.
+           The Dataset of babies, birth weights, and ages used to support the conclusions of Dr. Smith&#39;s preprint Article, is a Representation. So is
+           the Article itself, as well as the Figures showing, and Captions describing, the scatterplots and correlations, presented within the Article.
+           The scatterplot Image and the output correlation Dataset upon which it is based, are also Representations.
         </pre>
       </div>
+      Because Representations always have Agents or Activities they were generatedBy, whether or not they make any textually recognizable Claims, they always have at least a minimal EvidenceGraph supporting them.
+      <br><br>
+      When the creating Activity is not documented, e.g. the Activity of &quot;writing&quot;, or &quot;drawing&quot;, or &quot;photographing&quot;, the EvidenceGraph of the Representation consists the creating Agent and its createdBy relationship to the Representation. The quality of the evidence then depends solely upon the reputation of the authoring Agent, e.g. appointments and publication record.
+      <br><br>
+      When the creating Activity is clearly documented and reproducible, for example as a Computation, the EvidenceGraph includes the Agent associatedWith running that Computation, the parameter set or other characteristics of the Computation, the Software on which the Computation was based, and the Dataset input to the Computation.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
+            <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">prov:Entity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -708,7 +732,7 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#Service</p>
        <p>
-         <strong>Schema.org Equivalent Class:</strong> https://schema.org/Service</p>
+         <strong>Equivalent Schema.org IRI:</strong> https://schema.org/Service</p>
       <div class="comment">
          <span class="markdown">A Service is an Activity accessed online, which executes a Computation.</span>
       </div>
@@ -722,6 +746,11 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
         </pre>
       </div>
       <dl class="description">
+         <dt>has equivalent-classes</dt>
+         <dd>
+            <a href="https://schema.org/Service" title="https://schema.org/Service">schema:Service</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#Computation" title="https://w3id.org/EVI#Computation">Computation</a>
@@ -742,7 +771,7 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#Software</p>
        <p>
-         <strong>Schema.org Equivalent Classes:</strong> https://schema.org/SoftwareApplication, https://schema.org/SoftwareSourceCode</p>
+         <strong>Equivalent Schema.org IRI:</strong> https://schema.org/SoftwareApplication, https://schema.org/SoftwareSourceCode</p>
       <div class="comment">
          <span class="markdown">Software is a specific set of computer-interpretable instructions to perform one or more Computations.</span>
       </div>
@@ -750,12 +779,20 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (1) The python code for the function scipy.stats.pearsonr in SciPy v1.5.2 is a Software.
-
-           Software always has a specific version and an identifier which points to that retrievable version. Any software which is only conceptual identified, e.g. &quot;scipy.stats.pearsonr&quot; with no version number and no Identifier, is a Method, as it is only descriptive. 
+           The python code for the function scipy.stats.pearsonr in SciPy v1.5.2 is a Software.
         </pre>
       </div>
+      Software always has a specific version and an identifier which points to that retrievable version. Any software which is only conceptually identified, e.g. &quot;scipy.stats.pearsonr&quot; with no version number and no Identifier, is a Method, as it is only descriptive.
       <dl class="description">
+         <dt>has equivalent-classes</dt>
+         <dd>
+            <a href="https://schema.org/SoftwareApplcation" title="https://schema.org/SoftwareApplcation">schema:SoftwareApplcation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="https://schema.org/SoftwareSourceCode" title="https://schema.org/SoftwareSourceCode">schema:SoftwareSourceCode</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#Material" title="https://w3id.org/EVI#Material">Material</a>
@@ -773,117 +810,120 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
 <div id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
-      <li>
-         <a href="#associatedWith" title="https://w3id.org/EVI#associatedWith">associatedWith</a>
-      </li>
-      <li>
-         <a href="#challengedBy" title="https://w3id.org/EVI#challengedBy">challengedBy</a>
-      </li>
-      <li>
-         <a href="#challenges" title="https://w3id.org/EVI#challenges">challenges</a>
-      </li>
-      <li>
-         <a href="#containedBy" title="https://w3id.org/EVI#containedBy">containedBy</a>
-      </li>
-      <li>
-         <a href="#contains" title="https://w3id.org/EVI#contains">contains</a>
-      </li>
-      <li>
-         <a href="#create" title="https://w3id.org/EVI#create">create</a>
-      </li>
-      <li>
-         <a href="#createdBy" title="https://w3id.org/EVI#createdBy">createdBy</a>
-      </li>
-      <li>
-         <a href="#datasetUsedBy" title="https://w3id.org/EVI#datasetUsedBy">datasetUsedBy</a>
-      </li>
-      <li>
-         <a href="#derived" title="https://w3id.org/EVI#derived">derived</a>
-      </li>
-      <li>
-         <a href="#derivedFrom" title="https://w3id.org/EVI#derivedFrom">derivedFrom</a>
-      </li>
-      <li>
-         <a href="#describedBy" title="https://w3id.org/EVI#describedBy">describedBy</a>
-      </li>
-      <li>
-         <a href="#describes" title="https://w3id.org/EVI#describes">describes</a>
-      </li>
-      <li>
-         <a href="#directlyChallengedBy" title="https://w3id.org/EVI#directlyChallengedBy">directlyChallengedBy</a>
-      </li>
-      <li>
-         <a href="#directlyChallenges" title="https://w3id.org/EVI#directlyChallenges">directlyChallenges</a>
-      </li>
-      <li>
-         <a href="#directlySupportedBy" title="https://w3id.org/EVI#directlySupportedBy">directlySupportedBy</a>
-      </li>
-      <li>
-         <a href="#directlySupports" title="https://w3id.org/EVI#directlySupports">directlySupports</a>
-      </li>
-      <li>
-         <a href="#evidenceFor" title="https://w3id.org/EVI#evidenceFor">evidenceFor</a>
-      </li>
-      <li>
-         <a href="#generated" title="https://w3id.org/EVI#generated">generated</a>
-      </li>
-      <li>
-         <a href="#generatedBy" title="https://w3id.org/EVI#generatedBy">generatedBy</a>
-      </li>
-      <li>
-         <a href="#hasEvidence" title="https://w3id.org/EVI#hasEvidence">hasEvidence</a>
-      </li>
-      <li>
-         <a href="#indirectlyChallengedBy" title="https://w3id.org/EVI#indirectlyChallengedBy">indirectlyChallengedBy</a>
-      </li>
-      <li>
-         <a href="#indirectlyChallenges" title="https://w3id.org/EVI#indirectlyChallenges">indirectlyChallenges</a>
-      </li>
-      <li>
-         <a href="#instrumentUsedBy" title="https://w3id.org/EVI#instrumentUsedBy">instrumentUsedBy</a>
-      </li>
-      <li>
-         <a href="#referredBy" title="https://w3id.org/EVI#referredBy">referredBy</a>
-      </li>
-      <li>
-         <a href="#referTo" title="https://w3id.org/EVI#referTo">referTo</a>
-      </li>
-      <li>
-         <a href="#representedBy" title="https://w3id.org/EVI#representedBy">representedBy</a>
-      </li>
-      <li>
-         <a href="#represents" title="https://w3id.org/EVI#represents">represents</a>
-      </li>
-      <li>
-         <a href="#serviceUsedBy" title="https://w3id.org/EVI#serviceUsedBy">serviceUsedBy</a>
-      </li>
-      <li>
-         <a href="#softwareUsedBy" title="https://w3id.org/EVI#softwareUsedBy">softwareUsedBy</a>
-      </li>
-      <li>
-         <a href="#supportedBy" title="https://w3id.org/EVI#supportedBy">supportedBy</a>
-      </li>
-      <li>
-         <a href="#supports" title="https://w3id.org/EVI#supports">supports</a>
-      </li>
-      <li>
-         <a href="#used" title="https://w3id.org/EVI#used">used</a>
-      </li>
-      <li>
-         <a href="#usedBy" title="https://w3id.org/EVI#usedBy">usedBy</a>
-      </li>
-      <li>
-         <a href="#usedDataset" title="https://w3id.org/EVI#usedDataset">usedDataset</a>
-      </li>
-      <li>
-         <a href="#usedInstrument" title="https://w3id.org/EVI#usedInstrument">usedInstrument</a>
-      </li>
-      <li>
-         <a href="#usedService" title="https://w3id.org/EVI#usedService">usedService</a>
-      </li>
-      <li>
-         <a href="#usedSoftware" title="https://w3id.org/EVI#usedSoftware">usedSoftware</a>
-      </li>
+     <li>
+        <a href="#associatedWith" title="https://w3id.org/EVI#associatedWith">associatedWith</a>
+     </li>
+     <li>
+        <a href="#associateFor" title="https://w3id.org/EVI#associateFor">associateFor</a>
+     </li>
+     <li>
+        <a href="#challengedBy" title="https://w3id.org/EVI#challengedBy">challengedBy</a>
+     </li>
+     <li>
+        <a href="#challenges" title="https://w3id.org/EVI#challenges">challenges</a>
+     </li>
+     <li>
+        <a href="#containedBy" title="https://w3id.org/EVI#containedBy">containedBy</a>
+     </li>
+     <li>
+        <a href="#contains" title="https://w3id.org/EVI#contains">contains</a>
+     </li>
+     <li>
+        <a href="#created" title="https://w3id.org/EVI#created">created</a>
+     </li>
+     <li>
+        <a href="#createdBy" title="https://w3id.org/EVI#createdBy">createdBy</a>
+     </li>
+     <li>
+        <a href="#datasetUsedBy" title="https://w3id.org/EVI#datasetUsedBy">datasetUsedBy</a>
+     </li>
+     <li>
+        <a href="#derivedFrom" title="https://w3id.org/EVI#derivedFrom">derivedFrom</a>
+     </li>
+     <li>
+        <a href="#derivedTo" title="https://w3id.org/EVI#derivedTo">derivedTo</a>
+     </li>
+     <li>
+        <a href="#describedBy" title="https://w3id.org/EVI#describedBy">describedBy</a>
+     </li>
+     <li>
+        <a href="#describes" title="https://w3id.org/EVI#describes">describes</a>
+     </li>
+     <li>
+        <a href="#directlyChallengedBy" title="https://w3id.org/EVI#directlyChallengedBy">directlyChallengedBy</a>
+     </li>
+     <li>
+        <a href="#directlyChallenges" title="https://w3id.org/EVI#directlyChallenges">directlyChallenges</a>
+     </li>
+     <li>
+        <a href="#directlySupportedBy" title="https://w3id.org/EVI#directlySupportedBy">directlySupportedBy</a>
+     </li>
+     <li>
+        <a href="#directlySupports" title="https://w3id.org/EVI#directlySupports">directlySupports</a>
+     </li>
+     <li>
+        <a href="#evidenceFor" title="https://w3id.org/EVI#evidenceFor">evidenceFor</a>
+     </li>
+     <li>
+        <a href="#generated" title="https://w3id.org/EVI#generated">generated</a>
+     </li>
+     <li>
+        <a href="#generatedBy" title="https://w3id.org/EVI#generatedBy">generatedBy</a>
+     </li>
+     <li>
+        <a href="#hasEvidence" title="https://w3id.org/EVI#hasEvidence">hasEvidence</a>
+     </li>
+     <li>
+        <a href="#indirectlyChallengedBy" title="https://w3id.org/EVI#indirectlyChallengedBy">indirectlyChallengedBy</a>
+     </li>
+     <li>
+        <a href="#indirectlyChallenges" title="https://w3id.org/EVI#indirectlyChallenges">indirectlyChallenges</a>
+     </li>
+     <li>
+        <a href="#instrumentUsedBy" title="https://w3id.org/EVI#instrumentUsedBy">instrumentUsedBy</a>
+     </li>
+     <li>
+        <a href="#referredBy" title="https://w3id.org/EVI#referredBy">referredBy</a>
+     </li>
+     <li>
+        <a href="#referTo" title="https://w3id.org/EVI#referTo">referTo</a>
+     </li>
+     <li>
+        <a href="#representedBy" title="https://w3id.org/EVI#representedBy">representedBy</a>
+     </li>
+     <li>
+        <a href="#represents" title="https://w3id.org/EVI#represents">represents</a>
+     </li>
+     <li>
+        <a href="#serviceUsedBy" title="https://w3id.org/EVI#serviceUsedBy">serviceUsedBy</a>
+     </li>
+     <li>
+        <a href="#softwareUsedBy" title="https://w3id.org/EVI#softwareUsedBy">softwareUsedBy</a>
+     </li>
+     <li>
+        <a href="#supportedBy" title="https://w3id.org/EVI#supportedBy">supportedBy</a>
+     </li>
+     <li>
+        <a href="#supports" title="https://w3id.org/EVI#supports">supports</a>
+     </li>
+     <li>
+        <a href="#used" title="https://w3id.org/EVI#used">used</a>
+     </li>
+     <li>
+        <a href="#usedBy" title="https://w3id.org/EVI#usedBy">usedBy</a>
+     </li>
+     <li>
+        <a href="#usedDataset" title="https://w3id.org/EVI#usedDataset">usedDataset</a>
+     </li>
+     <li>
+        <a href="#usedInstrument" title="https://w3id.org/EVI#usedInstrument">usedInstrument</a>
+     </li>
+     <li>
+        <a href="#usedService" title="https://w3id.org/EVI#usedService">usedService</a>
+     </li>
+     <li>
+        <a href="#usedSoftware" title="https://w3id.org/EVI#usedSoftware">usedSoftware</a>
+     </li>
    </ul>
    <div class="entity" id="associatedWith">
       <h3>associatedWith<sup class="type-op" title="object property">op</sup>
@@ -895,7 +935,7 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">A prov:Agent that has some responsibility for the occurrence of this prov:Activity is associatedWith the prov:Activity.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
@@ -903,8 +943,6 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
         </pre>
       </div>
       <div class="description">
-         <p>
-            <strong>has characteristics:</strong> symmetric</p>
          <dl>
             <dt>has super-properties</dt>
             <dd>
@@ -913,13 +951,43 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">Activity</a>
+               <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">prov:Activity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
+               <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">prov:Agent</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#associateFor" title="https://w3id.org/EVI#associateFor">associateFor</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="associateFor">
+      <h3>associateFor<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/EVI#associateFor</p>
+      <div class="comment">
+         <span class="markdown">Reverse of associatedWith property.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#directlySupports" title="https://w3id.org/EVI#directlySupports">directlySupports</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#associatedWith" title="https://w3id.org/EVI#associatedWith">associatedWith</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -933,7 +1001,7 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
          <strong>IRI:</strong> https://w3id.org/EVI#challengedBy</p>
       <div class="comment">
          <span class="markdown">Reverse of challenges property.</span>
-      </div>      
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -959,7 +1027,7 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
          <strong>IRI:</strong> https://w3id.org/EVI#challenges</p>
       <div class="comment">
          <span class="markdown">The challenges property is entailed by property chain rule when a Representation A either directly challenges another Representation B, or indirectlyChallenges B by challenging a Representation which supports it.</span>
-      </div>       
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -1016,11 +1084,11 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">Instances of Representations may contain instances of other Representations.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           Dr. Smith&#39;s Article contains an Image showing a scatterplot.
+           Dr. Smith's Article contains an Image showing a scatterplot.
         </pre>
       </div>
       <div class="description">
@@ -1045,13 +1113,13 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
          </dl>
       </div>
    </div>
-   <div class="entity" id="create">
-      <h3>create<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="created">
+      <h3>created<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/EVI#create</p>
+         <strong>IRI:</strong> https://w3id.org/EVI#created</p>
       <div class="comment">
          <span class="markdown">Reverse of createdBy property.</span>
       </div>
@@ -1080,13 +1148,14 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">A prov:Agent is a creator of a prov:Entity if it is createdBy the Agent.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (1) &quot;Smith M 2020. Post-conception age and birthweight. Preprint RXiv 20200729.1&quot; was createdBy Mary Smith.
-           
-           (2) &quot;Preprint RXiv 20200729.1&quot; an Article was createdBy &quot;Dr. Mary Smith&quot; a Person and &quot;Preprint RXiv&quot; an Organization (because Preprint RXiv is the publisher).
+           (1) "Smith M 2020. Post-conception age and birth weight. Preprint rXiv 20200729.1" was createdBy Mary Smith.
+
+           (2) "Preprint rXiv 20200729.1" an Article was createdBy "Dr. Mary Smith" a Person and "Preprint rXiv" an Organization (because Preprint rXiv
+           is the publisher).
         </pre>
       </div>
       <div class="description">
@@ -1102,17 +1171,17 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>
-               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
+               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">prov:Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">Agent</a>
+               <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">prov:Agent</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#create" title="https://w3id.org/EVI#create">create</a>
+               <a href="#created" title="https://w3id.org/EVI#created">created</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1143,13 +1212,55 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
          </dl>
       </div>
    </div>
-   <div class="entity" id="derived">
-      <h3>derived<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="derivedFrom">
+      <h3>derivedFrom<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/EVI#derived</p>
+         <strong>IRI:</strong> https://w3id.org/EVI#derivedFrom</p>
+      <div class="comment">
+         <span class="markdown">A derivation is a transformation of a prov:Entity into another, an update of a prov:Entity resulting in a new one, or the construction of a new prov:Entity based on a pre-existing prov:Entity.</span>
+      </div>
+      <br>
+      <div class="example">
+        <strong class="crossreference">Example</strong>
+        <pre>
+           Mary Smith's Image of a scatterplot was derivedFrom her Dataset1.
+        </pre>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#directlySupportedBy" title="https://w3id.org/EVI#directlySupportedBy">directlySupportedBy</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">prov:Entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">prov:Entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#derivedTo" title="https://w3id.org/EVI#derivedTo">derivedTo</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="derivedTo">
+      <h3>derivedTo<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/EVI#derivedTo</p>
       <div class="comment">
          <span class="markdown">Reverse of derivedFrom property.</span>
       </div>
@@ -1163,48 +1274,6 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
             <dt>is inverse of</dt>
             <dd>
                <a href="#derivedFrom" title="https://w3id.org/EVI#derivedFrom">derivedFrom</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="derivedFrom">
-      <h3>derivedFrom<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/EVI#derivedFrom</p>
-      <div class="comment">
-         <span class="markdown">A derivation is a transformation of a prov:Entity into another, an update of a prov:Entity resulting in a new one, or the construction of a new prov:Entity based on a pre-existing prov:Entity.</span>
-      </div>
-       <br>
-      <div class="example">
-        <strong class="crossreference">Example</strong>
-        <pre>
-           Mary Smith&#39;s Image of a scatterplot was derivedFrom her Dataset1.
-        </pre>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#directlySupportedBy" title="https://w3id.org/EVI#directlySupportedBy">directlySupportedBy</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#derived" title="https://w3id.org/EVI#derived">derived</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1240,11 +1309,11 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">The describes property is used when a Method, generally composed with a block of text, narrates a prov:Activity that takes place.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           The Method &quot;We used scipy.stats.pearsonr to compute the Pearson correlation coefficient&quot; describes a prov:Activity.
+           The Method "We used scipy.stats.pearsonr to compute the Pearson correlation coefficient" describes a prov:Activity.
         </pre>
       </div>
       <div class="description">
@@ -1256,7 +1325,7 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">Activity</a>
+               <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">prov:Activity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1302,15 +1371,17 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">The directlyChallenges property establishes a relation between instances of Representations A and B when A asserts that B is wrong or deficient. It is non-transitive, entailing indirectlyChallenges properties on Representations supportedBy the Representation it directlyChallenges, via a property chain rule.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           Dr. Chad Jones has created a new &quot;improved&quot; version of scipy.stats.pearsonr, v1.5.2x, deprecating the older v1.5.2, which according to Dr. Jones, contained a bug. Dr. Jones published a note to this effect on his blog. We can link that blog post and the new version of pearsonr to the old version via a directlyChallenges property. This entails indirectlyChallenges properties on the path to the root in the EvidenceGraph of Dr. Smith&#39; Article.
-           
-           Note: A challenge whether direct or indirect, is an assertion, whose truth value is also based on some form of evidence. We do not say a Representation is false, flawed or invalid, simply because it has been challenged.
+           Dr. Chad Jones has created a new "improved" version of scipy.stats.pearsonr, v1.5.2x, deprecating the older v1.5.2, which according to Dr.
+           Jones, contained a bug. Dr. Jones published a note to this effect on his blog. We can link that blog post and the new version of pearsonr
+           to the old version via a directlyChallenges property. This entails indirectlyChallenges properties on the path to the root in the
+           EvidenceGraph of Dr. Smith's Article.
         </pre>
-      </div>       
+      </div>
+      A challenge whether direct or indirect, is an assertion, whose truth value is also based on some form of evidence. We do not say a Representation is false, flawed or invalid, simply because it has been challenged.
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1379,7 +1450,14 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
          <strong>IRI:</strong> https://w3id.org/EVI#directlySupports</p>
       <div class="comment">
          <span class="markdown">The directlySupports property is a non-transitive version of supports, a subproperty of supports. directlySupports is a superproperty of the properties attributed (inverse of attributedTo), derived (inverse of derivedFrom), associated (inverse of associatedWith), used, and generated (inverse of generatedBy).</span>
-      </div>       
+      </div>
+      <br>
+      <div class="example">
+        <strong class="crossreference">Example</strong>
+        <pre>
+           TODO
+        </pre>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1389,8 +1467,9 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#create" title="https://w3id.org/EVI#create">create</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#derived" title="https://w3id.org/EVI#derived">derived</a>
+               <a href="#associateFor" title="https://w3id.org/EVI#associateFor">associateFor</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#created" title="https://w3id.org/EVI#created">created</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#derivedTo" title="https://w3id.org/EVI#derivedTo">derivedTo</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#generated" title="https://w3id.org/EVI#generated">generated</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#used" title="https://w3id.org/EVI#used">used</a>
                <sup class="type-op" title="object property">op</sup>
@@ -1411,7 +1490,15 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#evidenceFor</p>
       <div class="comment">
-         <span class="markdown">The evidenceFor property is used to declare which evidence (of type EvidenceGaph) exists for a Representation.</span>
+         <span class="markdown">The evidenceFor property is used to specify which evidence (of type EvidenceGaph) exists for a Representation.</span>
+      </div>
+      <br>
+      <div class="example">
+        <strong class="crossreference">Example</strong>
+        <pre>
+           The Article &quot;Preprint rXiv 20200729.1&quot; createdBy Dr. Smith is an instance of a EvidenceGaph EG1, a named graph with EG1 as its name. With the
+           evidenceFor property it can be specified that EG1 is an evidence for the Article.
+        </pre>
       </div>
       <div class="description">
          <dl>
@@ -1468,11 +1555,11 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">Generation is the completion of production of a new prov:Entity by a prov:Activity. This entity did not exist before generation and becomes available for usage after this generation.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           Dataset1 a Dataset was generatedBy Computation1, a Computation in Mary Smith&#39;s baby study.
+           Dataset1 a Dataset was generatedBy Computation1, a Computation in Mary Smith's baby study.
         </pre>
       </div>
       <div class="description">
@@ -1484,12 +1571,12 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
+               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">prov:Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">Activity</a>
+               <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">prov:Activity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1555,6 +1642,13 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">The indirectlyChallenges property establishes a relation between instances of Representations when one indirectly challenges the other entailed by property chaining.</span>
       </div>
+      <br>
+      <div class="example">
+        <strong class="crossreference">Example</strong>
+        <pre>
+           TODO
+        </pre>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -1580,8 +1674,8 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
             <dt>has sub-property chains</dt>
             <dd>
                <a href="#directlyChallenges" title="https://w3id.org/EVI#directlyChallenges">directlyChallenges</a>
-               <sup class="type-op" title="object property">op</sup> 
-               <span class="logic">o</span> 
+               <sup class="type-op" title="object property">op</sup>
+               <span class="logic">o</span>
                <a href="#supports" title="https://w3id.org/EVI#supports">supports</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
@@ -1643,11 +1737,11 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">The referTo property is used to identify the resources (of type Material) required by Methods.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (1) TODO
+           &quot;We used scipy.stats.pearsonr to compute the Pearson correlation coefficient&quot; a Method referTo the SciPy v1.5.2 a Software as the Material.
         </pre>
       </div>
       <div class="description">
@@ -1678,7 +1772,7 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#representedBy</p>
       <div class="comment">
-         <span class="markdown">An Entity or any of its features or feature sets may be representedBy a Representation.</span>
+         <span class="markdown">Reverse of represents property.</span>
       </div>
       <div class="description">
          <dl>
@@ -1698,17 +1792,18 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#represents</p>
       <div class="comment">
-         <span class="markdown">Reverse of representedBy property.</span>
+         <span class="markdown">A Representation represents an Entity or any of its features or feature sets.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (1) The Reference &quot;Smith M 2020. Post-conception age and birthweight. Preprint RXiv 20200729.1&quot; represents the Article &quot;Preprint RXiv 20200729.1&quot;
+           (1) The Reference "Smith M 2020. Post-conception age and birth weight. Preprint rXiv 20200729.1" represents the Article "Preprint rXiv
+           20200729.1"
 
-           (2) The photo of Dr. Mary Smith in the Author Information section of her Article, represents the Person &quot;Dr. Mary Smith&quot;.
+           (2) The photo of Dr. Mary Smith in the Author Information section of her Article, represents the Person "Dr. Mary Smith".
 
-           (3) The Dataset Dataset1 analyzed in Dr. Smith&#39;s Article, represents attributes of the set of babies in her cohort of premies.
+           (3) The Dataset Dataset1 analyzed in Dr. Smith's Article, represents attributes of the set of babies in her cohort of premies.
         </pre>
       </div>
       <div class="description">
@@ -1720,7 +1815,7 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
+               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">prov:Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1816,21 +1911,23 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">The supports property is a transitive relation between Representations entailed by its subproperty, directlySupports, which is non-transitive. In EvidenceGraphs, if A supports B, then the correctness (truth value) of A provides a warrant for belief in the correctness (truth value) of B.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (1) The Person &quot;Mary Smith&quot; supports the Article &quot;Preprint RXiv 20200729.1&quot;. To say this is to say that the known character, credentials and reputation of the author is a support for the truth value of their Articles.
-           
-           2(a) The Software scipy.stats.pearsonr in the SciPy v1.5.2 package supportsthe correlation statistic computed by Dr. Smith on her baby weight and age Dataset,
-           
-           2(b) The computed correlation statistic supports the scatterplot Image, and 
-           
-           2(c) the scatterplot Image supports the Article&#39;s conclusion.
-           
-           Because supports is transitive, if A supports B and B supports C, then A supports C by entailment. Therefore by entailment from transitivity, the scipy.stats.pearsonr code supports the conclusion of the Article.
+           (1) The Person "Mary Smith" supports the Article "Preprint RXiv 20200729.1". To say this is to say that the known character, credentials and
+           reputation of the author is a support for the truth value of their Articles.
+
+           (2-a) The Software scipy.stats.pearsonr in the SciPy v1.5.2 package supportsthe correlation statistic computed by Dr. Smith on her baby
+           weight and age Dataset,
+
+           (2-b) The computed correlation statistic supports the scatterplot Image, and
+
+           (2-c) the scatterplot Image supports the Article's conclusion.
         </pre>
-      </div>       
+      </div>
+      Because supports is transitive, if A supports B and B supports C, then A supports C by entailment. Therefore by entailment from transitivity, the scipy.stats.pearsonr code supports the conclusion of
+      the Article.
       <div class="description">
          <p>
             <strong>has characteristics:</strong> transitive</p>
@@ -1868,11 +1965,11 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">An Activity used an Entity, when the Entity (such as a Dataset or a Software) was instrumental in enabling that Activity to occur.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           The Computation on Dr. Smith&#39;s Dataset1 used the Software scipy.stats.pearsonr v1.5.2.
+           The Computation on Dr. Smith's Dataset1 used the Software scipy.stats.pearsonr v1.5.2.
         </pre>
       </div>
       <div class="description">
@@ -1892,12 +1989,12 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">Activity</a>
+               <a href="#https://www.w3.org/ns/prov#Activity" title="https://www.w3.org/ns/prov#Activity">prov:Activity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">Entity</a>
+               <a href="#https://www.w3.org/ns/prov#Entity" title="https://www.w3.org/ns/prov#Entity">prov:Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1916,7 +2013,7 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <p>
          <strong>IRI:</strong> https://w3id.org/EVI#usedBy</p>
       <div class="comment">
-         <span class="markdown">A prov:Entity that was used by a prov:Activity.</span>
+         <span class="markdown">Reverse of used property.</span>
       </div>
       <div class="description">
          <dl>
@@ -1951,11 +2048,11 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">The property usedDataset is a subproperty of used where domain is Computation and range is Dataset.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           Mary Smith&#39;s Computation1 to determine correlations usedDataset Dataset1, a record of preterm infant ages and birthweights.
+           Mary Smith's Computation1 to determine correlations usedDataset Dataset1, a record of preterm infant ages and birth weights.
         </pre>
       </div>
       <div class="description">
@@ -1993,11 +2090,11 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">The property usedInstrument is a subproperty of used where domain is DataAcquisition and range is Instrument.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           (1) TODO
+           Mary Smith usedInsrument Instrument1 to collect the Dataset Dataset1.
         </pre>
       </div>
       <div class="description">
@@ -2035,11 +2132,11 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">The property usedService is a subproperty of used where domain is Computation and range is Service.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           The Computation &quot;AssignID&quot;usedService FAIRSCAPE_MDS to assign an Identifier for Mary Smith&#39;s Dataset1.
+           The Computation "AssignID" usedService FAIRSCAPE_MDS to assign an Identifier for Mary Smith's Dataset1.
         </pre>
       </div>
       <div class="description">
@@ -2077,11 +2174,11 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       <div class="comment">
          <span class="markdown">The property usedSoftware is a subproperty of used where domain is Computation and range is Software.</span>
       </div>
-       <br>
+      <br>
       <div class="example">
         <strong class="crossreference">Example</strong>
         <pre>
-           Mary Smith&#39;s Computation1 usedSoftware &quot;scipy.stats.pearsonr v1.5.2&quot; a Software.
+           Mary Smith's Computation1 usedSoftware "scipy.stats.pearsonr v1.5.2" a Software.
         </pre>
       </div>
       <div class="description">
@@ -2110,44 +2207,60 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
       </div>
    </div>
 </div>
-    
+
 <div id="dataproperties">
-   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#https://www.w3.org/ns/prov#atTime" title="https://www.w3.org/ns/prov#atTime">atTime</a>
+         <a href="#http://schema.org/contentSize" title="http://schema.org/contentSize">schema:contentSize</a>
       </li>
       <li>
-         <a href="#https://schema.org/contentUrl" title="https://schema.org/contentUrl">contentUrl</a>
+         <a href="#http://schema.org/contentUrl" title="http://schema.org/contentUrl">schema:contentUrl</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/description" title="http://schema.org/description">schema:description</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/endTime" title="http://schema.org/endTime">schema:endTime</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/fileFormat" title="http://schema.org/fileFormat">schema:fileFormat</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/name" title="http://schema.org/name">schema:name</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/startTime" title="http://schema.org/startTime">schema:startTime</a>
       </li>
    </ul>
-   <div class="entity" id="https://www.w3.org/ns/prov#atTime">
-      <h3>atTime<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="http://schema.org/contentSize">
+      <h3>schema:contentSize<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://www.w3.org/ns/prov#atTime</p>
+         <strong>IRI:</strong> http://schema.org/contentSize</p>
       <div class="comment">
-         <span class="markdown">The PROV data model is implicitly based on a notion of instantaneous events (or just events), that mark transitions in the world. Events include generation, usage, or invalidation of entities, as well as starting or ending of activities. This notion of event is not first-class in the data model, but it is useful for explaining its other concepts and its semantics.</span>
+         <span class="markdown">File size in (mega/kilo) bytes.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
       </div>
    </div>
-   <div class="entity" id="https://schema.org/contentUrl">
-      <h3>contentUrl<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="http://schema.org/contentUrl">
+      <h3>schema:contentUrl<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://schema.org/contentUrl</p>
+         <strong>IRI:</strong> http://schema.org/contentUrl</p>
       <div class="comment">
-         <span class="markdown">Actual bytes of the media object, for example the image file or video file</span>
-      </div>
-       <br>
-      <div class="example">
-        <strong class="crossreference">Example</strong>
-        <pre>
-           (1) TODO
-        </pre>
+         <span class="markdown">Actual bytes of the media object, for example the image file or video file.</span>
       </div>
       <div class="description">
          <dl>
@@ -2158,8 +2271,127 @@ EvidenceGraphs are bipolar argumentation frameworks <b>[Cayrol &amp; Lagasquie-S
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://schema.org/description">
+      <h3>schema:description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/description</p>
+      <div class="comment">
+         <span class="markdown">A description of the item.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/endTime">
+      <h3>schema:endTime<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/endTime</p>
+      <div class="comment">
+         <span class="markdown">The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the end of a clip within a larger file.
+
+Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Computation" title="https://w3id.org/EVI#Computation">Computation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/fileFormat">
+      <h3>schema:fileFormat<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/fileFormat</p>
+      <div class="comment">
+         <span class="markdown">Media type, typically MIME format (see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/name">
+      <h3>schema:name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/name</p>
+      <div class="comment">
+         <span class="markdown">The name of the item.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/startTime">
+      <h3>schema:startTime<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/startTime</p>
+      <div class="comment">
+         <span class="markdown">The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.
+
+Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Computation" title="https://w3id.org/EVI#Computation">Computation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
 </div>
-    
+
 <div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
