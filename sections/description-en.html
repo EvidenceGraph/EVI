@@ -1,14 +1,18 @@
 <html>
 <div id="description"><h2 id="desc" class="list">EVI: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-  <p><a href="#EVI_ontology">Figure 1</a>. shows how the EVI ontology is used to represent the provenance of a scientific experiment. A scientific experiment is represented as a p-plan:Plan which consists of several steps. Each step of a scientific experiment has input and output variables. The ontology also describes how the instruments, materials and settings are linked to the experiment. </p>
+  <p><a href="#EVI_ontology">Figure 1</a>. shows the EVI semantic model built using the classes and
+  object properties. The core PROV ontology concepts used in EVI are Entity, Activity, and
+  Agent, with two suc-classes Person and Organization. The object properties in EVI are used to
+  establish relations among instances, most of which are of type Representation. Computation and
+  DataAcquisition are Activities performed on instances of other Representations, Software or Services.</p>
   <div id="EVI_ontology" class="figure" style="text-align: center;">
       <img src="resources/images/EVI-v-0-1.svg" alt="Semantic Model of Evidence Graph ontology." width="636" height="429">
+      <br><br>
       <div style="text-align: center;">
-          <a href="#EVI_ontology">Figure 1</a>. The provenance of a scientific experiment depicted using the EVI ontology.
+          <a href="#EVI_ontology">Figure 1</a>. The semantic model depicted using the EVI ontology.
       </div>
   </div>
 </span>
-
 </div>
 </html>
