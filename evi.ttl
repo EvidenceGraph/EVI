@@ -16,7 +16,7 @@
                         <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by-nc-sa/2.0/" ;
                         <http://purl.org/dc/terms/title> "EVI: Evidence Graph Ontology"@en ;
                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "evi" ;
-                        <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/evi/"@en ;
+                        <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/EVI"@en ;
                         owl:versionIRI "http://www.w3.org/2002/07/owl"@en ;
                         owl:versionInfo "0.1"@en .
 
@@ -68,61 +68,21 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/EVI#about
-:about rdf:type owl:ObjectProperty ;
-       rdfs:domain :Caption ;
-       rdfs:range <http://schema.org/Dataset> ;
-       rdfs:comment "Asserts instance of a Caption about a Dataset." ;
-       rdfs:label "about" .
-
-
-###  https://w3id.org/EVI#arguedBy
-:arguedBy rdf:type owl:ObjectProperty ;
-          owl:inverseOf :argues ;
-          rdfs:comment "Asserts that the principal Claim is arguedBy an EvideneGraph." ;
-          rdfs:label "arguedBy" .
-
-
-###  https://w3id.org/EVI#argues
-:argues rdf:type owl:ObjectProperty ;
-        rdfs:domain :EvidenceGraph ;
-        rdfs:range <http://schema.org/Claim> ;
-        rdfs:comment "Asserts that EvidenceGraph argues the principal Claim." ;
-        rdfs:label "argues" .
-
-
-###  https://w3id.org/EVI#assertedBy
-:assertedBy rdf:type owl:ObjectProperty ;
-            owl:inverseOf :asserts ;
-            rdfs:comment "Instance of Representation assertedBy instance of EvidenceGraph." ;
-            rdfs:label "assertedBy" .
-
-
-###  https://w3id.org/EVI#asserts
-:asserts rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :contains ;
-         rdfs:domain :EvidenceGraph ;
-         rdfs:range :Representation ;
-         rdfs:comment "Instance of EvidenceGraph asserts instance of Representation." ;
-         rdfs:label "asserts" .
+###  https://w3id.org/EVI#associateFor
+:associateFor rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :directlySupports ;
+              owl:inverseOf :associatedWith ;
+              rdfs:comment "Reverse of associatedWith property." ;
+              rdfs:label "associateFor" .
 
 
 ###  https://w3id.org/EVI#associatedWith
 :associatedWith rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf <https://www.w3.org/ns/prov#wasAssociatedWith> ;
+                rdfs:subPropertyOf :directlySupportedBy ;
                 rdfs:domain <https://www.w3.org/ns/prov#Activity> ;
                 rdfs:range <https://www.w3.org/ns/prov#Agent> ;
-                rdfs:comment "A prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity." ;
+                rdfs:comment "A prov:Agent that has some responsibility for the occurrence of this prov:Activity is associatedWith the prov:Activity." ;
                 rdfs:label "associatedWith" .
-
-
-###  https://w3id.org/EVI#attributedTo
-:attributedTo rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf <https://www.w3.org/ns/prov#wasAttributedTo> ;
-              rdfs:domain <https://www.w3.org/ns/prov#Entity> ;
-              rdfs:range <https://www.w3.org/ns/prov#Agent> ;
-              rdfs:comment "Attribution is the ascribing of a prov:Entity to a prov:Agent." ;
-              rdfs:label "attributedTo" .
 
 
 ###  https://w3id.org/EVI#challengedBy
@@ -136,33 +96,82 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 :challenges rdf:type owl:ObjectProperty ;
             rdfs:domain :Representation ;
             rdfs:range :Representation ;
-            rdfs:comment "The challenges property is inferred when Representation either directlyChallenges another, or indirectlyChallenges it by undercutting (directlyChallenges) a Representation which supports it." ;
+            rdfs:comment "The challenges property is entailed by property chain rule when a Representation A either directly challenges another Representation B, or indirectlyChallenges B by challenging a Representation which supports it." ;
             rdfs:label "challenges" .
 
 
+###  https://w3id.org/EVI#containedBy
+:containedBy rdf:type owl:ObjectProperty ;
+             owl:inverseOf :contains ;
+             rdfs:comment "Reverse of contains property." ;
+             rdfs:label "containedBy" .
+
+
 ###  https://w3id.org/EVI#contains
-:contains rdf:type owl:ObjectProperty ;
+:contains rdf:type owl:ObjectProperty ,
+                   owl:TransitiveProperty ;
           rdfs:domain :Representation ;
           rdfs:range :Representation ;
-          rdfs:comment "Instances of Representations may contain instances of  Representations." ;
+          rdfs:comment "Instances of Representations may contain instances of other Representations." ;
           rdfs:label "contains" .
 
 
-###  https://w3id.org/EVI#creator
-:creator rdf:type owl:ObjectProperty ;
-         rdfs:domain :Representation ;
-         rdfs:range <https://www.w3.org/ns/prov#Agent> ;
-         rdfs:comment "An instance of Representation responsible for making the resource. Recommended practice is to identify the creator with a URI." ;
-         rdfs:label "creator" .
+###  https://w3id.org/EVI#created
+:created rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :directlySupports ;
+         owl:inverseOf :createdBy ;
+         rdfs:comment "Reverse of createdBy property." ;
+         rdfs:label "created" .
+
+
+###  https://w3id.org/EVI#createdBy
+:createdBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :directlySupportedBy ;
+           rdfs:domain :Representation ,
+                       <https://www.w3.org/ns/prov#Entity> ;
+           rdfs:range <https://www.w3.org/ns/prov#Agent> ;
+           rdfs:comment "A prov:Agent is a creator of a prov:Entity if it is createdBy the Agent." ;
+           rdfs:label "createdBy" .
+
+
+###  https://w3id.org/EVI#datasetUsedBy
+:datasetUsedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :usedBy ;
+               owl:inverseOf :usedDataset ;
+               rdfs:comment "Reverse of usedDataset property." ;
+               rdfs:label "datasetUsedBy" .
 
 
 ###  https://w3id.org/EVI#derivedFrom
 :derivedFrom rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf <https://www.w3.org/ns/prov#wasDerivedFrom> ;
+             rdfs:subPropertyOf :directlySupportedBy ;
+             owl:inverseOf :derivedTo ;
              rdfs:domain <https://www.w3.org/ns/prov#Entity> ;
              rdfs:range <https://www.w3.org/ns/prov#Entity> ;
              rdfs:comment "A derivation is a transformation of a prov:Entity into another, an update of a prov:Entity resulting in a new one, or the construction of a new prov:Entity based on a pre-existing prov:Entity." ;
              rdfs:label "derivedFrom" .
+
+
+###  https://w3id.org/EVI#derivedTo
+:derivedTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :directlySupports ;
+           rdfs:comment "Reverse of derivedFrom property." ;
+           rdfs:label "derivedTo" .
+
+
+###  https://w3id.org/EVI#describedBy
+:describedBy rdf:type owl:ObjectProperty ;
+             owl:inverseOf :describes ;
+             rdfs:comment "Reverse of describes property." ;
+             rdfs:label "describedBy" .
+
+
+###  https://w3id.org/EVI#describes
+:describes rdf:type owl:ObjectProperty ;
+           rdfs:domain :Method ;
+           rdfs:range <https://www.w3.org/ns/prov#Activity> ;
+           rdfs:comment "The describes property is used when a Method, generally composed with a block of text, narrates a prov:Activity that takes place." ;
+           rdfs:label "describes" .
 
 
 ###  https://w3id.org/EVI#directlyChallengedBy
@@ -176,7 +185,9 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/EVI#directlyChallenges
 :directlyChallenges rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :challenges ;
-                    rdfs:comment "The directlyChallenges property establishes a relation between instances of Representations when they directly challenge one another." ;
+                    rdfs:domain :Representation ;
+                    rdfs:range :Representation ;
+                    rdfs:comment "The directlyChallenges property establishes a relation between instances of Representations A and B when A asserts that B is wrong or deficient. It is non-transitive, entailing indirectlyChallenges properties on Representations supportedBy the Representation it directlyChallenges, via a property chain rule." ;
                     rdfs:label "directlyChallenges" .
 
 
@@ -191,17 +202,40 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/EVI#directlySupports
 :directlySupports rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :supports ;
-                  rdfs:comment "The use of directlySupports property is intended to establish a direct relation between instances of  Representations." ;
+                  rdfs:comment "The directlySupports property is a non-transitive version of supports, a subproperty of supports. directlySupports is a superproperty of the properties attributed (inverse of attributedTo), derived (inverse of derivedFrom), associated (inverse of associatedWith), used, and generated (inverse of generatedBy)." ;
                   rdfs:label "directlySupports" .
+
+
+###  https://w3id.org/EVI#evidenceFor
+:evidenceFor rdf:type owl:ObjectProperty ;
+             owl:inverseOf :hasEvidence ;
+             rdfs:domain :EvidenceGraph ;
+             rdfs:range :Representation ;
+             rdfs:comment "The evidenceFor property is used to declare which evidence (of type EvidenceGaph) exists for a Representation." ;
+             rdfs:label "evidenceFor" .
+
+
+###  https://w3id.org/EVI#generated
+:generated rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :directlySupports ;
+           owl:inverseOf :generatedBy ;
+           rdfs:comment "Reverse of generatedBy property." ;
+           rdfs:label "generated" .
 
 
 ###  https://w3id.org/EVI#generatedBy
 :generatedBy rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf <https://www.w3.org/ns/prov#wasGeneratedBy> ;
+             rdfs:subPropertyOf :directlySupportedBy ;
              rdfs:domain <https://www.w3.org/ns/prov#Entity> ;
              rdfs:range <https://www.w3.org/ns/prov#Activity> ;
-             rdfs:comment "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation." ;
+             rdfs:comment "Generation is the completion of production of a new prov:Entity by a prov:Activity. This entity did not exist before generation and becomes available for usage after this generation." ;
              rdfs:label "generatedBy" .
+
+
+###  https://w3id.org/EVI#hasEvidence
+:hasEvidence rdf:type owl:ObjectProperty ;
+             rdfs:comment "Reverse of evidenceFor property." ;
+             rdfs:label "hasEvidence" .
 
 
 ###  https://w3id.org/EVI#indirectlyChallengedBy
@@ -215,17 +249,42 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/EVI#indirectlyChallenges
 :indirectlyChallenges rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :challenges ;
+                      rdfs:domain :Representation ;
+                      rdfs:range :Representation ;
                       owl:propertyChainAxiom ( :directlyChallenges
                                                :supports
                                              ) ;
-                      rdfs:comment "The indirectlyChallenges property establishes a relation between instances of Representations when they indirectly challenge one another with the help of property chaining." ;
+                      rdfs:comment "The indirectlyChallenges property establishes a relation between instances of Representations when one indirectly challenges the other entailed by property chaining." ;
                       rdfs:label "indirectlyChallenges" .
+
+
+###  https://w3id.org/EVI#instrumentUsedBy
+:instrumentUsedBy rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :usedBy ;
+                  owl:inverseOf :usedInstrument ;
+                  rdfs:comment "Reverse of usedInstrument property." ;
+                  rdfs:label "instrumentUsedBy" .
+
+
+###  https://w3id.org/EVI#referTo
+:referTo rdf:type owl:ObjectProperty ;
+         owl:inverseOf :referredBy ;
+         rdfs:domain :Method ;
+         rdfs:range :Material ;
+         rdfs:comment "The referTo property is used to identify the resources (of type Material) required by Methods." ;
+         rdfs:label "referTo" .
+
+
+###  https://w3id.org/EVI#referredBy
+:referredBy rdf:type owl:ObjectProperty ;
+            rdfs:comment "Reverse of referTo property." ;
+            rdfs:label "referredBy" .
 
 
 ###  https://w3id.org/EVI#representedBy
 :representedBy rdf:type owl:ObjectProperty ;
                owl:inverseOf :represents ;
-               rdfs:comment "Instances of prov:Entity may be represented by instance of Representation." ;
+               rdfs:comment "Reverse of represents property." ;
                rdfs:label "representedBy" .
 
 
@@ -233,8 +292,24 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 :represents rdf:type owl:ObjectProperty ;
             rdfs:domain :Representation ;
             rdfs:range <https://www.w3.org/ns/prov#Entity> ;
-            rdfs:comment "Instance of Representation may represent instance of prov:Entity." ;
+            rdfs:comment "A Representation represents an Entity or any of its features or feature sets." ;
             rdfs:label "represents" .
+
+
+###  https://w3id.org/EVI#serviceUsedBy
+:serviceUsedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :usedBy ;
+               owl:inverseOf :usedService ;
+               rdfs:comment "Reverse of usedService property." ;
+               rdfs:label "serviceUsedBy" .
+
+
+###  https://w3id.org/EVI#softwareUsedBy
+:softwareUsedBy rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :usedBy ;
+                owl:inverseOf :usedSoftware ;
+                rdfs:comment "Reverse of usedSoftware property." ;
+                rdfs:label "softwareUsedBy" .
 
 
 ###  https://w3id.org/EVI#supportedBy
@@ -249,23 +324,24 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                    owl:TransitiveProperty ;
           rdfs:domain :Representation ;
           rdfs:range :Representation ;
-          rdfs:comment "The supports property is a transitive relation between Representations." ;
+          rdfs:comment "The supports property is a transitive relation between Representations entailed by its subproperty, directlySupports, which is non-transitive. In EvidenceGraphs, if A supports B, then the correctness (truth value) of A provides a warrant for belief in the correctness (truth value) of B." ;
           rdfs:label "supports" .
 
 
 ###  https://w3id.org/EVI#used
 :used rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf :directlySupports ;
       owl:inverseOf :usedBy ;
       rdfs:domain <https://www.w3.org/ns/prov#Activity> ;
       rdfs:range <https://www.w3.org/ns/prov#Entity> ;
-      rdfs:comment "A prov:Activity that used a prov:Entity." ,
-                   "The more specific usedDataset, usedService, usedSoftware properties should be used whenever possible." ;
+      rdfs:comment "An Activity used an Entity, when the Entity (such as a Dataset or a Software) was instrumental in enabling that Activity to occur." ;
       rdfs:label "used" .
 
 
 ###  https://w3id.org/EVI#usedBy
 :usedBy rdf:type owl:ObjectProperty ;
-        rdfs:comment "A prov:Entity that was used by a prov:Activity." ;
+        rdfs:subPropertyOf :directlySupportedBy ;
+        rdfs:comment "Reverse of used property." ;
         rdfs:label "usedBy" .
 
 
@@ -274,8 +350,17 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
              rdfs:subPropertyOf :used ;
              rdfs:domain :Computation ;
              rdfs:range :Dataset ;
-             rdfs:comment "A Computation as a prov:Activity that used Dataset as a prov:Entity." ;
+             rdfs:comment "The property usedDataset is a subproperty of used where domain is Computation and range is Dataset." ;
              rdfs:label "usedDataset" .
+
+
+###  https://w3id.org/EVI#usedInstrument
+:usedInstrument rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :used ;
+                rdfs:domain :DataAcquisition ;
+                rdfs:range :Instrument ;
+                rdfs:comment "The property usedInstrument is a subproperty of used where domain is DataAcquisition and range is Instrument." ;
+                rdfs:label "usedInstrument" .
 
 
 ###  https://w3id.org/EVI#usedService
@@ -283,7 +368,7 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
              rdfs:subPropertyOf :used ;
              rdfs:domain :Computation ;
              rdfs:range :Service ;
-             rdfs:comment "A Computation as a prov:Activity that used Service as a prov:Entity." ;
+             rdfs:comment "The property usedService is a subproperty of used where domain is Computation and range is Service." ;
              rdfs:label "usedService" .
 
 
@@ -292,76 +377,69 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
               rdfs:subPropertyOf :used ;
               rdfs:domain :Computation ;
               rdfs:range :Software ;
-              rdfs:comment "A Computation as a prov:Activity that used Software as a prov:Entity." ;
+              rdfs:comment "The property usedSoftware is a subproperty of used where domain is Computation and range is Software." ;
               rdfs:label "usedSoftware" .
-
-
-###  https://www.w3.org/ns/prov#wasAssociatedWith
-<https://www.w3.org/ns/prov#wasAssociatedWith> rdf:type owl:ObjectProperty ;
-                                               rdfs:comment "A prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity." ,
-                                                            "The more specific associatedWith property should be used whenever possible." ;
-                                               rdfs:label "wasAssociatedWith" .
-
-
-###  https://www.w3.org/ns/prov#wasAttributedTo
-<https://www.w3.org/ns/prov#wasAttributedTo> rdf:type owl:ObjectProperty ;
-                                             rdfs:comment "Attribution is the ascribing of a prov:Entity to a prov:Agent." ,
-                                                          "The more specific attributedTo property should be used whenever possible." ;
-                                             rdfs:label "wasAttributedTo" .
-
-
-###  https://www.w3.org/ns/prov#wasDerivedFrom
-<https://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty ;
-                                            rdfs:comment "A derivation is a transformation of a prov:Entity into another, an update of a prov:Entity resulting in a new one, or the construction of a new prov:Entity based on a pre-existing prov:Entity." ,
-                                                         "The more specific derivedFrom property should be used whenever possible." ;
-                                            rdfs:label "wasDerivedFrom" .
-
-
-###  https://www.w3.org/ns/prov#wasGeneratedBy
-<https://www.w3.org/ns/prov#wasGeneratedBy> rdf:type owl:ObjectProperty ;
-                                            rdfs:comment "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation." ,
-                                                         "The more specific generatedBy property should be used whenever possible." ;
-                                            rdfs:label "wasGeneratedBy" .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://schema.org/contentUrl
-<https://schema.org/contentUrl> rdf:type owl:DatatypeProperty ;
-                                rdfs:range xsd:anyURI ;
-                                rdfs:comment "A URL for the media object in the form of xsd:anyURI." ,
-                                             "Actual bytes of the media object, for example the image file or video file" ;
-                                rdfs:label "contentUrl" .
+###  http://schema.org/contentSize
+<http://schema.org/contentSize> rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:integer ;
+                                rdfs:comment "File size in (mega/kilo) bytes." ;
+                                rdfs:label "schema:contentSize" .
 
 
-###  https://w3id.org/EVI#citation
-:citation rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Reference ;
-          rdfs:range xsd:string ;
-          rdfs:comment "The description of Reference in the form of xsd:string." ;
-          rdfs:label "citation" .
+###  http://schema.org/contentUrl
+<http://schema.org/contentUrl> rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:anyURI ;
+                               rdfs:comment "Actual bytes of the media object, for example the image file or video file." ;
+                               rdfs:label "schema:contentUrl" .
 
 
-###  https://w3id.org/EVI#id
-:id rdf:type owl:DatatypeProperty ;
-    rdfs:comment "An identifier to specify an object." ;
-    rdfs:label "id" .
+###  http://schema.org/description
+<http://schema.org/description> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain owl:Thing ;
+                                rdfs:range xsd:string ;
+                                rdfs:comment "A description of the item." ;
+                                rdfs:label "schema:description" .
 
 
-###  https://w3id.org/EVI#state
-:state rdf:type owl:DatatypeProperty ;
-       rdfs:domain :Claim ;
-       rdfs:range xsd:string ;
-       rdfs:comment "The statement of Claim in the form of xsd:string." ;
-       rdfs:label "state" .
+###  http://schema.org/endTime
+<http://schema.org/endTime> rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :Computation ;
+                            rdfs:range xsd:dateTime ;
+                            rdfs:comment """The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the end of a clip within a larger file.
+
+Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.""" ;
+                            rdfs:label "schema:endTime" .
 
 
-###  https://www.w3.org/ns/prov#atTime
-<https://www.w3.org/ns/prov#atTime> rdf:type owl:DatatypeProperty ;
-                                    rdfs:comment "The PROV data model is implicitly based on a notion of instantaneous events (or just events), that mark transitions in the world. Events include generation, usage, or invalidation of entities, as well as starting or ending of activities. This notion of event is not first-class in the data model, but it is useful for explaining its other concepts and its semantics." ;
-                                    rdfs:label "atTime" .
+###  http://schema.org/fileFormat
+<http://schema.org/fileFormat> rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:string ;
+                               rdfs:comment "Media type, typically MIME format (see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry." ;
+                               rdfs:label "schema:fileFormat" .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:DatatypeProperty ;
+                         rdfs:domain owl:Thing ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "The name of the item." ;
+                         rdfs:label "schema:name" .
+
+
+###  http://schema.org/startTime
+<http://schema.org/startTime> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :Computation ;
+                              rdfs:range xsd:dateTime ;
+                              rdfs:comment """The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.
+
+Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.""" ;
+                              rdfs:label "schema:startTime" .
 
 
 #################################################################
@@ -372,88 +450,101 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 <http://schema.org/Article> rdf:type owl:Class ;
                             owl:equivalentClass :Article ;
                             rdfs:subClassOf :Representation ;
-                            rdfs:comment "An identifiable source object of which an EvidenceGraph is derived. It includes information about its location, time of creation, and the authors." ;
-                            rdfs:label "Article" .
+                            rdfs:comment "An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all." ;
+                            rdfs:label "schema:Article" .
 
 
 ###  http://schema.org/Claim
 <http://schema.org/Claim> rdf:type owl:Class ;
                           owl:equivalentClass :Claim ;
                           rdfs:subClassOf :Representation ;
-                          rdfs:comment "A Claim is a principal statement arguedBy a EvidenceGraph in a scientific Article." ;
-                          rdfs:label "Claim" .
+                          rdfs:comment """A Claim in Schema.org represents a specific, factually-oriented claim that could be the itemReviewed in a ClaimReview. The content of a claim can be summarized with the text property. Variations on well known claims can have their common identity indicated via sameAs links, and summarized with a name. Ideally, a Claim description includes enough contextual information to minimize the risk of ambiguity or inclarity. In practice, many claims are better understood in the context in which they appear or the interpretations provided by claim reviews.
+
+Beyond ClaimReview, the Claim type can be associated with related creative works - for example a ScholaryArticle or Question might be about some Claim.
+
+At this time, Schema.org does not define any types of relationship between claims. This is a natural area for future exploration.""" ;
+                          rdfs:label "schema:Claim" .
 
 
 ###  http://schema.org/Dataset
 <http://schema.org/Dataset> rdf:type owl:Class ;
                             owl:equivalentClass :Dataset ;
-                            rdfs:subClassOf :Representation ;
+                            rdfs:subClassOf :Material ;
                             rdfs:comment "A body of structured information describing some topic(s) of interest." ;
-                            rdfs:label "Dataset" .
+                            rdfs:label "schema:Dataset" .
 
 
 ###  http://schema.org/Organization
 <http://schema.org/Organization> rdf:type owl:Class ;
                                  owl:equivalentClass <https://www.w3.org/ns/prov#Organization> ;
                                  rdfs:subClassOf <https://www.w3.org/ns/prov#Agent> ;
-                                 rdfs:comment "An organization is a social or legal institution such as a company, society, etc." ;
-                                 rdfs:label "Organization" .
+                                 rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
+                                 rdfs:label "schema:Organization" .
 
 
 ###  http://schema.org/Person
 <http://schema.org/Person> rdf:type owl:Class ;
                            owl:equivalentClass <https://www.w3.org/ns/prov#Person> ;
                            rdfs:subClassOf <https://www.w3.org/ns/prov#Agent> ;
-                           rdfs:comment "Person agents are people." ;
-                           rdfs:label "Person" .
+                           rdfs:comment "A person (alive, dead, undead, or fictional)." ;
+                           rdfs:label "schema:Person" .
 
 
 ###  http://schema.org/Service
 <http://schema.org/Service> rdf:type owl:Class ;
                             owl:equivalentClass :Service ;
-                            rdfs:subClassOf :Method ;
-                            rdfs:comment "A Method used during a Computation Activity." ;
-                            rdfs:label "Service" .
+                            rdfs:subClassOf :Computation ;
+                            rdfs:comment "A service provided by an organization, e.g. delivery service, print services, etc" ;
+                            rdfs:label "schema:Service" .
 
 
 ###  http://schema.org/SoftwareApplication
 <http://schema.org/SoftwareApplication> rdf:type owl:Class ;
                                         owl:equivalentClass :Software ;
                                         rdfs:subClassOf :Material ;
-                                        rdfs:comment "A set of instructions to perform specific Computation Activity." ;
-                                        rdfs:label "SoftwareApplication" .
+                                        rdfs:comment "A software application." ;
+                                        rdfs:label "schema:SoftwareApplication" .
+
+
+###  http://schema.org/SoftwareSourceCode
+<http://schema.org/SoftwareSourceCode> rdf:type owl:Class ;
+                                       owl:equivalentClass :Software ;
+                                       rdfs:subClassOf :Material ;
+                                       rdfs:comment "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates." ;
+                                       rdfs:label "schema:SoftwareSourceCode" .
 
 
 ###  https://w3id.org/EVI#Article
 :Article rdf:type owl:Class ;
          rdfs:subClassOf :Representation ;
+         rdfs:comment "An Article is a (typically compound) textual document conveying a set of Claims and other Representations. Among these, an Article in EVI always conveys an assertion of its authorship in the form of a bibliographic self-reference." ;
          rdfs:label "Article" .
-
-
-###  https://w3id.org/EVI#Caption
-:Caption rdf:type owl:Class ;
-         rdfs:subClassOf <http://schema.org/Claim> ;
-         rdfs:comment "A composition of descriptive statements which describes information about objects such as images, tables, datasets etc." ;
-         rdfs:label "Caption" .
 
 
 ###  https://w3id.org/EVI#Claim
 :Claim rdf:type owl:Class ;
        rdfs:subClassOf :Representation ;
-       rdfs:comment "A Claim is a principal statement arguedBy a EvidenceGraph in a scientific Article." ;
+       rdfs:comment "A Claim is a declarative sentence or assertion. Claims are defeasible." ;
        rdfs:label "Claim" .
 
 
 ###  https://w3id.org/EVI#Computation
 :Computation rdf:type owl:Class ;
              rdfs:subClassOf <https://www.w3.org/ns/prov#Activity> ;
-             rdfs:comment "Computation is an Activity which is generally performed on a Dataset with the help of a SoftwareApplication" ;
+             rdfs:comment "Computation is an Activity performed on a Dataset with the help of a Software." ;
              rdfs:label "Computation" .
+
+
+###  https://w3id.org/EVI#DataAcquisition
+:DataAcquisition rdf:type owl:Class ;
+                 rdfs:subClassOf <https://www.w3.org/ns/prov#Activity> ;
+                 rdfs:comment "DataAcquisition is an Activity which allows one to collect data using  physical Instruments." ;
+                 rdfs:label "DataAcquisition" .
 
 
 ###  https://w3id.org/EVI#Dataset
 :Dataset rdf:type owl:Class ;
-         rdfs:subClassOf :Representation ;
+         rdfs:subClassOf :Material ;
          rdfs:comment "A body of structured information describing some topic(s) of interest." ;
          rdfs:label "Dataset" .
 
@@ -461,200 +552,121 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/EVI#EvidenceGraph
 :EvidenceGraph rdf:type owl:Class ;
                rdfs:subClassOf :Representation ;
-               rdfs:comment "An EvidenceGraph is a set of Representations, having supports and / or challenges relations to one another, and potentially those which have Reference to other EvidenceGraphs." ;
+               rdfs:comment """An EvidenceGraph is a directed acyclic graph
+
+Ev = (Rn, r+, r-)
+
+where Rn is a set of Representations, r+ ∈ RnXRn is a set of supports relations, r- ∈ RnXRn is a set of challenge relations, and R+∩R- = Φ.
+
+EvidenceGraphs are bipolar argumentation frameworks (Cayrol &amp; Lagasquie-Schiex, 2009) represented as RDF named graphs.""" ;
                rdfs:label "EvidenceGraph" .
+
+
+###  https://w3id.org/EVI#Identifier
+:Identifier rdf:type owl:Class ;
+            rdfs:subClassOf :Representation ;
+            rdfs:comment "An Identifier uniquely identifies an Entity, in some local context, or in the global context." ;
+            rdfs:label "Identifier" .
+
+
+###  https://w3id.org/EVI#Image
+:Image rdf:type owl:Class ;
+       rdfs:subClassOf :Dataset ;
+       rdfs:comment "An Image is a visual representation of structured or unstructured data produced digitally." ;
+       rdfs:label "Image" .
+
+
+###  https://w3id.org/EVI#Instrument
+:Instrument rdf:type owl:Class ;
+            rdfs:subClassOf :Material ;
+            rdfs:comment "An Instrument is a physical object which represents a non-digital Material. Instruments are used for acquisition of data." ;
+            rdfs:label "Instrument" .
 
 
 ###  https://w3id.org/EVI#Material
 :Material rdf:type owl:Class ;
           rdfs:subClassOf :Representation ;
-          rdfs:comment "A Material supports any Method of which it is a component." ;
+          rdfs:comment "A Material is the digital Representation of an Entity, used to conduct an experiment, perform a study, or do a Computation. It is describedBy any Method in which it is used. Materials can be natively digital, like Datasets; or digital representations of non-digital objects (physical entities), like Instruments." ;
           rdfs:label "Material" .
 
 
 ###  https://w3id.org/EVI#Method
 :Method rdf:type owl:Class ;
         rdfs:subClassOf :Representation ;
-        rdfs:comment "A reusable recipe showing how the Dataset were obtained. It specifies an Activitiy, and may refer to some Material as a component of the recipe." ;
+        rdfs:comment "A descriptive recipe describing how a Representation is made or obtained. It describes an Activity, and may referTo some Material as a component of the recipe." ;
         rdfs:label "Method" .
-
-
-###  https://w3id.org/EVI#Reagent
-:Reagent rdf:type owl:Class ;
-         rdfs:subClassOf :Material ;
-         rdfs:comment "A Reagent is a Material used for representing biological objects." ;
-         rdfs:label "Reagent" .
 
 
 ###  https://w3id.org/EVI#Reference
 :Reference rdf:type owl:Class ;
            rdfs:subClassOf :Representation ;
-           rdfs:comment "A Representation that is used to speify the citation of an EvidenceGraph." ;
+           rdfs:comment "A Reference is a bibliographic record. References are Representations which represent and attribute archived digital or bibliographic objects, including Articles, Datasets, and Software." ;
            rdfs:label "Reference" .
 
 
 ###  https://w3id.org/EVI#Representation
 :Representation rdf:type owl:Class ;
                 rdfs:subClassOf <https://www.w3.org/ns/prov#Entity> ;
-                rdfs:comment "A Representation is an Entity which represents an instance of EvidenceGraph, an Article, a Claim, a Dataset, a Material, a Method, or a Reference." ,
-                             "A Representation is an Entity which represents something." ;
+                rdfs:comment "A Representation is an Entity which represents another Entity. Representations are always attributedTo an Agent, their creator, contributor, influencer or to an Activity they were generatedBy." ;
                 rdfs:label "Representation" .
 
 
 ###  https://w3id.org/EVI#Service
 :Service rdf:type owl:Class ;
-         rdfs:subClassOf :Method ;
-         rdfs:comment "A Method used during a Computation Activity." ;
+         rdfs:subClassOf :Computation ;
+         rdfs:comment "A Service is an Activity accessed online, which executes a Computation." ;
          rdfs:label "Service" .
 
 
 ###  https://w3id.org/EVI#Software
 :Software rdf:type owl:Class ;
           rdfs:subClassOf :Material ;
-          rdfs:comment "A set of instructions to perform specific Computation Activity." ;
+          rdfs:comment "Software is a specific set of computer-interpretable instructions to perform one or more Computations." ;
           rdfs:label "Software" .
 
 
 ###  https://www.w3.org/ns/prov#Activity
 <https://www.w3.org/ns/prov#Activity> rdf:type owl:Class ;
-                                      rdfs:comment "An Activity is a process by which an Entity is produced, modified, consumed or used." ,
-                                                   "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." ;
-                                      rdfs:label "Activity" .
+                                      rdfs:comment "An Activity is a process by which an Entity is produced, modified, consumed or used." ;
+                                      rdfs:label "prov:Activity" .
 
 
 ###  https://www.w3.org/ns/prov#Agent
 <https://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
                                    rdfs:subClassOf <https://www.w3.org/ns/prov#Entity> ;
-                                   rdfs:comment "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity." ;
-                                   rdfs:label "Agent" .
+                                   rdfs:comment "An Agent is an autonomous Entity. Persons and Organizations are Agents in EVI. Agents may be associatedWith Activities, and Entities may be attributedTo Agents." ;
+                                   rdfs:label "prov:Agent" .
 
 
 ###  https://www.w3.org/ns/prov#Entity
 <https://www.w3.org/ns/prov#Entity> rdf:type owl:Class ;
-                                    rdfs:comment "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary." ,
-                                                 "Entities are things which may be discussed, real or imaginary." ;
-                                    rdfs:label "Entity" .
+                                    rdfs:comment "An Entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects." ;
+                                    rdfs:label "prov:Entity" .
 
 
 ###  https://www.w3.org/ns/prov#Organization
 <https://www.w3.org/ns/prov#Organization> rdf:type owl:Class ;
                                           rdfs:subClassOf <https://www.w3.org/ns/prov#Agent> ;
-                                          rdfs:comment "An organization is a social or legal institution such as a company, society, etc." ;
-                                          rdfs:label "Organization" .
+                                          rdfs:comment "An Organization is a social or legal institution with structure and purpose such as a company, society, university, sports team, etc." ;
+                                          rdfs:label "prov:Organization" .
 
 
 ###  https://www.w3.org/ns/prov#Person
 <https://www.w3.org/ns/prov#Person> rdf:type owl:Class ;
                                     rdfs:subClassOf <https://www.w3.org/ns/prov#Agent> ;
-                                    rdfs:comment "Person agents are prople." ;
-                                    rdfs:label "Person" .
+                                    rdfs:comment "A Person is a human Agent." ;
+                                    rdfs:label "prov:Person" .
 
 
 #################################################################
 #    Rules
 #################################################################
 
-<http://purl.org/evi/computation> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:computation rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<http://purl.org/evi/data1> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:data1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<http://purl.org/evi/data2> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-<http://purl.org/evi/z> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-<http://purl.org/evi/a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-<http://purl.org/evi/x> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-<http://purl.org/evi/y> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "S5" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :attributedTo ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/z> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/a>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :supports ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/a> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/z>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "S2" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :derivedFrom ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/z> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/x>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :supports ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/x> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/z>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "S3" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :derivedFrom ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/z> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/x>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :supports ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/x> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/z>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "S4" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :generatedBy ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/z> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/y>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :supports ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/y> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/z>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
+:data2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "" ;
@@ -663,23 +675,23 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :usedDataset ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/computation> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/data1>
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :computation ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :data1
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :generatedBy ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/data2> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/computation>
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :data2 ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :computation
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :directlySupports ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://purl.org/evi/data1> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://purl.org/evi/data2>
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :supports ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :data1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :data2
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
