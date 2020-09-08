@@ -392,7 +392,7 @@
                         Agent, with two sub-classes Person and Organization. The object properties in EVI are used to establish relations among instances, most of which are of type Representation. Computation and
                         DataAcquisition are Activities performed on instances of other Representations, Software or Services.</p>
                     <div id="EVI_ontology" class="figure" style="text-align: center;">
-                        <img src="resources/images/EVI-v-0-1.svg" alt="Semantic Model of Evidence Graph ontology." width="740" height="520"/>
+                        <img src="resources/images/v01/EVI-v-0-1.svg" alt="Semantic Model of Evidence Graph ontology." width="740" height="520"/>
                         <br/><br/>
                         <div style="text-align: center;">
                             <a href="#EVI_ontology">Figure 1</a>. Classes and properties of EVI ontology.
@@ -484,15 +484,50 @@
                         <br/>
                         <div class="example">
                             <strong class="crossreference">Example</strong>
-                            <pre>
-           (1) A Computation in which a Dataset of Electronic Health Records (EHR) is de-identified is an Activity.
+                            <pre>                                                                
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # A Computation in which a Dataset of Electronic Health Records (EHR) is de-identified is an Activity.
+                                
+                                :deidentification1 a prov:Activity ;
+                                                   evi:used :dataset1 ;
+                                                   evi:generated :dataset2 .
+                                
+                                :dataset1 schema:description "EHR data"^^xsd:string .
+                                :dataset2 schema:description "de-identified EHR data"^^xsd:string .
 
-           (2) Manual annotation of the de-identified Dataset with descriptive metadata is an Activity.
+                                # Manual annotation of the de-identified Dataset with descriptive metadata is an Activity.
+                                
+                                :annotation1 a prov:Activity ;
+                                             evi:used :dataset2 ;
+                                             evi:generated :dataset3 .
+                                
+                                :dataset2 schema:description "de-identified EHR data"^^xsd:string .
+                                :dataset3 schema:description "annotated de-identified EHR data"^^xsd:string .
 
-           (3) Selection of a patient cohort from the annotated, de-identified Dataset is an Activity.
+                                # Selection of a patient cohort from the annotated, de-identified Dataset is an Activity.
+                                
+                                :cohort_selection1 a prov:Activity ;
+                                                   evi:used :dataset3 ;
+                                                   evi:generated :dataset4 .
+                                
+                                :dataset3 schema:description "annotated de-identified EHR data"^^xsd:string .
+                                :dataset4 schema:description "cohort of annotated de-identified EHR data"^^xsd:string .
 
-           (4) Preparation of an Article on analytic findings from the above Dataset analysis is an Activity.
-        </pre>
+                                # Preparation of an Article on analytic findings from the above Dataset analysis is an Activity.
+                                
+                                :articlepreparation1 a prov:Activity ;
+                                                     schema:description "analytics on the cohort of annotated de-identified EHR data"^^xsd:string ;
+                                                     evi:used :dataset4 .
+                                
+                                :dataset4 schema:description "cohort of annotated de-identified EHR data"^^xsd:string .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has sub-classes</dt>
@@ -529,12 +564,30 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) Dr. Mary Smith is an Agent of type Person.
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+    
+                                # Dr. Mary Smith is an Agent of type Person.
+                               
+                                :Mary_Smith a prov:Person ; a prov:Agent .
+                               
+                                # The University of Virginia is an Agent, of type Organization.
+                               
+                                &lt;https://www.virginia.edu/&gt; a prov:Organization , prov:Agent .
+                               
+                                # The bioRxiv preprint archive is an Agent of type Organization.
+                               
+                                &lt;https://www.biorxiv.org/&gt; a prov:Organization , prov:Agent .
+                                
+                                # The service FAIRSCAPE_MDS, as a SoftwareAgent, is used to assign an Identifier to a Dataset.
 
-           (2) The University of Virginia is an Agent, of type Organization.
-
-           (3) The bioRxiv preprint archive is an Agent of type Organization.
-        </pre>
+                                :FAIRSCAPE_MDS a prov:SoftwareAgent , prov:Agent .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has super-classes</dt>
@@ -572,8 +625,22 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           Dr. Smith&#39;s latest preprint, submitted to “Preprint Rxiv”, is an Article, which was createdBy Mary Smith.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+
+                                # Dr. Smith&#39;s latest preprint, submitted to “Preprint Rxiv”, is an Article, which was createdBy Mary Smith.
+                               
+                                :preprint1 a prov:Article ;
+                                          dcterms:title "A title of the article"^^xsd:string ;
+                                          evi:createdBy :Mary_Smith .
+                                
+                                :Mary_Smith a prov:Person .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has equivalent-classes</dt>
@@ -604,10 +671,18 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) The sentence &quot;Age (from conception) was significantly correlated with birth weight.&quot; is a Claim.
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                                                
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
 
-           (2) &quot;Happy birthday!&quot; is not a Claim.
-        </pre>
+                                # The sentence &quot;Age (from conception) was significantly correlated with birth weight&quot; is a Claim.
+
+                                :claim1 a evi:Claim ;
+                                        evi:state "Age (from conception) was significantly correlated with birth weight"^^xsd:string .
+
+                                # &quot;Happy birthday!&quot; is not a Claim.
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has equivalent-classes</dt>
@@ -636,9 +711,23 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           In Dr. Smith&#39;s research, she performed a Computation to determine the correlation of birth weight and post-menstrual age of one thousand
-           preterm infants.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                                                
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                            
+                                # In Dr. Smith&#39;s research, she performed a Computation to determine the correlation of birth weight 
+                                # and post-menstrual age of one thousand preterm infants.
+                               
+                                :computation1 a evi:Computation ;
+                                              evi:usedDataset :dataset5 ;
+                                              evi:usedSoftware :software1 ;
+                                              schema:description "determines the correlation of birth weight and death"^^xsd:string .
+
+                                :dataset5 schema:description "birth weight and death"^^xsd:string .
+                                :software1 schema:description "computes correlation"^^xsd:string .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has super-classes</dt>
@@ -674,8 +763,24 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           Dr. Smith used the BedMasterEx Instrument for acquiring heart rate data from babies in NICU within a 10 minute inteval.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                            
+                                # Dr. Smith used the BedMasterEx Instrument for acquiring heart rate data from babies in NICU within a 10 minute inteval.
+                               
+                                :dataAcquisition1 a evi:DataAcquisition ;
+                                                  evi:usedInstrument :BedMasterEx ;
+                                                  evi:generated :dataset6 ;
+                                                  evi:associatedWith :Mary_Smith .
+                               
+                                :BedMasterEx a evi:Instrument .
+                                :Mary_Smith a prov:Person .
+                                :dataset6 schema:description "heart rate data from babies in NICU within a 10 minute interval"^xsd:string .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has super-classes</dt>
@@ -706,11 +811,33 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) Dr. Smith analyzed a Dataset consisting of the subject identifiers, post-menstrual ages, and birthrights of one thousand babies.
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                                                
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                            
+                                # Dr. Smith analyzed a Dataset consisting of the subject identifiers, post-menstrual ages, and birthrights
+                                # of one thousand babies.
 
-           (2) Dr. Smith&#39;s results included a computed dataset showing the correlation of age and birthweight for male and female preterm infants in
-           five age ranges.
-        </pre>
+                                :analysis1 a prov:Activity ;
+                                           evi:used :dataset7 ;
+                                           evi:associatedWith :Mary_Smith .
+                                
+                                :dataset7 a evi:Dataset ;
+                                          a evi:Identifier ;
+                                          schema:description "Subject identifiers, post-menstrual ages, and birth weights of one thousand babies"^^xsd:string .
+
+                               
+                                # Dr. Smith&#39;s results included a computed dataset showing the correlation of age and birthweight for male and
+                                # female preterm infants in five age ranges.
+                               
+                                :analysis1 evi:generated :dataset8 .
+                                                                
+                                :dataset8 a evi:Dataset ;
+                                          schema:description "Correlation of age and birthweight for male and female preterm infants in five age ranges"^^xsd:string .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has equivalent-classes</dt>
@@ -749,14 +876,45 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) The University of Virginia Hospital Neonatal ICU is an Entity.
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix foaf:    &lt;http://xmlns.com/foaf/0.1/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                            
+                                # The University of Virginia Hospital Neonatal ICU is an Entity.
 
-           (2) Subject #459 in Dr. Smith&#39;s study is an Entity.
+                                &lt;https://childrens.uvahealth.com/services/neonatology&gt; a prov:Entity ;
+                                                                                       a evi:Identifier ;
+                                                                                       foaf:name "University of Virginia Children's Hospital Neonatal Intensive Care Unit"^^xsd:string .
 
-           (3) Dr. Smith&#39;s preprint is an Entity, as is Dr. Smith.
+                                # Subject 459 in Dr. Smith's study is an Entity.
+                               
+                                :study1 evi:used :subject_459 .
+                               
+                                :study1 a prov:Activity .
+                                :subject_459 a prov:Entity .
 
-           (4) Dr. Smith&#39;s medical record in the UVA Health System is an Entity.
-        </pre>
+                                # Dr. Smith&#39;s preprint is an Entity, as is Dr. Smith.
+                               
+                                :preprint1 evi:createdBy :Mary_Smith .
+                                
+                                :preprint1 a prov:Entity .
+                                :Mary_Smith a prov:Person .
+                               
+                                # Dr. Smith&#39;s medical record in the UVA Health System is an Entity.
+                               
+                                :mrn1 a prov:Entity ;
+                                      evi:derivedFrom :Mary_Smith ;
+                                      evi:generatedBy :activity2 .
+                               
+                                :activity2 a prov:Activity ;
+                                           evi:associatedWith &lt;https://uvahealth.com/&gt; .
+                               
+                                &lt;https://uvahealth.com/&gt; a prov:Organization .                                
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has sub-classes</dt>
@@ -798,12 +956,12 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) A minimal EvidenceGraph for Dr. Smith&#39;s Article on baby birth weights is EG1 a EvidenceGraph {&quot;Preprint rXiv 20200729.1&quot; a Article
-           createdBy &quot;Smith M&quot; a Person} for &quot;Preprint rXiv 20200729.1&quot; a Article
+                               (1) A minimal EvidenceGraph for Dr. Smith&#39;s Article on baby birth weights is EG1 a EvidenceGraph {&quot;Preprint rXiv 20200729.1&quot; a Article
+                               createdBy &quot;Smith M&quot; a Person} for &quot;Preprint rXiv 20200729.1&quot; a Article
 
-           (2) A more robust EvidenceGraph for the correlation result discussed in Dr. Smith&#39;s Article might be &quot;Post-conception age was significantly
-           correlated with birth weight.&quot; a Claim derivedFrom Dataset2 generatedBy Computation1 using Dataset1, Software1.
-        </pre>
+                               (2) A more robust EvidenceGraph for the correlation result discussed in Dr. Smith&#39;s Article might be &quot;Post-conception age was significantly
+                               correlated with birth weight.&quot; a Claim derivedFrom Dataset2 generatedBy Computation1 using Dataset1, Software1.
+                            </pre>
                         </div>
                         EvidenceGraphs always have the relation evidenceFor to the Representation at their root. I.e. in Example (1) above, the EvidenceGraph EG1 is evidencefor &quot;Preprint rXiv 20200729.1&quot; a Article.
                         <dl class="description">
@@ -833,10 +991,19 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) The string &quot;20200729.1&quot; is a unique Identifier for Articles in the local context of the Preprint rXiv system.
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .                                
+                                @prefix ark:     &lt;http://clarklab.uvarc.io/mds/ark:99999/&gt; .                            
+                            
+                                # The string &quot;20200729.1&quot; is a unique Identifier for Articles in the local context of the Preprint rXiv system.
+                               
+                                &lt;https//arxiv.org/prep/20200729.1&gt; a evi:Identifier ;
+                                                                   a evi:Article .
+                                
+                                # An Archival Resource Key (ARK) is a globally unique persistent Identifier.                                                               
 
-           (2) An Archival Resource Key (ARK) is a globally unique persistent Identifier.
-        </pre>
+                                ark:ab6asdfas9 a evi:Identifier .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has super-classes</dt>
@@ -860,8 +1027,26 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           A scatterplot Image was produced from the Dataset of babies, birth weights, and ages.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                            
+                                #A scatterplot Image was produced from the Dataset of babies, birth weights, and ages.
+                               
+                                :scatterplot1 a evi:Image ;
+                                              evi:generatedBy :activity3 .
+                                
+                                :activity3 prov:used :dataset9 ;
+                                           schema:description "babies, birth weight, and ages"^^xsd:string .
+                                
+                                :activity3 a prov:Activity .
+
+                                # Or
+                                :scatterplot1 evi:derivedFrom :dataset9 .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has super-classes</dt>
@@ -885,8 +1070,19 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           BedMasterEx is an Instrument that is used to acquire and store vital signs of patients.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                                        
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                            
+                                # BedMasterEx is an Instrument that is used to acquire and store vital signs of patients.
+                               
+                                :BedMasterEx a evi:Instrument .
+                                
+                                :dataset10 evi:derivedFrom :BedMasterEx ;
+                                           schema:description "vital signs of patients"^^xsd:string .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has super-classes</dt>
@@ -915,10 +1111,24 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) Dr. Smith&#39;s Dataset of birth-weight and baby ages is a natively digital Material.
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                            
+                                # Dr. Smith&#39;s Dataset of birth-weight and baby ages is a natively digital Material.
+                               
+                                :dataset7 a evi:Dataset ;
+                                          a evi:Material ;
+                                          schema:decription "Subject identifiers, post-menstrual ages, and birth weights of one thousand babies"^^xsd:string .
 
-           (2) The BedMasterEx real time patient monitor system is a non-digital physical entity represented in EVI as a Material.
-        </pre>
+                                # The BedMasterEx real time patient monitor system is a Material, a non-digital physical entity.
+                               
+                                :BedMasterEx a evi:Material .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has super-classes</dt>
@@ -954,8 +1164,22 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           &quot;We used scipy.stats.pearsonr to compute the Pearson correlation coefficient&quot; is a Method.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                            
+                                # &quot;We used scipy.stats.pearsonr to compute the Pearson correlation coefficient&quot; is a Method.
+                               
+                                :method1 a evi:Method ;
+                                         evi:describes :activity4 ;
+                                         schema:description "scipy.stats.pearsonr"^^xsd:string .
+                                :activity4 a prov:Activity ;
+                                           schema:description "computes the Pearson correlation coefficient"^^xsd:string .
+                            </pre>
                         </div>
                         Note that the actual version of code for scipy.stats.pearsonr is a Material (Software) not a Method. Methods are descriptive, Materials are concrete objects (even if they are digital, they are concrete).
                         <dl class="description">
@@ -988,12 +1212,21 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) The University of Virginia Health System is an Organization.
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                            
+                                # The University of Virginia Health System is an Organization.
+                               
+                                &lt;https://uvahealth.com&gt; a prov:Organization .
 
-           (2) The Association for Computing Machinery is an Organization.
+                                # The Association for Computing Machinery is an Organization.
+                               
+                                &lt;https://www.acm.org&gt; a prov:Organization .
 
-           (3) The UVA Cavaliers basketball team, 2019 NCAA Champions, is an Organization.
-        </pre>
+                                # The UVA Cavaliers basketball team, 2019 NCAA Champions, is an Organization.
+                               
+                                &lt;https://en.wikipedia.org/wiki/2018%E2%80%9319_Virginia_Cavaliers_men%27s_basketball_team&gt; a prov:Organization .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has equivalent-classes</dt>
@@ -1024,10 +1257,27 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) Dr. Mary Smith is a Person conducting a study of infant birth weight correlations.
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                            
+                                # Dr. Mary Smith is a Person conducting a study of infant birth weight correlations.
+                               
+                                :study2 a prov:Activity ;
+                                        evi:associatedWith :Mary_Smith .
+                                
+                                :Mary_Smith a prov:Person .
 
-           (2) The babies in Dr. Smith&#39;s study are Persons, participating as subjects in her study.
-        </pre>
+                                # The babies in Dr. Smith&#39;s study are Persons, participating as subjects in her study.
+                               
+                                :study2 a prov:Activity ;
+                                        evi:associatedWith :Mary_Smith ;
+                                        evi:used :subject_460 .
+                                
+                                :Mary_Smith a prov:Person .
+                                :subject_460 a prov:Entity .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has equivalent-classes</dt>
@@ -1056,8 +1306,21 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           &quot;Smith M 2020. Post-conception age and birth weight. Preprint rXiv 20200729.1&quot; is a Reference for Dr. Smith&#39;s Article.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                            
+                                # &quot;Smith M 2020. Post-conception age and birth weight. Preprint rXiv 20200729.1&quot; is a Reference for Dr. Smith&#39;s Article.
+                                
+                                :reference1 a evi:Reference ;                                            
+                                            evi:represents :article1 .
+                                
+                                :article1 a evi:Article ;
+                                          dcterms:title "Post-conception age and birth weight"^^xsd:string .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has super-classes</dt>
@@ -1081,10 +1344,18 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           The Dataset of babies, birth weights, and ages used to support the conclusions of Dr. Smith&#39;s preprint Article, is a Representation. So is
-           the Article itself, as well as the Figures showing, and Captions describing, the scatterplots and correlations, presented within the Article.
-           The scatterplot Image and the output correlation Dataset upon which it is based, are also Representations.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                            
+                               The Dataset of babies, birth weights, and ages used to support the conclusions of Dr. Smith&#39;s preprint Article, is a Representation. So is
+                               the Article itself, as well as the Figures showing, and Captions describing, the scatterplots and correlations, presented within the Article.
+                               The scatterplot Image and the output correlation Dataset upon which it is based, are also Representations.
+                            </pre>
                         </div>
                         Because Representations always have Agents or Activities they were generatedBy, whether or not they make any textually recognizable Claims, they always have at least a minimal EvidenceGraph supporting them.
                         <br/><br/>
@@ -1147,10 +1418,17 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) The Datacite DOI Registration Agency provides a Service online to generate globally unique Digital Object Identifiers (DOIs).
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                
+                                # The Datacite DOI Registration Agency provides a Service online to generate globally unique Digital Object Identifiers (DOIs).
+                                
+                                &lt;https://doi.datacite.org/&gt; a evi:Service .
 
-           (2) The bit.ly URL shortener is a Service.
-        </pre>
+                                # The bit.ly URL shortener is a Service.
+                                
+                                &lt;https://bitly.com/&gt; a evi:Service .
+                            </pre>
                         </div>
                         <dl class="description">
                             <dt>has equivalent-classes</dt>
@@ -1186,8 +1464,13 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           The python code for the function scipy.stats.pearsonr in SciPy v1.5.2 is a Software.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                            
+                                # The python code for the function scipy.stats.pearsonr in SciPy v1.5.2 is a Software.
+                                
+                                &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; a evi:Software .
+                            </pre>
                         </div>
                         Software always has a specific version and an identifier which points to that retrievable version. Any software which is only conceptually identified, e.g. &quot;scipy.stats.pearsonr&quot; with no version number and no Identifier, is a Method, as it is only descriptive.
                         <dl class="description">
@@ -1346,8 +1629,21 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           Dr. Mary Smith is associatedWith the Computation(s) which analyzed her Datasets.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # Dr. Mary Smith is associatedWith the Computation(s) which analyzed her Datasets.
+                                
+                                :analysis1 a prov:Activity ;
+                                           evi:associatedWith :Mary_Smith .
+                                
+                                :Mary_Smith a prov:Person .
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -1495,8 +1791,23 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           Dr. Smith's Article contains an Image showing a scatterplot.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                               
+                                # Dr. Smith's Article contains an Image showing a scatterplot.
+                                
+                                :preprint1 a prov:Article ;
+                                           evi:contains :scatterplot1 ;           
+                                           evi:createdBy :Mary_Smith .
+                                           
+                                :Mary_Smith a prov:Person .
+                                :scatterplot1 a evi:Image .
+                            </pre>
                         </div>
                         <div class="description">
                             <p>
@@ -1559,11 +1870,31 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) "Smith M 2020. Post-conception age and birth weight. Preprint rXiv 20200729.1" was createdBy Mary Smith.
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # "Smith M 2020. Post-conception age and birth weight. Preprint rXiv 20200729.1" was createdBy Mary Smith.
+                                
+                                :preprint1 a prov:Article ;
+                                           dcterms:title "Smith M 2020. Post-conception age and birth weight. Preprint rXiv 20200729.1"^^xsd:string ;
+                                           evi:createdBy :Mary_Smith .
+                                :Mary_Smith a prov:Person .
 
-           (2) "Preprint rXiv 20200729.1" an Article was createdBy "Dr. Mary Smith" a Person and "Preprint rXiv" an Organization (because Preprint rXiv
-           is the publisher).
-        </pre>
+                                # "Preprint rXiv 20200729.1" an Article was createdBy "Dr. Mary Smith" a Person and "Preprint rXiv" 
+                                # an Organization (because Preprint rXiv is the publisher).
+                                
+                                :preprint1 a prov:Article ;
+                                           evi:contains :scatterplot1 ;
+                                           evi:createdBy :Mary_Smith .
+                                           
+                                :Mary_Smith a prov:Person .
+                                :scatterplot1 a evi:Image .
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -1633,8 +1964,19 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           Mary Smith's Image of a scatterplot was derivedFrom her Dataset1.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # Mary Smith's Image of a scatterplot was derivedFrom her Dataset1.
+                                
+                                :scatterplot evi:derivedFrom :dataset1 .
+                                :scatterplot1 a evi:Image .
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -1720,8 +2062,24 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           The Method "We used scipy.stats.pearsonr to compute the Pearson correlation coefficient" describes a prov:Activity.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # The Method "We used scipy.stats.pearsonr to compute the Pearson correlation coefficient" describes a prov:Activity.
+                                
+                                :method1 a evi:Method ;
+                                         schema:description "We used scipy.stats.pearsonr to compute the Pearson correlation coefficient"^^xsd:string ;
+                                         evi:describes :computation1 ;
+                                         evi:referTo &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; .
+                                
+                                :computation1 a prov:Activity .         
+                                &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; a evi:Software .
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -1782,11 +2140,31 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           Dr. Chad Jones has created a new "improved" version of scipy.stats.pearsonr, v1.5.2x, deprecating the older v1.5.2, which according to Dr.
-           Jones, contained a bug. Dr. Jones published a note to this effect on his blog. We can link that blog post and the new version of pearsonr
-           to the old version via a directlyChallenges property. This entails indirectlyChallenges properties on the path to the root in the
-           EvidenceGraph of Dr. Smith's Article.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # Dr. Chad Jones has created a new "improved" version of scipy.stats.pearsonr, v1.5.2x, deprecating the older v1.5.2, which according to Dr.
+                                # Jones, contained a bug. Dr. Jones published a note to this effect on his blog. We can link that blog post and the new version of pearsonr
+                                # to the old version via a directlyChallenges property. This entails indirectlyChallenges properties on the path to the root in the
+                                # EvidenceGraph of Dr. Smith's Article.
+
+                                :article2 a evi:Article ;
+                                          evi:createdBy :Chad_Jone ;
+                                          evi:represents :software2 .
+                                          
+                                :software2 a evi:Software ;
+                                           schema:version "1.5.2" .
+                                           
+                                &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; a evi:Software ;
+                                                                                                                 schema:version "1.5.1" .
+                                :article2 evi:directlyChallenges &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; .
+                                :software2 evi:directlyChallenges &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; .                                
+                            </pre>
                         </div>
                         A challenge whether direct or indirect, is an assertion, whose truth value is also based on some form of evidence. We do not say a Representation is false, flawed or invalid, simply because it has been challenged.
                         <div class="description">
@@ -1897,9 +2275,18 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           The Article &quot;Preprint rXiv 20200729.1&quot; createdBy Dr. Smith is an instance of a EvidenceGaph EG1, a named graph with EG1 as its name. With the
-           evidenceFor property it can be specified that EG1 is an evidence for the Article.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # The Article &quot;Preprint rXiv 20200729.1&quot; createdBy Dr. Smith is an instance of a 
+                                # EvidenceGaph EG1, a named graph with EG1 as its name. With the evidenceFor property it 
+                                # can be specified that EG1 is an evidence for the Article.                                
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -1960,8 +2347,21 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           Dataset1 a Dataset was generatedBy Computation1, a Computation in Mary Smith's baby study.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # Dataset1 a Dataset was generatedBy Computation1, a Computation in Mary Smith's baby study.
+                                
+                                :dataset1 a evi:Dataset ;
+                                          evi:generatedBy :computation1 .
+
+                                :computation1 a evi:Computation .
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -2136,8 +2536,23 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           &quot;We used scipy.stats.pearsonr to compute the Pearson correlation coefficient&quot; a Method referTo the SciPy v1.5.2 a Software as the Material.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # &quot;We used scipy.stats.pearsonr to compute the Pearson correlation coefficient&quot; a Method 
+                                # referTo the SciPy v1.5.2 a Software as the Material.
+                                
+                                :method1 a evi:Method ;
+                                         schema:description "We used scipy.stats.pearsonr to compute the Pearson correlation coefficient"^^xsd:string ;
+                                         evi:describes :computation1 ;
+                                         evi:referTo &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; .
+                                &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; a evi:Software .
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -2193,13 +2608,38 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) The Reference "Smith M 2020. Post-conception age and birth weight. Preprint rXiv 20200729.1" represents the Article "Preprint rXiv
-           20200729.1"
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # The Reference "Smith M 2020. Post-conception age and birth weight. Preprint rXiv 20200729.1" represents the Article "Preprint rXiv
+                                20200729.1"
+                                
+                                :reference1 evi:represents :preprint1 .
 
-           (2) The photo of Dr. Mary Smith in the Author Information section of her Article, represents the Person "Dr. Mary Smith".
+                                :preprint1 a prov:Article ;
+                                           dcterms:title "Post-conception age and birth weight"^^xsd:string ;
+                                           evi:createdBy :Mary_Smith .
 
-           (3) The Dataset Dataset1 analyzed in Dr. Smith's Article, represents attributes of the set of babies in her cohort of premies.
-        </pre>
+                                :Mary_Smith a prov:Person .
+
+                                :reference1 a evi:Reference ;
+                                              dcterms:title "Smith M 2020. Post-conception age and birth weight. Preprint rXiv 20200729.1"^^xsd:string .
+
+                                # The photo of Dr. Mary Smith in the Author Information section of her Article, represents the Person "Dr. Mary Smith".
+
+                                :photo1 evi:represents :Mary_Smith .
+                                
+                                :preprint1 evi:contains :photo1 ;
+                                           evi:createdBy :Mary_Smith .
+
+                                :photo1 a evi:Image .
+                                :Mary_Smith a prov:Person .
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -2310,16 +2750,42 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           (1) The Person "Mary Smith" supports the Article "Preprint RXiv 20200729.1". To say this is to say that the known character, credentials and
-           reputation of the author is a support for the truth value of their Articles.
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # The Person "Mary Smith" supports the Article "Preprint RXiv 20200729.1". To say this is to say that the 
+                                # known character, credentials and reputation of the author is a support for the truth value of their Articles.
+                                
+                                :preprint1 a prov:Article ;
+                                           dcterms:title "A title ..."^^xsd:string ;
+                                           evi:createdBy :Mary_Smith .
+                                :Mary_Smith a prov:Person .
+                                :Mary_Smith evi:supports :preprint1 .
 
-           (2-a) The Software scipy.stats.pearsonr in the SciPy v1.5.2 package supportsthe correlation statistic computed by Dr. Smith on her baby
-           weight and age Dataset,
+                                # The Software scipy.stats.pearsonr in the SciPy v1.5.2 package supportsthe correlation statistic computed by Dr. Smith on her baby
+                                weight and age Dataset,
 
-           (2-b) The computed correlation statistic supports the scatterplot Image, and
+                                &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; evi:supports :computation1 .
+                                :computation1 a evi:Computation ;
+                                              evi:usedSoftware &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; .
+                                              evi:associatedWith :Mary_Smith .
+                                              
+                                &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; a evi:Software .
+                                :Mary_Smith a prov:Person .
 
-           (2-c) the scatterplot Image supports the Article's conclusion.
-        </pre>
+                                # The computed correlation statistic supports the scatterplot Image, and
+
+                                :computation1 evi:supports :scatterplot1 .
+                                
+                                # the scatterplot Image supports the Article's conclusion.
+                                
+                                :scatterplot1 evi:supports :claim1 .
+                            </pre>
                         </div>
                         Because supports is transitive, if A supports B and B supports C, then A supports C by entailment. Therefore by entailment from transitivity, the scipy.stats.pearsonr code supports the conclusion of
                         the Article.
@@ -2364,8 +2830,23 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           The Computation on Dr. Smith's Dataset1 used the Software scipy.stats.pearsonr v1.5.2.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # The Computation on Dr. Smith's Dataset1 used the Software scipy.stats.pearsonr v1.5.2.
+                               
+                                :computation1 a evi:Computation ;
+                                              prov:used &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; .
+                                              evi:associatedWith :Mary_Smith .
+                                              
+                                &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; a evi:Software .
+                                :Mary_Smith a prov:Person .
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -2447,8 +2928,25 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           Mary Smith's Computation1 to determine correlations usedDataset Dataset1, a record of preterm infant ages and birth weights.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # Mary Smith's Computation1 to determine correlations usedDataset Dataset1, a record of preterm infant ages and birth weights.
+                                
+                                :computation1 a evi:Computation ;
+                                              evi:usedDataset :dataset1 ;
+                                              evi:associatedWith :Mary_Smith .
+                                              
+                                :Mary_Smith a prov:Person .
+                                
+                                :dataset1 a evi:Dataset ;
+                                          schema:description "preterm infant ages and birth weights"^^xsd:string .
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -2489,8 +2987,25 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           Mary Smith usedInsrument Instrument1 to collect the Dataset Dataset1.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # Mary Smith usedInsrument Instrument1 to collect the Dataset Dataset1.
+                                
+                                :DataAcquisition1 a evi:DataAcquisition ;
+                                                  evi:usedInstrument :instrument1 ;
+                                                  evi:generated :dataset1 ;
+                                                  evi:associatedWith :Mary_Smith .
+                                                  
+                                :instrument1 a evi:Instrument .
+                                :Mary_Smith a prov:Person .
+                                :dataset1 a evi:Dataset .
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -2531,8 +3046,25 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           The Computation "AssignID" usedService FAIRSCAPE_MDS to assign an Identifier for Mary Smith's Dataset1.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # The Computation "AssignID" usedService FAIRSCAPE_MDS to assign an Identifier for Mary Smith's Dataset1.
+                                
+                                :AssignID a evi:Computation ;
+                                          evi:usedService :FAIRSCAPE_MDS ;
+                                          evi:associatedWith :Mary_Smith .
+                                          
+                                :FAIRSCAPE_MDS a evi:Service ;
+                                              schema:description "Assign an Identifier to a Dataset"^^xsd:string .
+                                              
+                                :Mary_Smith a prov:Person .
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -2573,8 +3105,23 @@
                         <div class="example">
                             <strong class="crossreference">Example</strong>
                             <pre>
-           Mary Smith's Computation1 usedSoftware "scipy.stats.pearsonr v1.5.2" a Software.
-        </pre>
+                                @prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                                @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .                                
+                                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                                @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+                                @prefix evi:     &lt;http://w3id.org/EVI#&gt; .
+                                @prefix schema:  &lt;http://schema.org/&gt; .
+                                @prefix :        &lt;http://example.com/&gt; .
+                                
+                                # Mary Smith's Computation1 usedSoftware "scipy.stats.pearsonr v1.5.2" a Software.
+                                
+                                :computation1 a evi:Computation ;
+                                              evi:usedSoftware &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; .
+                                              evi:associatedWith :Mary_Smith .
+                                              
+                                &lt;https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html&gt; a evi:Software .
+                                :Mary_Smith a prov:Person .
+                            </pre>
                         </div>
                         <div class="description">
                             <dl>
@@ -2700,7 +3247,8 @@
                         <div class="comment">
                             <span class="markdown">The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the end of a clip within a larger file.
 
-                                Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</span>
+                                Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions
+                            </span>
                         </div>
                         <div class="description">
                             <dl>
