@@ -68,11 +68,11 @@
                 <dl>
                     <!--VERSIONS: CURRENT, PREVIOUS, REVISION-->
                     <dt>Current version:</dt>
+                    <dd><a href="https://github.com/EvidenceGraph/EVI/blob/master/Ontology/versions/v0.2/evi.owl">0.2</a></dd>
+                    <dt>Previous version:</dt>
                     <dd><a href="https://github.com/EvidenceGraph/EVI/blob/master/Ontology/versions/v0.1/evi.owl">0.1</a></dd>
-                    <!--dt>Previous version:</dt>
-<dd><a href="https://github.com/EvidenceGraph/EVI/blob/master/Ontology/versions/v1.0/evi.owl">1.0</a></dd>
-<dt>Revision:</dt>
-<dd>1.1</dd-->
+                    <!--dt>Revision:</dt>
+                    <dd>1.1</dd-->
                     <!--AUTHORS-->
                     <dt>Authors:</dt>
                     <dd><a href="https://github.com/sadnanalmanir">Sadnan Al Manir</a>, University of Virginia, USA</dd>
@@ -91,7 +91,7 @@
                     </dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> -->
                     <!--CITE AS-->
                     <!--dt>Cite as:</dt>
-<dd>Sadnan Al Manir, Tim Clark. EVI: Evidence Graph Ontology. Revision: 1.0.</dd-->
+                    <dd>Sadnan Al Manir, Tim Clark. EVI: Evidence Graph Ontology. Revision: 1.0.</dd-->
                 </dl>
 
                 <hr/>
@@ -175,6 +175,9 @@
                         <a href="#Dataset" title="https://w3id.org/EVI#Dataset">Dataset</a>
                     </li>
                     <li>
+                      <a href="#Download" title="https://w3id.org/EVI#Download">Download</a>
+                   </li>
+                    <li>
                         <a href="#EvidenceGraph" title="https://w3id.org/EVI#EvidenceGraph">EvidenceGraph</a>
                     </li>
                     <li>
@@ -207,6 +210,9 @@
                     <li>
                         <a href="#https://www.w3.org/ns/prov#Person" title="https://www.w3.org/ns/prov#Person">prov:Person</a>
                     </li>
+                    <li>
+                      <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">prov:SoftwareAgent</a>
+                   </li>
                     <li>
                         <a href="#Reference" title="https://w3id.org/EVI#Reference">Reference</a>
                     </li>
@@ -296,6 +302,9 @@
                     <a href="#directlySupports" title="https://w3id.org/EVI#directlySupports">directlySupports</a>
                 </li>
                 <li>
+                  <a href="#distribution" title="https://w3id.org/EVI#distribution">distribution</a>
+               </li>
+                <li>
                     <a href="#evidenceFor" title="https://w3id.org/EVI#evidenceFor">evidenceFor</a>
                 </li>
                 <li>
@@ -360,26 +369,61 @@
                 </li>
                 </ul><h4>Data Properties</h4><ul class="hlist">
                 <li>
-                    <a href="#http://schema.org/contentSize" title="http://schema.org/contentSize">schema:contentSize</a>
-                </li>
-                <li>
-                    <a href="#http://schema.org/contentUrl" title="http://schema.org/contentUrl">schema:contentUrl</a>
-                </li>
-                <li>
-                    <a href="#http://schema.org/description" title="http://schema.org/description">schema:description</a>
-                </li>
-                <li>
-                    <a href="#http://schema.org/endTime" title="http://schema.org/endTime">schema:endTime</a>
-                </li>
-                <li>
-                    <a href="#http://schema.org/fileFormat" title="http://schema.org/fileFormat">schema:fileFormat</a>
-                </li>
-                <li>
-                    <a href="#http://schema.org/name" title="http://schema.org/name">schema:name</a>
-                </li>
-                <li>
-                    <a href="#http://schema.org/startTime" title="http://schema.org/startTime">schema:startTime</a>
-                </li>
+                  <a href="#publicationVenue" title="https://w3id.org/EVI#publicationVenue">publicationVenue</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/author" title="http://schema.org/author">schema:author</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/contentSize" title="http://schema.org/contentSize">schema:contentSize</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/contentUrl" title="http://schema.org/contentUrl">schema:contentUrl</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/dateCreated" title="http://schema.org/dateCreated">schema:dateCreated</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/datePublished" title="http://schema.org/datePublished">schema:datePublished</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/description" title="http://schema.org/description">schema:description</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/endTime" title="http://schema.org/endTime">schema:endTime</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/fileFormat" title="http://schema.org/fileFormat">schema:fileFormat</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/identifier" title="http://schema.org/identifier">schema:identifier</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/keywords" title="http://schema.org/keywords">schema:keywords</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/license" title="http://schema.org/license">schema:license</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/name" title="http://schema.org/name">schema:name</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/startTime" title="http://schema.org/startTime">schema:startTime</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/title" title="http://schema.org/title">schema:title</a>
+               </li>
+               <li>
+                  <a href="#http://schema.org/version" title="http://schema.org/version">schema:version</a>
+               </li>
+               <li>
+                  <a href="#state" title="https://w3id.org/EVI#state">
+                     <span>state</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#type" title="https://w3id.org/EVI#type">type</a>
+               </li>
                 </ul>
             </div>
 
@@ -392,7 +436,7 @@
                         Agent, with two sub-classes Person and Organization. The object properties in EVI are used to establish relations among instances, most of which are of type Representation. Computation and
                         DataAcquisition are Activities performed on instances of other Representations, Software or Services.</p>
                     <div id="EVI_ontology" class="figure" style="text-align: center;">
-                        <img src="resources/images/v01/EVI-v-0-1.svg" alt="Semantic Model of Evidence Graph ontology." width="740" height="520"/>
+                        <img src="resources/images/v02/EVI-v-0-2.svg" alt="Semantic Model of Evidence Graph ontology." width="740" height="520"/>
                         <br/><br/>
                         <div style="text-align: center;">
                             <a href="#EVI_ontology">Figure 1</a>. Classes and properties of EVI ontology.
@@ -939,6 +983,30 @@
                             </dd>
                         </dl>
                     </div>
+                    <div class="entity" id="Download">
+                      <h3>Download<sup class="type-c" title="class">c</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> https://w3id.org/EVI#Download</p>
+                      <dl class="description">
+                         <dt>is in domain of</dt>
+                         <dd>
+                            <a href="#http://schema.org/contentSize" title="http://schema.org/contentSize">schema:contentSize</a>
+                            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/contentUrl" title="http://schema.org/contentUrl">schema:contentUrl</a>
+                            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/fileFormat" title="http://schema.org/fileFormat">schema:fileFormat</a>
+                            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/identifier" title="http://schema.org/identifier">schema:identifier</a>
+                            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/version" title="http://schema.org/version">schema:version</a>
+                            <sup class="type-dp" title="data property">dp</sup>
+                         </dd>
+                         <dt>is in range of</dt>
+                         <dd>
+                            <a href="#distribution" title="https://w3id.org/EVI#distribution">distribution</a>
+                            <sup class="type-op" title="object property">op</sup>
+                         </dd>
+                      </dl>
+                   </div>
                     <div class="entity" id="EvidenceGraph">
                         <h3>EvidenceGraph<sup class="type-c" title="class">c</sup>
                             <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1292,6 +1360,30 @@
                             </dd>
                         </dl>
                     </div>
+                    <div class="entity" id="http://www.w3.org/ns/prov#SoftwareAgent">
+                      <h3>prov:SoftwareAgent<sup class="type-c" title="class">c</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://www.w3.org/ns/prov#SoftwareAgent</p>
+                      <div class="comment">
+                         <span class="markdown">A Service is considered a SoftwareAgent that can be invoked and executed. A Software is different from SoftwareAgent in the context that it can be downloaded.</span>
+                      </div>
+                      <dl class="description">
+                         <dt>has super-classes</dt>
+                         <dd>
+                            <a href="#https://www.w3.org/ns/prov#Agent" title="https://www.w3.org/ns/prov#Agent">prov:Agent</a>
+                            <sup class="type-c" title="class">c</sup>
+                         </dd>
+                         <dt>has sub-classes</dt>
+                         <dd>
+                            <a href="#Service" title="https://w3id.org/EVI#Service">Service</a>
+                            <sup class="type-c" title="class">c</sup>, <a href="#http://schema.org/Service" title="http://schema.org/Service">schema:Service</a>
+                            <sup class="type-c" title="class">c</sup>
+                         </dd>
+                      </dl>
+                   </div>
                     <div class="entity" id="Reference">
                         <h3>Reference<sup class="type-c" title="class">c</sup>
                             <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -2261,6 +2353,34 @@
                             </dl>
                         </div>
                     </div>
+                    <div class="entity" id="distribution">
+                      <h3>distribution<sup class="type-op" title="object property">op</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> https://w3id.org/EVI#distribution</p>
+                      <div class="comment">
+                         <span class="markdown">Refers to the metadata of downloadable form of Software, Dataset.</span>
+                      </div>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Dataset" title="https://w3id.org/EVI#Dataset">Dataset</a>
+                               <sup class="type-c" title="class">c</sup> 
+                               <span class="logic">or</span> 
+                               <a href="#Software" title="https://w3id.org/EVI#Software">Software</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <a href="#Download" title="https://w3id.org/EVI#Download">Download</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
                     <div class="entity" id="evidenceFor">
                         <h3>evidenceFor<sup class="type-op" title="object property">op</sup>
                             <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -3153,186 +3273,469 @@
                 <div id="dataproperties">
                     <h3 id="dataproperties-headline" class="list">Data Properties</h3>
                     <ul class="hlist">
-                        <li>
-                            <a href="#http://schema.org/contentSize" title="http://schema.org/contentSize">schema:contentSize</a>
-                        </li>
-                        <li>
-                            <a href="#http://schema.org/contentUrl" title="http://schema.org/contentUrl">schema:contentUrl</a>
-                        </li>
-                        <li>
-                            <a href="#http://schema.org/description" title="http://schema.org/description">schema:description</a>
-                        </li>
-                        <li>
-                            <a href="#http://schema.org/endTime" title="http://schema.org/endTime">schema:endTime</a>
-                        </li>
-                        <li>
-                            <a href="#http://schema.org/fileFormat" title="http://schema.org/fileFormat">schema:fileFormat</a>
-                        </li>
-                        <li>
-                            <a href="#http://schema.org/name" title="http://schema.org/name">schema:name</a>
-                        </li>
-                        <li>
-                            <a href="#http://schema.org/startTime" title="http://schema.org/startTime">schema:startTime</a>
-                        </li>
-                    </ul>
-                    <div class="entity" id="http://schema.org/contentSize">
-                        <h3>schema:contentSize<sup class="type-dp" title="data property">dp</sup>
-                            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-                            </span>
-                        </h3>
-                        <p>
-                            <strong>IRI:</strong> http://schema.org/contentSize</p>
-                        <div class="comment">
-                            <span class="markdown">File size in (mega/kilo) bytes.</span>
-                        </div>
-                        <div class="description">
-                            <dl>
-                                <dt>has range</dt>
-                                <dd>
-                                    <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="entity" id="http://schema.org/contentUrl">
-                        <h3>schema:contentUrl<sup class="type-dp" title="data property">dp</sup>
-                            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-                            </span>
-                        </h3>
-                        <p>
-                            <strong>IRI:</strong> http://schema.org/contentUrl</p>
-                        <div class="comment">
-                            <span class="markdown">Actual bytes of the media object, for example the image file or video file.</span>
-                        </div>
-                        <div class="description">
-                            <dl>
-                                <dt>has range</dt>
-                                <dd>
-                                    <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="entity" id="http://schema.org/description">
-                        <h3>schema:description<sup class="type-dp" title="data property">dp</sup>
-                            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-                            </span>
-                        </h3>
-                        <p>
-                            <strong>IRI:</strong> http://schema.org/description</p>
-                        <div class="comment">
-                            <span class="markdown">A description of the item.</span>
-                        </div>
-                        <div class="description">
-                            <dl>
-                                <dt>has domain</dt>
-                                <dd>
-                                    <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
-                                    <sup class="type-c" title="class">c</sup>
-                                </dd>
-                                <dt>has range</dt>
-                                <dd>
-                                    <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="entity" id="http://schema.org/endTime">
-                        <h3>schema:endTime<sup class="type-dp" title="data property">dp</sup>
-                            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-                            </span>
-                        </h3>
-                        <p>
-                            <strong>IRI:</strong> http://schema.org/endTime</p>
-                        <div class="comment">
-                            <span class="markdown">The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the end of a clip within a larger file.
+                      <li>
+                         <a href="#publicationVenue" title="https://w3id.org/EVI#publicationVenue">publicationVenue</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/author" title="http://schema.org/author">schema:author</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/contentSize" title="http://schema.org/contentSize">schema:contentSize</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/contentUrl" title="http://schema.org/contentUrl">schema:contentUrl</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/dateCreated" title="http://schema.org/dateCreated">schema:dateCreated</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/datePublished" title="http://schema.org/datePublished">schema:datePublished</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/description" title="http://schema.org/description">schema:description</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/endTime" title="http://schema.org/endTime">schema:endTime</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/fileFormat" title="http://schema.org/fileFormat">schema:fileFormat</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/identifier" title="http://schema.org/identifier">schema:identifier</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/keywords" title="http://schema.org/keywords">schema:keywords</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/license" title="http://schema.org/license">schema:license</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/name" title="http://schema.org/name">schema:name</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/startTime" title="http://schema.org/startTime">schema:startTime</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/title" title="http://schema.org/title">schema:title</a>
+                      </li>
+                      <li>
+                         <a href="#http://schema.org/version" title="http://schema.org/version">schema:version</a>
+                      </li>
+                      <li>
+                         <a href="#state" title="https://w3id.org/EVI#state">
+                            <span>state</span>
+                         </a>
+                      </li>
+                      <li>
+                         <a href="#type" title="https://w3id.org/EVI#type">type</a>
+                      </li>
+                   </ul>
+                   <div class="entity" id="publicationVenue">
+                      <h3>publicationVenue<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> https://w3id.org/EVI#publicationVenue</p>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Software" title="https://w3id.org/EVI#Software">Software</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/author">
+                      <h3>schema:author<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/author</p>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Dataset" title="https://w3id.org/EVI#Dataset">Dataset</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/contentSize">
+                      <h3>schema:contentSize<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/contentSize</p>
+                      <div class="comment">
+                         <span class="markdown">File size in (mega/kilo) bytes.</span>
+                      </div>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Download" title="https://w3id.org/EVI#Download">Download</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#long">long</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/contentUrl">
+                      <h3>schema:contentUrl<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/contentUrl</p>
+                      <div class="comment">
+                         <span class="markdown">Actual bytes of the media object, for example the image file or video file.</span>
+                      </div>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Download" title="https://w3id.org/EVI#Download">Download</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/dateCreated">
+                      <h3>schema:dateCreated<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/dateCreated</p>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Dataset" title="https://w3id.org/EVI#Dataset">Dataset</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/datePublished">
+                      <h3>schema:datePublished<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/datePublished</p>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Dataset" title="https://w3id.org/EVI#Dataset">Dataset</a>
+                               <sup class="type-c" title="class">c</sup> 
+                               <span class="logic">or</span> 
+                               <a href="#Software" title="https://w3id.org/EVI#Software">Software</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/description">
+                      <h3>schema:description<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/description</p>
+                      <div class="comment">
+                         <span class="markdown">A description of the item.</span>
+                      </div>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/endTime">
+                      <h3>schema:endTime<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/endTime</p>
+                      <div class="comment">
+                         <span class="markdown">The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the end of a clip within a larger file.
 
-                                Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions
-                            </span>
-                        </div>
-                        <div class="description">
-                            <dl>
-                                <dt>has domain</dt>
-                                <dd>
-                                    <a href="#Computation" title="https://w3id.org/EVI#Computation">Computation</a>
-                                    <sup class="type-c" title="class">c</sup>
-                                </dd>
-                                <dt>has range</dt>
-                                <dd>
-                                    <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="entity" id="http://schema.org/fileFormat">
-                        <h3>schema:fileFormat<sup class="type-dp" title="data property">dp</sup>
-                            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-                            </span>
-                        </h3>
-                        <p>
-                            <strong>IRI:</strong> http://schema.org/fileFormat</p>
-                        <div class="comment">
-                            <span class="markdown">Media type, typically MIME format (see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.</span>
-                        </div>
-                        <div class="description">
-                            <dl>
-                                <dt>has range</dt>
-                                <dd>
-                                    <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="entity" id="http://schema.org/name">
-                        <h3>schema:name<sup class="type-dp" title="data property">dp</sup>
-                            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-                            </span>
-                        </h3>
-                        <p>
-                            <strong>IRI:</strong> http://schema.org/name</p>
-                        <div class="comment">
-                            <span class="markdown">The name of the item.</span>
-                        </div>
-                        <div class="description">
-                            <dl>
-                                <dt>has domain</dt>
-                                <dd>
-                                    <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
-                                    <sup class="type-c" title="class">c</sup>
-                                </dd>
-                                <dt>has range</dt>
-                                <dd>
-                                    <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="entity" id="http://schema.org/startTime">
-                        <h3>schema:startTime<sup class="type-dp" title="data property">dp</sup>
-                            <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-                            </span>
-                        </h3>
-                        <p>
-                            <strong>IRI:</strong> http://schema.org/startTime</p>
-                        <div class="comment">
-                            <span class="markdown">The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.
+                Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</span>
+                      </div>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Computation" title="https://w3id.org/EVI#Computation">Computation</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/fileFormat">
+                      <h3>schema:fileFormat<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/fileFormat</p>
+                      <div class="comment">
+                         <span class="markdown">Media type, typically MIME format (see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.</span>
+                      </div>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Download" title="https://w3id.org/EVI#Download">Download</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/identifier">
+                      <h3>schema:identifier<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/identifier</p>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Download" title="https://w3id.org/EVI#Download">Download</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/keywords">
+                      <h3>schema:keywords<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/keywords</p>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Dataset" title="https://w3id.org/EVI#Dataset">Dataset</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/license">
+                      <h3>schema:license<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/license</p>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Dataset" title="https://w3id.org/EVI#Dataset">Dataset</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/name">
+                      <h3>schema:name<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/name</p>
+                      <div class="comment">
+                         <span class="markdown">The name of the item.</span>
+                      </div>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/startTime">
+                      <h3>schema:startTime<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/startTime</p>
+                      <div class="comment">
+                         <span class="markdown">The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.
 
-                                Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</span>
-                        </div>
-                        <div class="description">
-                            <dl>
-                                <dt>has domain</dt>
-                                <dd>
-                                    <a href="#Computation" title="https://w3id.org/EVI#Computation">Computation</a>
-                                    <sup class="type-c" title="class">c</sup>
-                                </dd>
-                                <dt>has range</dt>
-                                <dd>
-                                    <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-                                </dd>
-                            </dl>
-                        </div>
-                    </div>
+                Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</span>
+                      </div>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Computation" title="https://w3id.org/EVI#Computation">Computation</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/title">
+                      <h3>schema:title<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/title</p>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Software" title="https://w3id.org/EVI#Software">Software</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="http://schema.org/version">
+                      <h3>schema:version<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> http://schema.org/version</p>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Download" title="https://w3id.org/EVI#Download">Download</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="state">
+                      <h3>state<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> https://w3id.org/EVI#state</p>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Claim" title="https://w3id.org/EVI#Claim">Claim</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
+                   <div class="entity" id="type">
+                      <h3>type<sup class="type-dp" title="data property">dp</sup>
+                         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                         </span>
+                      </h3>
+                      <p>
+                         <strong>IRI:</strong> https://w3id.org/EVI#type</p>
+                      <div class="description">
+                         <dl>
+                            <dt>has domain</dt>
+                            <dd>
+                               <a href="#Software" title="https://w3id.org/EVI#Software">Software</a>
+                               <sup class="type-c" title="class">c</sup>
+                            </dd>
+                            <dt>has range</dt>
+                            <dd>
+                               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+                            </dd>
+                         </dl>
+                      </div>
+                   </div>
                 </div>
 
                 <div id="legend">

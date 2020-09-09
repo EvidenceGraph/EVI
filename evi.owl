@@ -23,8 +23,9 @@
         <terms:title xml:lang="en">EVI: Evidence Graph Ontology</terms:title>
         <vann:preferredNamespacePrefix>evi</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri xml:lang="en">http://w3id.org/EVI</vann:preferredNamespaceUri>
+        <owl:priorVersion xml:lang="en">0.1</owl:priorVersion>
         <owl:versionIRI xml:lang="en">http://www.w3.org/2002/07/owl</owl:versionIRI>
-        <owl:versionInfo xml:lang="en">0.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -300,6 +301,24 @@
     
 
 
+    <!-- https://w3id.org/EVI#distribution -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/EVI#distribution">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/EVI#Dataset"/>
+                    <rdf:Description rdf:about="https://w3id.org/EVI#Software"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/EVI#Download"/>
+        <rdfs:comment>Refers to the metadata of downloadable form of Software, Dataset.</rdfs:comment>
+        <rdfs:label>distribution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/EVI#evidenceFor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/EVI#evidenceFor">
@@ -550,10 +569,21 @@
     
 
 
+    <!-- http://schema.org/author -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/author">
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>schema:author</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://schema.org/contentSize -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/contentSize">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Download"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
         <rdfs:comment>File size in (mega/kilo) bytes.</rdfs:comment>
         <rdfs:label>schema:contentSize</rdfs:label>
     </owl:DatatypeProperty>
@@ -563,9 +593,37 @@
     <!-- http://schema.org/contentUrl -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/contentUrl">
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Download"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>Actual bytes of the media object, for example the image file or video file.</rdfs:comment>
         <rdfs:label>schema:contentUrl</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/dateCreated -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/dateCreated">
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>schema:dateCreated</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/datePublished -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/datePublished">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/EVI#Dataset"/>
+                    <rdf:Description rdf:about="https://w3id.org/EVI#Software"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>schema:datePublished</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -597,9 +655,40 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
     <!-- http://schema.org/fileFormat -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/fileFormat">
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Download"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Media type, typically MIME format (see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, &apos;encoding&apos; can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.</rdfs:comment>
         <rdfs:label>schema:fileFormat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/identifier">
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Download"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label>schema:identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/keywords -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/keywords">
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>schema:keywords</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/license -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/license">
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>schema:license</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -624,6 +713,55 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
 
 Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.</rdfs:comment>
         <rdfs:label>schema:startTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/title -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/title">
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>schema:title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/version -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/version">
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Download"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>schema:version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/EVI#publicationVenue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/EVI#publicationVenue">
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>publicationVenue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/EVI#state -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/EVI#state">
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Claim"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/EVI#type -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/EVI#type">
+        <rdfs:domain rdf:resource="https://w3id.org/EVI#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>type</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -702,7 +840,7 @@ At this time, Schema.org does not define any types of relationship between claim
 
     <owl:Class rdf:about="http://schema.org/Service">
         <owl:equivalentClass rdf:resource="https://w3id.org/EVI#Service"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/EVI#Computation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
         <rdfs:comment>A service provided by an organization, e.g. delivery service, print services, etc</rdfs:comment>
         <rdfs:label>schema:Service</rdfs:label>
     </owl:Class>
@@ -727,6 +865,16 @@ At this time, Schema.org does not define any types of relationship between claim
         <rdfs:subClassOf rdf:resource="https://w3id.org/EVI#Material"/>
         <rdfs:comment>Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.</rdfs:comment>
         <rdfs:label>schema:SoftwareSourceCode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#SoftwareAgent -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#SoftwareAgent">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/prov#Agent"/>
+        <rdfs:comment>A Service is considered a SoftwareAgent that can be invoked and executed. A Software is different from SoftwareAgent in the context that it can be downloaded.</rdfs:comment>
+        <rdfs:label>prov:SoftwareAgent</rdfs:label>
     </owl:Class>
     
 
@@ -777,6 +925,14 @@ At this time, Schema.org does not define any types of relationship between claim
         <rdfs:subClassOf rdf:resource="https://w3id.org/EVI#Material"/>
         <rdfs:comment>A body of structured information describing some topic(s) of interest.</rdfs:comment>
         <rdfs:label>Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/EVI#Download -->
+
+    <owl:Class rdf:about="https://w3id.org/EVI#Download">
+        <rdfs:label>Download</rdfs:label>
     </owl:Class>
     
 
@@ -870,7 +1026,7 @@ EvidenceGraphs are bipolar argumentation frameworks (Cayrol &amp;amp; Lagasquie-
     <!-- https://w3id.org/EVI#Service -->
 
     <owl:Class rdf:about="https://w3id.org/EVI#Service">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/EVI#Computation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
         <rdfs:comment>A Service is an Activity accessed online, which executes a Computation.</rdfs:comment>
         <rdfs:label>Service</rdfs:label>
     </owl:Class>
