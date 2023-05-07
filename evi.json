@@ -1,5 +1,121 @@
 [ {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/EVI#Dataset"
+    }, {
+      "@id" : "https://w3id.org/EVI#Software"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/EVI#Dataset"
+    }, {
+      "@id" : "https://w3id.org/EVI#Software"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/EVI#Computation"
+    }, {
+      "@id" : "https://w3id.org/EVI#Dataset"
+    }, {
+      "@id" : "https://w3id.org/EVI#Software"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/EVI#Dataset"
+    }, {
+      "@id" : "https://w3id.org/EVI#Software"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    }, {
+      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/EVI#Computation"
+    }, {
+      "@id" : "https://w3id.org/EVI#Dataset"
+    }, {
+      "@id" : "https://w3id.org/EVI#Software"
+    } ]
+  } ]
+}, {
   "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/EVI#Dataset"
+    }, {
+      "@id" : "https://w3id.org/EVI#Software"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    }, {
+      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/EVI#Computation"
+    }, {
+      "@id" : "https://w3id.org/EVI#Dataset"
+    }, {
+      "@id" : "https://w3id.org/EVI#Software"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    }, {
+      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/EVI#Dataset"
+    }, {
+      "@id" : "https://w3id.org/EVI#Software"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -13,18 +129,18 @@
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid7"
+      "@id" : "_:genid49"
     }, {
-      "@id" : "_:genid5"
+      "@id" : "_:genid47"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid9"
+      "@id" : "_:genid51"
     } ]
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "https://w3id.org/EVI#data2"
@@ -36,7 +152,7 @@
     "@id" : "https://w3id.org/EVI#generatedBy"
   } ]
 }, {
-  "@id" : "_:genid7",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "https://w3id.org/EVI#computation"
@@ -48,7 +164,7 @@
     "@id" : "https://w3id.org/EVI#usedDataset"
   } ]
 }, {
-  "@id" : "_:genid9",
+  "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "https://w3id.org/EVI#data1"
@@ -60,6 +176,26 @@
     "@id" : "https://w3id.org/EVI#supports"
   } ]
 }, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/EVI#Dataset"
+    }, {
+      "@id" : "https://w3id.org/EVI#Software"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/EVI#Dataset"
+    }, {
+      "@id" : "https://w3id.org/EVI#Software"
+    } ]
+  } ]
+}, {
   "@id" : "http://purl.org/dc/terms/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -67,7 +203,19 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/creator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An entity responsible for making the resource. Examples of a creator include a person, an organization, or a service i.e. a SoftwareAgent. Typically, the name of a creator should be used to indicate the entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/EVI#DigitalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "terms:creator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3.org/ns/prov#Agent"
+  } ]
 }, {
   "@id" : "http://purl.org/dc/terms/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -93,7 +241,7 @@
     "@value" : "schema:Article"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://w3id.org/EVI#Article"
@@ -108,7 +256,7 @@
     "@value" : "schema:Claim"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://w3id.org/EVI#Claim"
@@ -123,7 +271,7 @@
     "@value" : "schema:Dataset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Material"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://w3id.org/EVI#Dataset"
@@ -168,7 +316,7 @@
     "@value" : "schema:Service"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Computation"
+    "@id" : "http://www.w3.org/ns/prov#SoftwareAgent"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://w3id.org/EVI#Service"
@@ -183,7 +331,7 @@
     "@value" : "schema:SoftwareApplication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Material"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://w3id.org/EVI#Software"
@@ -198,34 +346,82 @@
     "@value" : "schema:SoftwareSourceCode"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Material"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://w3id.org/EVI#Software"
   } ]
 }, {
+  "@id" : "http://schema.org/author",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The author of the content."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "schema:author"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "http://schema.org/contentSize",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "File size in (mega/kilo) bytes."
+    "@value" : "File size in (tera/giga/mega/kilo) bytes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid3"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "schema:contentSize"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "http://www.w3.org/2001/XMLSchema#long"
   } ]
 }, {
-  "@id" : "http://schema.org/contentUrl",
+  "@id" : "http://schema.org/dateCreated",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Actual bytes of the media object, for example the image file or video file."
+    "@value" : "Date when the item was created."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/EVI#Dataset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "schema:contentUrl"
+    "@value" : "schema:dateCreated"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://schema.org/dateModified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The date when the item was modifed last."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid6"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "schema:dateModified"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://schema.org/datePublished",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Date when the item was first published."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid9"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "schema:datePublished"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "http://schema.org/description",
@@ -238,6 +434,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "schema:description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/encodingFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The format of the item in question encoded into."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid12"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "schema:encodingFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -263,11 +474,56 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Media type, typically MIME format (see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid15"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "schema:fileFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "schema:identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "http://schema.org/keywords",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid18"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "schema:keywords"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A license document that applies to this content, typically indicated by URL."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid22"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "schema:license"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid25"
   } ]
 }, {
   "@id" : "http://schema.org/name",
@@ -300,11 +556,56 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
+  "@id" : "http://schema.org/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The title of a Thing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "schema:title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://schema.org/version",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The version of the DigitalObject."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "schema:version"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#Bundle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A bundle is a named set of provenance descriptions, and is itself an Entity, so allowing provenance of provenance to be expressed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "prov:Bundle"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#SoftwareAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Service is considered a SoftwareAgent that can be invoked and executed. A Software is different from SoftwareAgent in the context that it can be downloaded."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "prov:SoftwareAgent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3.org/ns/prov#Agent"
+  } ]
 }, {
   "@id" : "https://w3id.org/EVI",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
@@ -316,11 +617,6 @@
   "http://purl.org/dc/terms/created" : [ {
     "@language" : "en",
     "@value" : "2020-07-27"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "https://datascience.virginia.edu/people/tim-clark"
-  }, {
-    "@value" : "https://github.com/sadnanalmanir"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
@@ -340,25 +636,29 @@
     "@language" : "en",
     "@value" : "http://w3id.org/EVI"
   } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@language" : "en",
+    "@value" : "0.2"
+  } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@language" : "en",
     "@value" : "http://www.w3.org/2002/07/owl"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "0.1"
+    "@value" : "1.0"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#Article",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An Article is a (typically compound) textual document conveying a set of Claims and other Representations. Among these, an Article in EVI always conveys an assertion of its authorship in the form of a bibliographic self-reference."
+    "@value" : "An Article is a (typically compound) textual document conveying a set of Claims and other DigitalObjects. Among these, an Article in EVI always conveys an assertion of its authorship in the form of a bibliographic self-reference."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Article"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#Claim",
@@ -370,7 +670,7 @@
     "@value" : "Claim"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#Computation",
@@ -385,18 +685,6 @@
     "@id" : "https://www.w3.org/ns/prov#Activity"
   } ]
 }, {
-  "@id" : "https://w3id.org/EVI#DataAcquisition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "DataAcquisition is an Activity which allows one to collect data using  physical Instruments."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DataAcquisition"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/prov#Activity"
-  } ]
-}, {
   "@id" : "https://w3id.org/EVI#Dataset",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -406,7 +694,37 @@
     "@value" : "Dataset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Material"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
+  } ]
+}, {
+  "@id" : "https://w3id.org/EVI#DigitalContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DigitalContent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/EVI#DigitalObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A DigitalObject is an Entity which represents another Entity. DigitalObjects are always attributedTo an Agent, their creator, contributor, influencer or to an Activity they were generatedBy."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DigitalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3.org/ns/prov#Entity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/EVI#Distribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The placement of instances of DigitalObjects. A single DigitalObject may be represented in multiple forms, hence resulting in multiple distributions. An Image can be encoded and distributed as any of the JPEG, PNG, SVG."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#EvidenceGraph",
@@ -418,19 +736,7 @@
     "@value" : "EvidenceGraph"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/EVI#Identifier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An Identifier uniquely identifies an Entity, in some local context, or in the global context."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Identifier"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#Image",
@@ -445,30 +751,6 @@
     "@id" : "https://w3id.org/EVI#Dataset"
   } ]
 }, {
-  "@id" : "https://w3id.org/EVI#Instrument",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An Instrument is a physical object which represents a non-digital Material. Instruments are used for acquisition of data."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Instrument"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Material"
-  } ]
-}, {
-  "@id" : "https://w3id.org/EVI#Material",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A Material is the digital Representation of an Entity, used to conduct an experiment, perform a study, or do a Computation. It is describedBy any Method in which it is used. Materials can be natively digital, like Datasets; or digital representations of non-digital objects (physical entities), like Instruments."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Material"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
-  } ]
-}, {
   "@id" : "https://w3id.org/EVI#Method",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -478,7 +760,7 @@
     "@value" : "Method"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#Reference",
@@ -490,19 +772,19 @@
     "@value" : "Reference"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ]
 }, {
-  "@id" : "https://w3id.org/EVI#Representation",
+  "@id" : "https://w3id.org/EVI#Schema",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A Representation is an Entity which represents another Entity. Representations are always attributedTo an Agent, their creator, contributor, influencer or to an Activity they were generatedBy."
+    "@value" : "A semi-structured interpretation of instances of DigitalObjects that can help comprehend the content."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Representation"
+    "@value" : "Schema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/prov#Entity"
+    "@id" : "https://w3id.org/EVI#Dataset"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#Service",
@@ -514,7 +796,7 @@
     "@value" : "Service"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Computation"
+    "@id" : "http://www.w3.org/ns/prov#SoftwareAgent"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#Software",
@@ -526,7 +808,22 @@
     "@value" : "Software"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/EVI#Material"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
+  } ]
+}, {
+  "@id" : "https://w3id.org/EVI#additionalDocumentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Any additional information of the item that may be useful."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid28"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "additionalDocumentation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid32"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#associateFor",
@@ -542,6 +839,21 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/EVI#associatedWith"
+  } ]
+}, {
+  "@id" : "https://w3id.org/EVI#associatedPublication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refenrece to the publications where the item or its relevant information can be discovered."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid35"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "associatedPublication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid39"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#associatedWith",
@@ -577,16 +889,16 @@
   "@id" : "https://w3id.org/EVI#challenges",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The challenges property is entailed by property chain rule when a Representation A either directly challenges another Representation B, or indirectlyChallenges B by challenging a Representation which supports it."
+    "@value" : "The challenges property is entailed by property chain rule when a DigitalObject A either directly challenges another DigitalObject B, or indirectlyChallenges B by challenging a DigitalObject which supports it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "challenges"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#computation",
@@ -607,16 +919,31 @@
   "@id" : "https://w3id.org/EVI#contains",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Instances of Representations may contain instances of other Representations."
+    "@value" : "Instances of DigitalObjects may contain instances of other DigitalObjects."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "contains"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
+  } ]
+}, {
+  "@id" : "https://w3id.org/EVI#contentUrl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The contentUrl property provides the access to the actual byes of the DigitalContent that can be downloaded and examined."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/EVI#Distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contentUrl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/EVI#DigitalContent"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#created",
@@ -640,7 +967,7 @@
     "@value" : "A prov:Agent is a creator of a prov:Entity if it is createdBy the Agent."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   }, {
     "@id" : "https://www.w3.org/ns/prov#Entity"
   } ],
@@ -659,6 +986,21 @@
 }, {
   "@id" : "https://w3id.org/EVI#data2",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "https://w3id.org/EVI#dataSchema",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The dataSchema property describes the content-level schema of a DigitalObject that may be distributed in one or more ways."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/EVI#Distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dataSchema"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/EVI#Schema"
+  } ]
 }, {
   "@id" : "https://w3id.org/EVI#datasetUsedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -753,16 +1095,16 @@
   "@id" : "https://w3id.org/EVI#directlyChallenges",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The directlyChallenges property establishes a relation between instances of Representations A and B when A asserts that B is wrong or deficient. It is non-transitive, entailing indirectlyChallenges properties on Representations supportedBy the Representation it directlyChallenges, via a property chain rule."
+    "@value" : "The directlyChallenges property establishes a relation between instances of DigitalObjects A and B when A asserts that B is wrong or deficient. It is non-transitive, entailing indirectlyChallenges properties on DigitalObjects supportedBy the DigitalObject it directlyChallenges, via a property chain rule."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "directlyChallenges"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/EVI#challenges"
@@ -771,7 +1113,7 @@
   "@id" : "https://w3id.org/EVI#directlySupportedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The use of directlySupportedBy property is intended to establish a direct relation between instances of  Representations."
+    "@value" : "The use of directlySupportedBy property is intended to establish a direct relation between instances of DigitalObjects."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "directlySupportedBy"
@@ -795,22 +1137,16 @@
     "@id" : "https://w3id.org/EVI#supports"
   } ]
 }, {
-  "@id" : "https://w3id.org/EVI#evidenceFor",
+  "@id" : "https://w3id.org/EVI#distributedFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The evidenceFor property is used to declare which evidence (of type EvidenceGaph) exists for a Representation."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/EVI#EvidenceGraph"
+    "@value" : "Reverse of hasDistribution property."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "evidenceFor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@value" : "distributedFrom"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/EVI#hasEvidence"
+    "@id" : "https://w3id.org/EVI#hasDistribution"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#generated",
@@ -846,13 +1182,19 @@
     "@id" : "https://w3id.org/EVI#directlySupportedBy"
   } ]
 }, {
-  "@id" : "https://w3id.org/EVI#hasEvidence",
+  "@id" : "https://w3id.org/EVI#hasDistribution",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Reverse of evidenceFor property."
+    "@value" : "Used to represent different forms of a DigitalObject. An image may be distributed as a JPEG, PNG, or SVG."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasEvidence"
+    "@value" : "hasDistribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/EVI#Distribution"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#indirectlyChallengedBy",
@@ -873,16 +1215,16 @@
   "@id" : "https://w3id.org/EVI#indirectlyChallenges",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The indirectlyChallenges property establishes a relation between instances of Representations when one indirectly challenges the other entailed by property chaining."
+    "@value" : "The indirectlyChallenges property establishes a relation between instances of DigitalObjects when one indirectly challenges the other entailed by property chaining."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "indirectlyChallenges"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/EVI#challenges"
@@ -895,46 +1237,19 @@
     } ]
   } ]
 }, {
-  "@id" : "https://w3id.org/EVI#instrumentUsedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://w3id.org/EVI#publicationVenue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Reverse of usedInstrument property."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "instrumentUsedBy"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/EVI#usedBy"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/EVI#usedInstrument"
-  } ]
-}, {
-  "@id" : "https://w3id.org/EVI#referTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The referTo property is used to identify the resources (of type Material) required by Methods."
+    "@value" : "The (digital/physical) name where the item was published."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/EVI#Method"
+    "@id" : "_:genid42"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "referTo"
+    "@value" : "publicationVenue"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/EVI#Material"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/EVI#referredBy"
-  } ]
-}, {
-  "@id" : "https://w3id.org/EVI#referredBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Reverse of referTo property."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "referredBy"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#representedBy",
@@ -952,10 +1267,10 @@
   "@id" : "https://w3id.org/EVI#represents",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A Representation represents an Entity or any of its features or feature sets."
+    "@value" : "A DigitalObject represents an Entity or any of its features or feature sets."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "represents"
@@ -994,10 +1309,22 @@
     "@id" : "https://w3id.org/EVI#usedSoftware"
   } ]
 }, {
+  "@id" : "https://w3id.org/EVI#state",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/EVI#Claim"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "state"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://w3id.org/EVI#supportedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The supportedBy property is a transitive relation between Representations."
+    "@value" : "The supportedBy property is a transitive relation between DigitalObjects."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "supportedBy"
@@ -1009,16 +1336,16 @@
   "@id" : "https://w3id.org/EVI#supports",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The supports property is a transitive relation between Representations entailed by its subproperty, directlySupports, which is non-transitive. In EvidenceGraphs, if A supports B, then the correctness (truth value) of A provides a warrant for belief in the correctness (truth value) of B."
+    "@value" : "The supports property is a transitive relation between DigitalObjects entailed by its subproperty, directlySupports, which is non-transitive. In EvidenceGraphs, if A supports B, then the correctness (truth value) of A provides a warrant for belief in the correctness (truth value) of B."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "supports"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/EVI#Representation"
+    "@id" : "https://w3id.org/EVI#DigitalObject"
   } ]
 }, {
   "@id" : "https://w3id.org/EVI#used",
@@ -1067,24 +1394,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/EVI#Dataset"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/EVI#used"
-  } ]
-}, {
-  "@id" : "https://w3id.org/EVI#usedInstrument",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The property usedInstrument is a subproperty of used where domain is DataAcquisition and range is Instrument."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/EVI#DataAcquisition"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "usedInstrument"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/EVI#Instrument"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/EVI#used"
