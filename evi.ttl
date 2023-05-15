@@ -4,20 +4,24 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/EVI> .
+@base <https://w3id.org/EVI#> .
 
 <https://w3id.org/EVI> rdf:type owl:Ontology ;
-                        <http://purl.org/dc/terms/contributor> "https://github.com/jniestroy" ,
-                                                               "https://github.com/mlev71" ;
+                        owl:versionIRI <https://w3id.org/EVI/1.1> ;
+                        <http://purl.org/dc/terms/contributor> <https://github.com/jniestroy> ,
+                                                               <https://github.com/mlev71> ;
                         <http://purl.org/dc/terms/created> "2020-07-27"@en ;
+                        <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-4060-7360> ,
+                                                           <https://orcid.org/0000-0003-4647-3877> ;
                         <http://purl.org/dc/terms/description> "The Evidence Graph ontology extends core concepts from the W3C Provenance Ontology PROV-O and Bioschemas' Profiles to describe evidence for correctness of findings in biomedical publications. The semantic data model in EVI is expressed using OWL2 Web Ontology Language (OWL2)."@en ;
-                        <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by-nc-sa/2.0/" ;
+                        <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-nc-sa/2.0/> ;
+                        <http://purl.org/dc/terms/modified> "2023-05-12"@en ;
                         <http://purl.org/dc/terms/title> "EVI: Evidence Graph Ontology"@en ;
                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "evi" ;
-                        <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/EVI"@en ;
-                        owl:priorVersion "0.2"@en ;
+                        <http://purl.org/vocab/vann/preferredNamespaceUri> <http://w3id.org/EVI> ;
+                        owl:priorVersion "1.0"@en ;
                         owl:versionIRI "http://www.w3.org/2002/07/owl"@en ;
-                        owl:versionInfo "1.0"@en .
+                        owl:versionInfo "1.1"@en .
 
 #################################################################
 #    Annotation properties
@@ -31,12 +35,21 @@
 <http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty ;
+                                   rdfs:range <https://www.w3.org/ns/prov#Agent> .
+
+
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
@@ -65,10 +78,7 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> rdf:type owl:ObjectProperty ;
-                                   rdfs:domain :DigitalObject ;
-                                   rdfs:range <https://www.w3.org/ns/prov#Agent> ;
-                                   rdfs:comment "An entity responsible for making the resource. Examples of a creator include a person, an organization, or a service i.e. a SoftwareAgent. Typically, the name of a creator should be used to indicate the entity." ;
-                                   rdfs:label "terms:creator" .
+                                   rdfs:domain :DigitalObject .
 
 
 ###  https://w3id.org/EVI#associateFor
@@ -275,6 +285,21 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                                              ) ;
                       rdfs:comment "The indirectlyChallenges property establishes a relation between instances of DigitalObjects when one indirectly challenges the other entailed by property chaining." ;
                       rdfs:label "indirectlyChallenges" .
+
+
+###  https://w3id.org/EVI#packagedBy
+:packagedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :packages ;
+            rdfs:comment "Reverse of packages property." ;
+            rdfs:label "packagedBy" .
+
+
+###  https://w3id.org/EVI#packages
+:packages rdf:type owl:ObjectProperty ;
+          rdfs:domain :Container ;
+          rdfs:range :Software ;
+          rdfs:comment "Instances of software can be packaged by the instances of containers." ;
+          rdfs:label "packages" .
 
 
 ###  https://w3id.org/EVI#representedBy
@@ -509,6 +534,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
                          rdfs:label "schema:name" .
 
 
+###  http://schema.org/runtime
+<http://schema.org/runtime> rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0)." ;
+                            rdfs:label "schema:runtime" .
+
+
 ###  http://schema.org/startTime
 <http://schema.org/startTime> rdf:type owl:DatatypeProperty ;
                               rdfs:domain :Computation ;
@@ -583,6 +614,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
 :state rdf:type owl:DatatypeProperty ;
        rdfs:domain :Claim ;
        rdfs:range xsd:string ;
+       rdfs:comment "Textual representation of a claim" ;
        rdfs:label "state" .
 
 
@@ -690,6 +722,13 @@ At this time, Schema.org does not define any types of relationship between claim
              rdfs:subClassOf <https://www.w3.org/ns/prov#Activity> ;
              rdfs:comment "Computation is an Activity performed on a Dataset with the help of a Software." ;
              rdfs:label "Computation" .
+
+
+###  https://w3id.org/EVI#Container
+:Container rdf:type owl:Class ;
+           rdfs:subClassOf :DigitalObject ;
+           rdfs:comment "A container is a digital object that can be defined as packages of software. Instances of containers are accompanied by all necessary dependencies such as specific versions, runtime environment and required libraries for execution." ;
+           rdfs:label "Container" .
 
 
 ###  https://w3id.org/EVI#Dataset
@@ -807,6 +846,30 @@ EvidenceGraphs are bipolar argumentation frameworks (Cayrol &amp; Lagasquie-Schi
 
 
 #################################################################
+#    Individuals
+#################################################################
+
+###  https://orcid.org/0000-0003-4060-7360
+<https://orcid.org/0000-0003-4060-7360> rdf:type owl:NamedIndividual .
+
+
+###  https://orcid.org/0000-0003-4647-3877
+<https://orcid.org/0000-0003-4647-3877> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/EVI
+<https://w3id.org/EVI> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/creator> rdfs:comment "An entity responsible for making the resource. Examples of a creator include a person, an organization, or a service i.e. a SoftwareAgent. Typically, the name of a creator should be used to indicate the entity." ;
+                                   rdfs:label "terms:creator" .
+
+
+#################################################################
 #    Rules
 #################################################################
 
@@ -845,4 +908,4 @@ EvidenceGraphs are bipolar argumentation frameworks (Cayrol &amp; Lagasquie-Schi
                                          ]
  ] .
 
-###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

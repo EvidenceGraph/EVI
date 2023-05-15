@@ -59,28 +59,28 @@
 <body>
     <div class="container">
         <div class="head">
-            <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+            <div style="float:right">language <a href="index.html"><b>en</b></a> </div>
 
             <!--TITLE-->
             <h1>EVI: Evidence Graph Ontology</h1>
             <!--RELEASE INFO-->
-            <h2>Release 2023-05-06</h2>
+            <h2>Release 2023-05-15</h2>
 
 
             <dl>
                 <!--VERSIONS: CURRENT, PREVIOUS, REVISION-->
                 <dt>Current version:</dt>
-                <dd><a href="https://github.com/EvidenceGraph/EVI/blob/master/Ontology/versions/v1.0/evi.owl">1.0</a>
+                <dd><a href="https://github.com/EvidenceGraph/EVI/blob/master/Ontology/versions/v1.1/evi.owl">1.1</a>
                 </dd>
                 <dt>Previous version:</dt>
-                <dd><a href="https://github.com/EvidenceGraph/EVI/blob/master/Ontology/versions/v0.2/evi.owl">0.2</a>
+                <dd><a href="https://github.com/EvidenceGraph/EVI/blob/master/Ontology/versions/v1.0/evi.owl">1.0</a>
                 </dd>
                 <!--dt>Revision:</dt>
                     <dd>1.1</dd-->
                 <!--AUTHORS-->
                 <dt>Authors:</dt>
-                <dd><a href="https://github.com/sadnanalmanir">Sadnan Al Manir</a>, University of Virginia, USA</dd>
-                <dd><a href="https://datascience.virginia.edu/people/tim-clark">Tim Clark</a>, University of Virginia,
+                <dd><a href="https://orcid.org/0000-0003-4060-7360">Sadnan Al Manir</a>, University of Virginia, USA</dd>
+                <dd><a href="https://orcid.org/0000-0003-4060-7360">Tim Clark</a>, University of Virginia,
                     USA</dd>
                 <!--CONTRIBUTORS-->
                 <dt>Contributors:</dt>
@@ -90,14 +90,20 @@
 
                 <!--DOWNLONADS SERIALIZATION BADGES-->
                 <dt>Download serialization:</dt>
-                <dd><span><a href="evi.json" target="_blank"><img
+                <dd>                  
+                  <span><a href="evi.jsonld" target="_blank"><img
                                 src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a>
-                    </span><span><a href="evi.xml" target="_blank"><img
+                  </span>
+                  <span><a href="evi.rdf" target="_blank"><img
                                 src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a>
-                    </span><span><a href="evi.nt" target="_blank"><img
+                  </span>                  
+                  <span><a href="evi.nt" target="_blank"><img
                                 src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a>
-                    </span><span><a href="evi.ttl" target="_blank"><img
-                                src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd>
+                  </span>
+                  <span><a href="evi.ttl" target="_blank"><img
+                                src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> 
+                  </span>
+               </dd>
                 <!--LICENSE-->
                 <dt>License: </dt>
                 <dd><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank"><img
@@ -226,6 +232,9 @@
                 <li>
                    <a href="#Computation" title="https://w3id.org/EVI#Computation">Computation</a>
                 </li>
+                <li>
+                  <a href="#https://w3id.org/EVI#Container" title="https://w3id.org/EVI#Container">Container</a>
+               </li>
                 <li>
                    <a href="#Dataset" title="https://w3id.org/EVI#Dataset">Dataset</a>
                 </li>
@@ -381,6 +390,12 @@
                    <a href="#indirectlyChallenges" title="https://w3id.org/EVI#indirectlyChallenges">indirectlyChallenges</a>
                 </li>
                 <li>
+                  <a href="#https://w3id.org/EVI#packagedBy" title="https://w3id.org/EVI#packagedBy">packagedBy</a>
+                </li>
+                <li>
+                  <a href="#https://w3id.org/EVI#packages" title="https://w3id.org/EVI#packages">packages</a>
+                </li>
+                <li>
                    <a href="#representedBy" title="https://w3id.org/EVI#representedBy">representedBy</a>
                 </li>
                 <li>
@@ -466,6 +481,9 @@
                    <a href="#http://schema.org/name" title="http://schema.org/name">schema:name</a>
                 </li>
                 <li>
+                   <a href="#http://schema.org/runtime" title="http://schema.org/runtime">schema:runtime</a>
+                </li>
+                <li>
                    <a href="#http://schema.org/startTime" title="http://schema.org/startTime">schema:startTime</a>
                 </li>
                 <li>
@@ -492,7 +510,7 @@
                     are activities performed on instances of other DigitalObjects, Software or Services.
                 </p>
                 <div id="EVI_ontology" class="figure" style="text-align: center;">
-                    <img src="resources/images/v10/EVI-v-1-0.svg" alt="Semantic Model of Evidence Graph ontology."
+                    <img src="resources/images/v11/EVI-v-1-1.svg" alt="Semantic Model of Evidence Graph ontology."
                         width="740" height="520" />
                     <br /><br />
                     <div style="text-align: center;">
@@ -520,6 +538,9 @@
                     </li>
                     <li>
                        <a href="#Computation" title="https://w3id.org/EVI#Computation">Computation</a>
+                    </li>
+                    <li>
+                     <a href="#https://w3id.org/EVI#Container" title="https://w3id.org/EVI#Container">Container</a>
                     </li>
                     <li>
                        <a href="#Dataset" title="https://w3id.org/EVI#Dataset">Dataset</a>
@@ -732,6 +753,30 @@
                        </dd>
                     </dl>
                  </div>
+
+                 <div class="entity" id="https://w3id.org/EVI#Container">
+                  <h3>Container<sup class="type-c" title="class">c</sup>
+                     <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+                     </span>
+                  </h3>
+                  <p>
+                     <strong>IRI:</strong> https://w3id.org/EVI#Container</p>
+                  <div class="comment">
+                     <span class="markdown">A container is a digital object that can be defined as packages of software. Instances of containers are accompanied by all necessary dependencies such as specific versions, runtime environment and required libraries for execution.</span>
+                  </div>
+                  <dl class="description">
+                     <dt>has super-classes</dt>
+                     <dd>
+                        <a href="#https://w3id.org/EVI#DigitalObject" title="https://w3id.org/EVI#DigitalObject">DigitalObject</a>
+                        <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>is in domain of</dt>
+                     <dd>
+                        <a href="#https://w3id.org/EVI#packages" title="https://w3id.org/EVI#packages">packages</a>
+                        <sup class="type-op" title="object property">op</sup>
+                     </dd>
+                  </dl>
+               </div>
 
                  <div class="entity" id="Dataset">
                     <h3>Dataset<sup class="type-c" title="class">c</sup>
@@ -1723,9 +1768,10 @@
                        </dd>
                        <dt>is in range of</dt>
                        <dd>
-                          <a href="#usedSoftware" title="https://w3id.org/EVI#usedSoftware">usedSoftware</a>
-                          <sup class="type-op" title="object property">op</sup>
-                       </dd>
+                        <a href="#https://w3id.org/EVI#packages" title="https://w3id.org/EVI#packages">packages</a>
+                        <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/EVI#usedSoftware" title="https://w3id.org/EVI#usedSoftware">usedSoftware</a>
+                        <sup class="type-op" title="object property">op</sup>
+                     </dd>
                     </dl>
                  </div>
             </div>
@@ -1807,6 +1853,12 @@
                     </li>
                     <li>
                        <a href="#indirectlyChallenges" title="https://w3id.org/EVI#indirectlyChallenges">indirectlyChallenges</a>
+                    </li>
+                    <li>
+                       <a href="#https://w3id.org/EVI#packagedBy" title="https://w3id.org/EVI#packagedBy">packagedBy</a>
+                    </li>
+                    <li>
+                       <a href="#https://w3id.org/EVI#packages" title="https://w3id.org/EVI#packages">packages</a>
                     </li>
                     <li>
                        <a href="#representedBy" title="https://w3id.org/EVI#representedBy">representedBy</a>
@@ -2740,6 +2792,56 @@
                        </dl>
                     </div>
                  </div>
+                 <div class="entity" id="https://w3id.org/EVI#packagedBy">
+                  <h3>packagedBy<sup class="type-op" title="object property">op</sup>
+                     <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+                     </span>
+                  </h3>
+                  <p>
+                     <strong>IRI:</strong> https://w3id.org/EVI#packagedBy</p>
+                  <div class="comment">
+                     <span class="markdown">Reverse of packages property.</span>
+                  </div>
+                  <div class="description">
+                     <dl>
+                        <dt>is inverse of</dt>
+                        <dd>
+                           <a href="#https://w3id.org/EVI#packages" title="https://w3id.org/EVI#packages">packages</a>
+                           <sup class="type-op" title="object property">op</sup>
+                        </dd>
+                     </dl>
+                  </div>
+               </div>
+               <div class="entity" id="https://w3id.org/EVI#packages">
+                  <h3>packages<sup class="type-op" title="object property">op</sup>
+                     <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+                     </span>
+                  </h3>
+                  <p>
+                     <strong>IRI:</strong> https://w3id.org/EVI#packages</p>
+                  <div class="comment">
+                     <span class="markdown">Instances of software can be packaged by the instances of containers.</span>
+                  </div>
+                  <div class="description">
+                     <dl>
+                        <dt>has domain</dt>
+                        <dd>
+                           <a href="#https://w3id.org/EVI#Container" title="https://w3id.org/EVI#Container">Container</a>
+                           <sup class="type-c" title="class">c</sup>
+                        </dd>
+                        <dt>has range</dt>
+                        <dd>
+                           <a href="#https://w3id.org/EVI#Software" title="https://w3id.org/EVI#Software">Software</a>
+                           <sup class="type-c" title="class">c</sup>
+                        </dd>
+                        <dt>is inverse of</dt>
+                        <dd>
+                           <a href="#https://w3id.org/EVI#packagedBy" title="https://w3id.org/EVI#packagedBy">packagedBy</a>
+                           <sup class="type-op" title="object property">op</sup>
+                        </dd>
+                     </dl>
+                  </div>
+               </div>
                  <div class="entity" id="representedBy">
                     <h3>representedBy<sup class="type-op" title="object property">op</sup>
                        <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -3332,6 +3434,9 @@
                        <a href="#http://schema.org/name" title="http://schema.org/name">schema:name</a>
                     </li>
                     <li>
+                     <a href="#http://schema.org/runtime" title="http://schema.org/runtime">schema:runtime</a>
+                  </li>
+                    <li>
                        <a href="#http://schema.org/startTime" title="http://schema.org/startTime">schema:startTime</a>
                     </li>
                     <li>
@@ -3765,6 +3870,17 @@
                        </dl>
                     </div>
                  </div>
+                 <div class="entity" id="http://schema.org/runtime">
+                  <h3>schema:runtime<sup class="type-dp" title="data property">dp</sup>
+                     <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+                     </span>
+                  </h3>
+                  <p>
+                     <strong>IRI:</strong> http://schema.org/runtime</p>
+                  <div class="comment">
+                     <span class="markdown">Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).</span>
+                  </div>
+               </div>
                  <div class="entity" id="http://schema.org/startTime">
                     <h3>schema:startTime<sup class="type-dp" title="data property">dp</sup>
                        <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -3836,6 +3952,9 @@
                     </h3>
                     <p>
                        <strong>IRI:</strong> https://w3id.org/EVI#state</p>
+                    <div class="comment">
+                        <span class="markdown">Textual representation of a claim</span>
+                    </div>
                     <div class="description">
                        <dl>
                           <dt>has domain</dt>
