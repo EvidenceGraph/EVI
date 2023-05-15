@@ -3,7 +3,7 @@ The Evidence Graph ontology extends core concepts from the W3C Provenance Ontolo
 
 ## Ontology
 * Docs https://evidencegraph.github.io/EVI/
-* OWL  https://github.com/EvidenceGraph/EVI/blob/master/Ontology/versions/v1.0/evi.owl
+* OWL  https://github.com/EvidenceGraph/EVI/blob/master/Ontology/versions/v1.1/evi.owl
 
 ## Contact:
 * Sadnan Al Manir (ma3xy@virginia.edu)
